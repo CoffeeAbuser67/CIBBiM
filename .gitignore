@@ -1,0 +1,94 @@
+# Node modules
+node_modules/
+
+# Build directories
+dist/
+build/
+
+# Cache directories and files
+.cache/
+.pnp.*
+.pnpjs
+.npm/
+.yarn/
+.yarn-cache/
+.yarnrc.yml
+yarn-error.log
+
+# Dependency directories
+node_modules/
+package-lock.json
+yarn.lock
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+.DS_Store
+
+# Environment variables
+.env
+.env.*.local
+
+# Misc
+coverage/
+.tmp/
+temp/
+*.tmp
+*.temp
+*.log
+*.sublime-project
+*.sublime-workspace
+
+# Output of TypeScript compiler
+*.tsbuildinfo
+
+# Storybook files
+storybook-static/
+
+# Testing
+*.test.js
+*.test.ts
+*.test.tsx
+*.spec.js
+*.spec.ts
+*.spec.tsx
+coverage/
+.nyc_output/
+
+# ESLint cache
+.eslintcache
+
+# Stylelint cache
+.stylelintcache
+
+# Mac OS files
+.DS_Store
+
+# IDE specific
+.idea/
+.vscode/
+
+# Ignore next.js, if using
+.next/
+
+# Ignore custom build folders and temp files
+out/
+public/static/
+
+# Firebase files (if applicable)
+.firebaserc
+.firebase/
+firebase-debug.log
+firebase-debug.*.log
+firestore.indexes.json
+firestore.rules
