@@ -5,7 +5,7 @@ import CIBBiM_BG from "../../assets/bg_cropped2.svg";
 const Home = () => {
 
 
-  // bora vie funfou ?
+  // bora funfou aqui!
 
   // ── ✦─DOM─➤
   return (
