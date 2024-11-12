@@ -8,9 +8,8 @@ import Loader from "./components/Loader";
 import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
 
-
 function App() {
-  const content = useRoutes(routes); 
+  const content = useRoutes(routes);
   return (
     <HelmetProvider>
       <Helmet
@@ -18,10 +17,9 @@ function App() {
         defaultTitle="CIBBiM"
       />
 
-      <Theme appearance="light" accentColor="orange" grayColor="olive">
+      <Theme accentColor="green" grayColor="olive">
         <Suspense fallback={<Loader />}>{content}</Suspense>
       </Theme>
-
     </HelmetProvider>
   );
 }
