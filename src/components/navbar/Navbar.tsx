@@ -6,12 +6,8 @@ const Navbar = () => {
 
   //──DOM──➤
   return (
-    <Card id="navbar" variant="classic" className=" h-[70px] rounded-t-none bg-blue-800">
-      <div className=" flex justify-between items-center">
-        
+    <Card id="navbar" variant="ghost" className=" flex w-full h-[70px] rounded-t-none  shadow drop-shadow-xl shadow-slate-950  bg-green-950" >
 
-      
-      </div>
     </Card>
   );
 }; // . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
