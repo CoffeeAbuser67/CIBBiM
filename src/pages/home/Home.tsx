@@ -7,6 +7,7 @@ import {
   Text,
   Button,
   Heading,
+  DropdownMenu,
 } from "@radix-ui/themes";
 
 import { Link } from "react-router-dom";
@@ -16,48 +17,94 @@ interface ButtonProps {
   path: string;
 }
 
-// {✪} CardMenu
-const CardMenu: React.FC = () => {
-  const buttons: ButtonProps[] = [
-    { name: "Apresentação", path: "/" },
-    { name: "Como utilizar", path: "/como_utilizar" },
-    { name: "Laboratórios", path: "/laboratorios" },
-    { name: "Serviços prestados", path: "/servicos_prestados" },
-    { name: "Formulários", path: "/formularios" },
-    { name: "Comitê Gestor", path: "/comite_gestor" },
-    { name: "Publicações", path: "/publicacoes" },
-    { name: "Links", path: "/links" },
-    { name: "Contato", path: "/contato" },
-  ];
+// {●} buttons
+const buttons: ButtonProps[] = [
+  { name: "Apresentação", path: "/" },
+  { name: "Como utilizar", path: "/como_utilizar" },
+  { name: "Laboratórios", path: "/laboratorios" },
+  { name: "Serviços prestados", path: "/servicos_prestados" },
+  { name: "Formulários", path: "/formularios" },
+  { name: "Comitê Gestor", path: "/comite_gestor" },
+  { name: "Publicações", path: "/publicacoes" },
+  { name: "Links", path: "/links" },
+  { name: "Contato", path: "/contato" },
+]; // . . . . . . . . .
 
+// {✪} Dropdown_Menu
+const Dropdown_Menu: React.FC = () => {
+  return (
+    <Flex gap="3" align="center">
+      <DropdownMenu.Root>
+        <DropdownMenu.Trigger>
+
+          <Button variant="ghost" size="2" highContrast color="gray" className ="cursor-pointer">
+
+            <Text weight="bold" size="3" className = "mr-1">
+              Menu
+            </Text>
+
+            <DropdownMenu.TriggerIcon />
+          </Button>
+
+        </DropdownMenu.Trigger>
+
+        <DropdownMenu.Content size="2" color="gray" variant="soft" highContrast className="bg-gray-100 border-none shadow drop-shadow-xl shadow-white">
+          {buttons.map(
+            (
+              item // {○} buttons
+            ) => (
+              <DropdownMenu.Item key={item.path} asChild>
+                <Link
+                  to={item.path}
+                  className="flex justify-start w-full px-4 py-4 cursor-pointer"
+                >
+                  <Text weight="bold" size="2" highContrast  >
+                    {item.name}
+                  </Text>
+                </Link>
+              </DropdownMenu.Item>
+            )
+          )}
+        </DropdownMenu.Content>
+      </DropdownMenu.Root>
+    </Flex>
+  );
+}; // . . . . . . . . .
+
+// {✪} Card_Menu
+const Card_Menu: React.FC = () => {
   return (
     <Card
-      id="CardMenu"
+      id="Card_Menu"
       variant="ghost"
       className=" flex w-[280px] justify-start p-8 mr-2 bg-gray-100 border-none shadow drop-shadow-xl shadow-white"
     >
       <ul className="space-y-2 w-full">
-        {buttons.map((button) => (
-          <li key={button.path}>
-            <Button
-              variant="ghost"
-              size="4"
-              color="gray"
-              className=" w-full"
-              highContrast
-            >
-              <Link to={button.path} className="flex w-full justify-start">
-                <Text weight="bold" size="3">
-                  {button.name}
-                </Text>
-              </Link>
-            </Button>
-          </li>
-        ))}
+        {buttons.map(
+          (
+            button // {○} buttons
+          ) => (
+            <li key={button.path}>
+              <Button
+                variant="ghost"
+                size="4"
+                color="gray"
+                className=" w-full"
+                highContrast
+              >
+                <Link to={button.path} className="flex w-full justify-start">
+                  <Text weight="bold" size="3">
+                    {button.name}
+                  </Text>
+                </Link>
+              </Button>
+            </li>
+          )
+        )}
       </ul>
     </Card>
   );
-};
+}; // . . . . . . . . .
 
 // <✪> CIBBiM_LOGO_SVG
 const CIBBiM_LOGO_SVG = () => (
@@ -252,9 +299,9 @@ const Home = () => {
         <Box className="grid grid-rows-6 grid-flow-col gap-8">
           <Box
             className="row-span-6"
-            //{○} CardMenu
+            //{○} Card_Menu
           >
-            <CardMenu />
+            <Card_Menu />
           </Box>
 
           <Box className=" col-span-2">
@@ -309,7 +356,7 @@ const Home = () => {
         id="panel2"
         className="bg-rose-300 w-full h-[420px]"
       >
-        <Flex align="center" justify = "end">
+        <Flex align="center" justify="end">
           <Box className="w-[420px] h-[420px] flex items-center ">
             <Text as="p" my="5" size="3" highContrast>
               Por estar situado no interior da Bahia, o CIBBiM tem como missão
@@ -328,7 +375,11 @@ const Home = () => {
           </Box>
         </Flex>
 
-        <h1 className="text-4xl">🦀</h1>
+        <div className="flex justify-center items-center h-[300px] gap-8">
+          <h1 className="text-4xl">🦀</h1>
+          <Dropdown_Menu //{○} Dropdown_Menu
+          />
+        </div>
       </Box>
     </Box>
   );
