@@ -249,7 +249,7 @@ const Home = () => {
         id="panel1"
         className="flex flex-col -full mx-16 p-16 items-center"
       >
-        <Box className="grid grid-rows-6 grid-flow-col gap-10">
+        <Box className="grid grid-rows-6 grid-flow-col gap-8">
           <Box
             className="row-span-6"
             //{○} CardMenu
@@ -288,6 +288,17 @@ const Home = () => {
               ensino, saúde e pesquisa públicas e privadas em um prédio único de
               caráter multiusuário e multidisciplinar.
             </Text>
+
+            <Text as="p" my="5" size="3" highContrast>
+              O CIBBiM, funcionando dentro de uma única edificação, facilita e
+              agiliza a execução de estudos, ensaios, exames e análises diversas
+              envolvendo a biologia e biotecnologia de microrganismos nas áreas
+              de saúde humana e animal, ambiental e industrial, dentre outras. A
+              alocação dos 10 diferentes laboratórios centralizada no CIBBiM
+              permite maximizar bem como racionalizar o uso de equipamentos,
+              especialmente os de grande porte que que têm elevado custo de
+              manutenção.
+            </Text>
           </Box>
         </Box>
       </Box>
@@ -296,18 +307,29 @@ const Home = () => {
         // . . . . . . . . . . . . . .
         //_PIN_ panel2
         id="panel2"
-        className="bg-rose-950"
-
+        className="bg-rose-300 w-full h-[420px]"
       >
+        <Flex align="center" justify = "end">
+          <Box className="w-[420px] h-[420px] flex items-center ">
+            <Text as="p" my="5" size="3" highContrast>
+              Por estar situado no interior da Bahia, o CIBBiM tem como missão
+              atender à comunidade interna (universidade) e externa (empresas,
+              clínicas, hospitais, institutos) na identificação fenotípica e
+              genotípica de microrganismos, bem como de metabólitos provenientes
+              de bactérias e fungos visando o desenvolvimento de processos e
+              produtos biotecnológicos. Ao desenvolver pesquisas que promovam o
+              equilíbrio e saúde do ecossistema (conceito de One Health) e ao
+              avançar o conhecimento sobre os microrganismos e suas aplicações
+              tecnológicas em uma região reconhecida como hotspot da
+              biodiversidade do planeta (bioma Mata Atlântica do sul da Bahia),
+              o CIBBiM se constitui como uma ferramenta estratégica do estado na
+              promoção do bem-estar da sociedade.
+            </Text>
+          </Box>
+        </Flex>
 
-
-      <h1 className="text-4xl"> 
-        🦀
-      </h1>
-
-
+        <h1 className="text-4xl">🦀</h1>
       </Box>
-
     </Box>
   );
 }; //★ Home ✦─────────────────➤
