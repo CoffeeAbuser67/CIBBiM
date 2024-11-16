@@ -281,6 +281,7 @@ const CIBBiM_LOGO_SVG = () => (
 
 // ★ Home ✦─────────────────➤
 const Home = () => {
+  // WARN  Missing helmet 
   // ── ✦─DOM─➤
   return (
     <Box id="home_canvas" className="relative w-full h-screen">
