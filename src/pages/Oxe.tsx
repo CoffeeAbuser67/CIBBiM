@@ -1,5 +1,4 @@
 import CIBBiM_BG from "../assets/bg_cibbim_teste.svg";
-
 import classNames from "classnames";
 import {
   Box,
@@ -13,7 +12,12 @@ import {
   Dialog,
   Table,
   Inset,
+  Strong,
 } from "@radix-ui/themes";
+
+import FOTO1 from "../assets/alimentos_bebidas_lab/FOTO1.jpg";
+import FOTO2 from "../assets/alimentos_bebidas_lab/FOTO2.jpg";
+import FOTO3 from "../assets/alimentos_bebidas_lab/FOTO3.jpg";
 
 // ✪ GPT_card
 const TableTest = () => {
@@ -26,7 +30,6 @@ const TableTest = () => {
       </Table.Header>
 
       <Table.Body>
-
         <Table.Row>
           <Table.RowHeaderCell>
             <Box width="400px">
@@ -38,12 +41,15 @@ const TableTest = () => {
                   "hover:shadow-lg hover:opacity-100",
                   "transition duration-300 ease-in-out transform hover:-translate-y-1",
                   "cursor-pointer"
-
                 )}
               >
-
                 <Flex gap="4" align="center">
-                  <Avatar size="4" radius="medium" fallback="T" color="indigo" />
+                  <Avatar
+                    size="4"
+                    radius="medium"
+                    fallback="T"
+                    color="indigo"
+                  />
                   <Box>
                     <Text as="div" weight="bold" highContrast>
                       Teodros Girmay
@@ -53,21 +59,14 @@ const TableTest = () => {
                     </Text>
                   </Box>
                 </Flex>
-
               </Card>
             </Box>
           </Table.RowHeaderCell>
         </Table.Row>
-
       </Table.Body>
     </Table.Root>
   );
 }; // . . . . . . . . . . .
-
-
-
-
-
 
 // ✪ GPT_card
 const GPT_card = () => (
@@ -96,7 +95,7 @@ const GPT_card = () => (
 const Oxe = () => {
   // ── ✦─DOM─➤
   return (
-    <Box id="Oxe_Canvas" className="relative w-full h-screen">
+    <Box id="Oxe_Canvas" className=" relative w-full h-screen">
       <div
         className={classNames(
           "justify-center items-center",
@@ -111,6 +110,252 @@ const Oxe = () => {
         <GPT_card
         // ○ GPT_card
         />
+      </div>
+
+      <div
+        // . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        // HERE  GRID
+        className="columns-2 md:columns-3 gap-4 items-center"
+      >
+        <Box
+          // . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+          // _PIN_ MANSONRY CARD 1
+          id="MasonryCard1"
+        >
+          <Card className="flex flex-col gap-8 shadow-md bg-slate-200" size="2" mb="6">
+            <Inset clip="border-box" side="top">
+              <img
+                src={FOTO1}
+                alt="Bold typography"
+                className="h-full w-full object-cover"
+              />
+            </Inset>
+
+            <Text as="p" size="3" wrap="wrap" className="line-clamp-6">
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique
+            </Text>
+          </Card>
+        </Box>
+
+        <Box
+          // . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+          // _PIN_ MANSONRY CARD 2
+          id="MasonryCard2"
+        >
+          <Card className="flex flex-col gap-8 shadow-md bg-slate-200" size="2" mb="6">
+            <Inset clip="border-box" side="top">
+              <img
+                src={FOTO2}
+                alt="Bold typography"
+                className="h-full w-full object-cover"
+              />
+            </Inset>
+
+            <Text as="p" size="3" wrap="wrap" className="line-clamp-6">
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique
+            </Text>
+          </Card>
+        </Box>
+
+        <Box
+          // . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+          // _PIN_ MANSONRY CARD 3
+          id="MasonryCard3"
+        >
+          <Card className="flex flex-col gap-8 shadow-md bg-slate-200" size="2" mb="6">
+            <Inset clip="border-box" side="top">
+              <img
+                src={FOTO3}
+                alt="Bold typography"
+                className="h-full w-full object-cover"
+              />
+            </Inset>
+
+            <Text as="p" size="3" wrap="wrap" className="line-clamp-6">
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique
+            </Text>
+          </Card>
+        </Box>
+
+        <Box
+          // . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+          // _PIN_ MANSONRY CARD 2
+          id="MasonryCard2"
+        >
+          <Card className="flex flex-col gap-8 shadow-md bg-slate-200" size="2" mb="6">
+            <Inset clip="border-box" side="top">
+              <img
+                src={FOTO2}
+                alt="Bold typography"
+                className="h-full w-full object-cover"
+              />
+            </Inset>
+
+            <Text as="p" size="3" wrap="wrap" className="line-clamp-6">
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique
+            </Text>
+          </Card>
+        </Box>
+
+        <Box
+          // . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+          // _PIN_ MANSONRY CARD 1
+          id="MasonryCard1"
+        >
+          <Card className="flex flex-col gap-8 shadow-md bg-slate-200" size="2" mb="6">
+            <Inset clip="border-box" side="top">
+              <img
+                src={FOTO1}
+                alt="Bold typography"
+                className="h-full w-full object-cover"
+              />
+            </Inset>
+
+            <Text as="p" size="3" wrap="wrap" className="line-clamp-6">
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique
+            </Text>
+          </Card>
+        </Box>
+
+
+        <Box
+          // . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+          // _PIN_ MANSONRY CARD 3
+          id="MasonryCard3"
+        >
+          <Card className="flex flex-col gap-8 shadow-md bg-slate-200" size="2" mb="6">
+            <Inset clip="border-box" side="top">
+              <img
+                src={FOTO3}
+                alt="Bold typography"
+                className="h-full w-full object-cover"
+              />
+            </Inset>
+
+            <Text as="p" size="3" wrap="wrap" className="line-clamp-6">
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique of arranging type to make
+              written language legible, readable and appealing when displayedis
+              Typography is the art and technique
+            </Text>
+          </Card>
+        </Box>
+
+
+      </div>
+
+      <div>
+        🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀
+        🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀🦀
+        🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀
+        🦀 🦀 🦀 🦀 🦀 🦀 🦀🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀🦀 🦀
+        🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀 🦀
+        🦀 🦀 🦀 🦀 🦀 🦀
       </div>
     </Box>
   );
