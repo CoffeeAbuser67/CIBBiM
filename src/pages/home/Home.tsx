@@ -21,7 +21,7 @@ interface ButtonProps {
 const buttons: ButtonProps[] = [
   { name: "Apresentação", path: "/" },
   { name: "Como utilizar", path: "/como_utilizar" },
-  { name: "Laboratórios", path: "/laboratorios" },
+  { name: "Infraestrutura", path: "/infraestrutura" },
   { name: "Serviços prestados", path: "/servicos_prestados" },
   { name: "Formulários", path: "/formularios" },
   { name: "Comitê Gestor", path: "/comite_gestor" },
@@ -281,9 +281,12 @@ const CIBBiM_LOGO_SVG = () => (
 
 // ★ Home ✦─────────────────➤
 const Home = () => {
+
   // WARN  Missing helmet 
+
   // ── ✦─DOM─➤
   return (
+
     <Box id="home_canvas" className="relative w-full h-screen">
       {/* <div
         // CIBBiM_BG
@@ -295,9 +298,11 @@ const Home = () => {
       <Box
         // _PIN_ panel1
         id="panel1"
-        className="flex flex-col -full mx-16 p-16 items-center"
+        className="mx-16 p-16 "
       >
+
         <Box className="grid grid-rows-6 grid-flow-col gap-8">
+          
           <Box
             className="row-span-6"
             //{○} Card_Menu
@@ -348,7 +353,10 @@ const Home = () => {
               manutenção.
             </Text>
           </Box>
+
+
         </Box>
+
       </Box>
 
       <Box
@@ -382,6 +390,7 @@ const Home = () => {
           />
         </div>
       </Box>
+
     </Box>
   );
 }; //★ Home ✦─────────────────➤

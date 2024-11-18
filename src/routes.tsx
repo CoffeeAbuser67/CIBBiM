@@ -5,7 +5,7 @@ import Default from "./layouts/Default";
 
 const Home = lazy(() => import("./pages/home/Home"));
 const Oxe = lazy(() => import("./pages/Oxe"));
-const Labs = lazy(() => import("./pages/labs/Laboratorios"));
+const Infra = lazy(() => import("./pages/labs/Infraestrutura"));
 
 const routes = [
   {
@@ -19,8 +19,8 @@ const routes = [
       },
 
       {
-        path: "laboratorios", // [ROUTE] /
-        element: <Labs />
+        path: "infraestrutura", // [ROUTE] /
+        element: <Infra />
       },
 
 
@@ -28,10 +28,6 @@ const routes = [
         path: "oxe", // [ROUTE] /oxe
         element: <Oxe />
       },
-
-
-
-
 
 
 

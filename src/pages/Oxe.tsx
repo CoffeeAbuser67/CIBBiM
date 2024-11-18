@@ -19,7 +19,7 @@ import FOTO1 from "../assets/alimentos_bebidas_lab/FOTO1.jpg";
 import FOTO2 from "../assets/alimentos_bebidas_lab/FOTO2.jpg";
 import FOTO3 from "../assets/alimentos_bebidas_lab/FOTO3.jpg";
 
-// ✪ GPT_card
+// ✪ TableTest
 const TableTest = () => {
   return (
     <Table.Root size="2">
