@@ -1,3 +1,5 @@
+// HERE Home
+
 import CIBBiM_BG from "../../assets/bg_cropped2.svg";
 import {
   Box,
