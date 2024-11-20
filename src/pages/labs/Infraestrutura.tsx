@@ -121,7 +121,6 @@ const Card_Menu: React.FC = () => {
   );
 }; // . . . . . . . . .
 
-
 // <✪> LabTemplate ✦───────────────➤
 const LabTemplate = () => {
   return (
@@ -221,40 +220,83 @@ const LabTemplate = () => {
                   className="columns-2 md:columns-3 gap-4 items-center"
                 >
                   {lab.EquipamentsList.map((Equipament, index) => (
-                    <Card // _PIN_ Equipaments Cards
-                      className="flex flex-col gap-5 shadow-md bg-slate-200"
-                      size="2"
-                      mb="6"
-                      key={index}
-                    >
-                      <Inset clip="border-box" side="top">
-                        <img // <○> Image
-                          src={Equipament.Image}
-                          alt="Bold typography"
-                          className="h-full w-full object-cover"
-                        />
-                      </Inset>
-                      <Box className="flex flex-col gap-2">
-                        <Heading // <○> Title
+                    <Dialog.Root key={index}>
+                      <Dialog.Trigger>
+                        <Card // _PIN_ Equipaments Cards
+                          className="flex flex-col gap-5 shadow-md bg-slate-200 cursor-pointer"
                           size="2"
+                          mb="6"
+                          key={index}
                         >
-                          {Equipament.Title}
-                        </Heading>
-                        <Text // <○> Desc
-                          as="p"
+                          <Inset clip="border-box" side="top">
+                            <img // <○> Image
+                              src={Equipament.Image}
+                              alt="Bold typography"
+                              className="h-full w-full object-cover"
+                            />
+                          </Inset>
+                          <Box className="flex flex-col gap-2">
+                            <Heading // <○> Title
+                              size="2"
+                            >
+                              {Equipament.Title}
+                            </Heading>
+                            <Text // <○> Desc
+                              as="p"
+                              size="2"
+                              wrap="wrap"
+                              className="line-clamp-6"
+                            >
+                              {Equipament.Desc}
+                            </Text>
+                          </Box>
+                        </Card>
+                      </Dialog.Trigger>
+
+                      <Dialog.Content
+                        className={classNames(
+                          "bg-gray-100",
+                          "w-full min-h-[600px] max-w-[1200px]", // Dialog width: 90% of the viewport, capped at 700px
+                          "rounded-lg", // Rounded corners
+                          "p-12", // Padding
+                          "shadow-lg", // Shadow for aesthetics
+                          "overflow-y-auto" // Ensure no horizontal scroll
+                        )}
+                      >
+                        <Card // _PIN_ Equipaments Cards nested
+                          className="flex w-full min-h-[600px] gap-5 shadow-md bg-slate-200"
                           size="2"
-                          wrap="wrap"
-                          className="line-clamp-6"
+                          key={index}
                         >
-                          {Equipament.Desc}
-                        </Text>
-                      </Box>
-                    </Card>
+                          <Inset clip="border-box" side="left"className="w-2/3">
+                            <img // <○> Image
+                              src={Equipament.Image}
+                              alt="Bold typography"
+                              className="h-full w-full object-contain"
+                            />
+                          </Inset>
+                          <Box className="flex-1 flex-col gap-2">
+                            <Heading // <○> Title
+                              size="2"
+                            >
+                              {Equipament.Title}
+                            </Heading>
+                            <Text // <○> Desc
+                              as="p"
+                              size="2"
+                              wrap="wrap"
+                            >
+                              {Equipament.Desc}
+                            </Text>
+                          </Box>
+                        </Card>
+                      </Dialog.Content>
+                    </Dialog.Root>
                   ))}
                 </Box>
               </Box>
 
-              <Flex gap="3" justify="end">
+              <Flex gap="3" justify="center">
                 <Dialog.Close>
                   <Button variant="soft" color="gray">
                     🦀
