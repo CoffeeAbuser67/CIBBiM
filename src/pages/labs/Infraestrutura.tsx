@@ -125,188 +125,224 @@ const Card_Menu: React.FC = () => {
 const LabTemplate = () => {
   return (
     <>
-      {labsList.map((lab, index) => (
-        <Dialog.Root key={index}>
-          <Dialog.Trigger>
-            <Card
-              // <●> triggerCard
-              // <○> Id
-              id={`triggerCard_${lab.Id}`}
-              variant="surface"
-              size="1"
-              className={classNames(
-                "max-w-[420px]",
-                "opacity-75 overflow-hidden bg-gray-100 shadow-md",
-                "hover:shadow-lg hover:opacity-100",
-                "transition duration-300 ease-in-out transform hover:-translate-y-1",
-                "cursor-pointer"
-              )}
-            >
-              <Flex gap="4" align="center">
-                <Avatar size="4" radius="medium" fallback="T" color="indigo" />
-                <Box>
-                  <Text
-                    // <○> LabName
-                    as="div"
-                    weight="bold"
-                    highContrast
+      <Table.Root size="2" className="max-w-[520px]">
+        <Table.Header>
+          <Table.Row>
+            <Table.ColumnHeaderCell>Laboratórios</Table.ColumnHeaderCell>
+          </Table.Row>
+        </Table.Header>
+
+        <Table.Body>
+          {labsList.map((lab, index) => (
+            <Table.Row >
+              <Table.RowHeaderCell>
+                <Dialog.Root key={index}>
+                  <Dialog.Trigger
+                    // <●> DialogTrigger
+                    id="DialogTrigger"
                   >
-                    {lab.LabName}
-                  </Text>
-                  <Text
-                    // <○> LabResponsible
-                    as="div"
-                    color="gray"
+                    <Card
+                      // <○> Id
+                      id={`TriggerCard_${lab.Id}`}
+                      variant="surface"
+                      size="1"
+                      className={classNames(
+                        "max-w-[420px]",
+                        "opacity-75 overflow-hidden bg-gray-100 shadow-md",
+                        "hover:shadow-lg hover:opacity-100",
+                        "transition duration-300 ease-in-out transform hover:-translate-y-1",
+                        "cursor-pointer"
+                      )}
+                    >
+                      <Flex gap="4" align="center">
+                        <Avatar
+                          size="4"
+                          radius="medium"
+                          fallback="T"
+                          color="indigo"
+                        />
+                        <Box>
+                          <Text
+                            // <○> LabName
+                            as="div"
+                            weight="bold"
+                            highContrast
+                          >
+                            {lab.LabName}
+                          </Text>
+                          <Text
+                            // <○> LabResponsible
+                            as="div"
+                            color="gray"
+                          >
+                            {lab.LabResponsible}
+                          </Text>
+                        </Box>
+                      </Flex>
+                    </Card>
+                  </Dialog.Trigger>
+
+                  <Dialog.Content
+                    className={classNames(
+                      "bg-gray-100",
+                      "w-[75vw] min-h-[600px] max-w-[12000px]", // Dialog width: 90% of the viewport, capped at 700px
+                      "rounded-lg", // Rounded corners
+                      "p-12", // Padding
+                      "shadow-lg", // Shadow for aesthetics
+                      "overflow-y-auto" // Ensure no horizontal scroll
+                    )}
                   >
-                    {lab.LabResponsible}
-                  </Text>
-                </Box>
-              </Flex>
-            </Card>
-          </Dialog.Trigger>
+                    <Box // . . .
+                      // <●> DialogContent
+                      // <○> Id
+                      id={`DialogContent${lab.Id}`}
+                      className="flex flex-col w-full gap-6"
+                    >
+                      <Box className="flex flex-col">
+                        <Dialog.Title as="h1">{lab.LabName}</Dialog.Title>
 
-          <Dialog.Content
-            className={classNames(
-              "bg-gray-100",
-              "w-[75vw] min-h-[600px] max-w-[12000px]", // Dialog width: 90% of the viewport, capped at 700px
-              "rounded-lg", // Rounded corners
-              "p-12", // Padding
-              "shadow-lg", // Shadow for aesthetics
-              "overflow-y-auto" // Ensure no horizontal scroll
-            )}
-          >
-            <Box // . . .
-              // <●> contentBox
-              // <○> Id
-              id={`contentBox${lab.Id}`}
-              className="flex flex-col w-full gap-9"
-            >
-              <Dialog.Title>
-                <Heading
-                  // <○> LabName
-                  color="green"
-                  size="5"
-                  className="mb-1"
-                  highContrast
-                >
-                  {lab.LabName}
-                </Heading>
-                <Heading size="4">
-                  Centro de Inovação em Biologia e Biotecnologia Microbiana
-                </Heading>
-                <Heading size="4">
-                  Universidade Estadual de Santa Cruz, Ilhéus, Bahia, Brasil
-                </Heading>
-              </Dialog.Title>
+                        <Heading size="3">
+                          Centro de Inovação em Biologia e Biotecnologia
+                          Microbiana
+                        </Heading>
 
-              <Dialog.Description
-              // <○> DescriptionComponent
-              >
-                <lab.DescriptionComponent />
-              </Dialog.Description>
+                        <Heading size="3">
+                          Universidade Estadual de Santa Cruz, Ilhéus, Bahia,
+                          Brasil
+                        </Heading>
+                      </Box>
 
-              <Box id="equipamentosPanel" className="flex flex-col gap-9">
-                <Text
-                  // <○> EquipamentsIntro
-                  as="div"
-                  weight="bold"
-                  highContrast
-                >
-                  {lab.EquipamentsIntro}
-                </Text>
-
-                <Box // . . . . . . . . .
-                  // HERE  EQUIPAMENTOS GRID
-                  className="columns-2 md:columns-3 gap-4 items-center"
-                >
-                  {lab.EquipamentsList.map((Equipament, index) => (
-                    <Dialog.Root key={index}>
-                      <Dialog.Trigger>
-                        <Card // _PIN_ Equipaments Cards
-                          className="flex flex-col gap-5 shadow-md bg-slate-200 cursor-pointer"
-                          size="2"
-                          mb="6"
-                          key={index}
-                        >
-                          <Inset clip="border-box" side="top">
-                            <img // <○> Image
-                              src={Equipament.Image}
-                              alt="Bold typography"
-                              className="h-full w-full object-cover"
-                            />
-                          </Inset>
-                          <Box className="flex flex-col gap-2">
-                            <Heading // <○> Title
-                              size="2"
-                            >
-                              {Equipament.Title}
-                            </Heading>
-                            <Text // <○> Desc
-                              as="p"
-                              size="2"
-                              wrap="wrap"
-                              className="line-clamp-6"
-                            >
-                              {Equipament.Desc}
-                            </Text>
-                          </Box>
-                        </Card>
-                      </Dialog.Trigger>
-
-                      <Dialog.Content
-                        className={classNames(
-                          "bg-gray-100",
-                          "w-full min-h-[600px] max-w-[1200px]", // Dialog width: 90% of the viewport, capped at 700px
-                          "rounded-lg", // Rounded corners
-                          "p-12", // Padding
-                          "shadow-lg", // Shadow for aesthetics
-                          "overflow-y-auto" // Ensure no horizontal scroll
-                        )}
+                      <Box
+                        // <○> DescriptionComponent
+                        className="flex flex-col gap-6"
                       >
-                        <Card // _PIN_ Equipaments Cards nested
-                          className="flex w-full min-h-[600px] gap-5 shadow-md bg-slate-200"
-                          size="2"
-                          key={index}
-                        >
-                          <Inset clip="border-box" side="left"className="w-2/3">
-                            <img // <○> Image
-                              src={Equipament.Image}
-                              alt="Bold typography"
-                              className="h-full w-full object-contain"
-                            />
-                          </Inset>
-                          <Box className="flex-1 flex-col gap-2">
-                            <Heading // <○> Title
-                              size="2"
-                            >
-                              {Equipament.Title}
-                            </Heading>
-                            <Text // <○> Desc
-                              as="p"
-                              size="2"
-                              wrap="wrap"
-                            >
-                              {Equipament.Desc}
-                            </Text>
-                          </Box>
-                        </Card>
-                      </Dialog.Content>
-                    </Dialog.Root>
-                  ))}
-                </Box>
-              </Box>
+                        <Dialog.Description className="whitespace-pre-wrap">
+                          Campus Soane Nazaré de Andrade, Rodovia Jorge Amado,
+                          km 16, {"\n"}
+                          Bairro Salobrinho CEP 45662-900. Ilhéus-Bahia
+                        </Dialog.Description>
 
-              <Flex gap="3" justify="center">
-                <Dialog.Close>
-                  <Button variant="soft" color="gray">
-                    🦀
-                  </Button>
-                </Dialog.Close>
-              </Flex>
-            </Box>
-          </Dialog.Content>
-        </Dialog.Root>
-      ))}
+                        <lab.DescriptionComponent />
+                      </Box>
+
+                      <Box
+                        id="equipamentosPanel"
+                        className="flex flex-col gap-9"
+                      >
+                        <Text
+                          // <○> EquipamentsIntro
+                          as="div"
+                          weight="bold"
+                          highContrast
+                        >
+                          {lab.EquipamentsIntro}
+                        </Text>
+
+                        <Box // . . . . . . . . .
+                          // _PIN_  EQUIPAMENTOS GRID
+                          className="columns-2 md:columns-3 gap-4 items-center"
+                        >
+                          {lab.EquipamentsList.map((Equipament, index) => (
+                            <Dialog.Root key={index}>
+                              <Dialog.Trigger>
+                                <Card // <●> NestedDialogTrigger
+                                  className="flex flex-col gap-5 shadow-md bg-slate-200 cursor-pointer"
+                                  size="2"
+                                  mb="6"
+                                  key={index}
+                                >
+                                  <Inset clip="border-box" side="top">
+                                    <img // <○> Image
+                                      src={Equipament.Image}
+                                      alt="Bold typography"
+                                      className="h-full w-full object-cover"
+                                    />
+                                  </Inset>
+                                  <Box className="flex flex-col gap-2">
+                                    <Heading // <○> Title
+                                      size="2"
+                                    >
+                                      {Equipament.Title}
+                                    </Heading>
+                                    <Text // <○> Desc
+                                      as="p"
+                                      size="2"
+                                      wrap="wrap"
+                                      className="line-clamp-6"
+                                    >
+                                      {Equipament.Desc}
+                                    </Text>
+                                  </Box>
+                                </Card>
+                              </Dialog.Trigger>
+
+                              <Dialog.Content
+                                className={classNames(
+                                  // . . .
+                                  // <●> NestedDialogcontent
+                                  "bg-gray-100",
+                                  "w-full min-h-[600px] max-w-[1200px]", // Dialog width: 90% of the viewport, capped at 700px
+                                  "rounded-lg", // Rounded corners
+                                  "p-12", // Padding
+                                  "shadow-lg", // Shadow for aesthetics
+                                  "overflow-y-auto" // Ensure no horizontal scroll
+                                )}
+                              >
+                                <Card
+                                  className="flex w-full min-h-[600px] gap-5 shadow-md bg-slate-200"
+                                  size="2"
+                                  key={index}
+                                >
+                                  <Inset
+                                    clip="border-box"
+                                    side="left"
+                                    className="w-2/3"
+                                  >
+                                    <img // <○> Image
+                                      src={Equipament.Image}
+                                      alt="Bold typography"
+                                      className="h-full w-full object-contain"
+                                    />
+                                  </Inset>
+
+                                  <Box className="flex-1 flex-col gap-2">
+                                    <Dialog.Title
+                                      size="2"
+                                      as="h2"
+                                      // <○> Title
+                                    >
+                                      {Equipament.Title}
+                                    </Dialog.Title>
+
+                                    <Dialog.Description // <○> Desc
+                                      size="2"
+                                      wrap="wrap"
+                                    >
+                                      {Equipament.Desc}
+                                    </Dialog.Description>
+                                  </Box>
+                                </Card>
+                              </Dialog.Content>
+                            </Dialog.Root>
+                          ))}
+                        </Box>
+                      </Box>
+
+                      <Flex gap="3" justify="center">
+                        <Dialog.Close>
+                          <Button variant="soft" color="gray">
+                            🦀
+                          </Button>
+                        </Dialog.Close>
+                      </Flex>
+                    </Box>
+                  </Dialog.Content>
+                </Dialog.Root>
+              </Table.RowHeaderCell>
+            </Table.Row>
+          ))}
+        </Table.Body>
+      </Table.Root>
     </>
   );
 }; // <✪> LabTemplate ✦───────────────➤
@@ -323,9 +359,9 @@ const Infraestrutura = () => {
         id="Pane"
         className="mx-16 p-16 overflow-hidden"
       >
-        <Box className="grid grid-rows-6 grid-flow-col gap-6">
+        <Box className="grid grid-rows-8 grid-flow-col gap-4">
           <Box
-            className="row-span-6"
+            className="row-span-8"
             //{○} Card_Menu
           >
             <Card_Menu />
@@ -346,24 +382,8 @@ const Infraestrutura = () => {
             </Flex>
           </Box>
 
-          <Box className="row-span-4 col-span-2">
-            <Table.Root size="2" className="max-w-[900px]">
-              <Table.Header>
-                <Table.Row>
-                  <Table.ColumnHeaderCell>Laboratórios</Table.ColumnHeaderCell>
-                </Table.Row>
-              </Table.Header>
-
-              <Table.Body>
-                <Table.Row>
-                  <Table.RowHeaderCell
-                  // <○> LabTemplate
-                  >
-                    <LabTemplate />
-                  </Table.RowHeaderCell>
-                </Table.Row>
-              </Table.Body>
-            </Table.Root>
+          <Box className="row-span-6 col-span-2">
+            <LabTemplate />
           </Box>
         </Box>
       </Box>
