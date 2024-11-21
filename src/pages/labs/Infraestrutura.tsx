@@ -12,6 +12,7 @@ import {
   Dialog,
   Table,
   Inset,
+  Strong,
 } from "@radix-ui/themes";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
@@ -134,9 +135,9 @@ const LabTemplate = () => {
 
         <Table.Body>
           {labsList.map((lab, index) => (
-            <Table.Row >
+            <Table.Row key={index}>
               <Table.RowHeaderCell>
-                <Dialog.Root key={index}>
+                <Dialog.Root>
                   <Dialog.Trigger
                     // <●> DialogTrigger
                     id="DialogTrigger"
@@ -172,8 +173,9 @@ const LabTemplate = () => {
                           </Text>
                           <Text
                             // <○> LabResponsible
-                            as="div"
+                            as="p"
                             color="gray"
+                            className="whitespace-pre-wrap"
                           >
                             {lab.LabResponsible}
                           </Text>
@@ -207,8 +209,7 @@ const LabTemplate = () => {
                         </Heading>
 
                         <Heading size="3">
-                          Universidade Estadual de Santa Cruz, Ilhéus, Bahia,
-                          Brasil
+                          Universidade Estadual de Santa Cruz
                         </Heading>
                       </Box>
 
@@ -216,12 +217,6 @@ const LabTemplate = () => {
                         // <○> DescriptionComponent
                         className="flex flex-col gap-6"
                       >
-                        <Dialog.Description className="whitespace-pre-wrap">
-                          Campus Soane Nazaré de Andrade, Rodovia Jorge Amado,
-                          km 16, {"\n"}
-                          Bairro Salobrinho CEP 45662-900. Ilhéus-Bahia
-                        </Dialog.Description>
-
                         <lab.DescriptionComponent />
                       </Box>
 
@@ -317,6 +312,7 @@ const LabTemplate = () => {
                                     <Dialog.Description // <○> Desc
                                       size="2"
                                       wrap="wrap"
+                                      className="whitespace-pre-wrap"
                                     >
                                       {Equipament.Desc}
                                     </Dialog.Description>
@@ -367,22 +363,16 @@ const Infraestrutura = () => {
             <Card_Menu />
           </Box>
 
-          <Box className="col-span-2">
-            <Heading color="green" size="7" highContrast>
+          <Box className="row-span-8 col-span-2">
+            <Heading color="green" size="7" className="mb-6" highContrast>
               Infraestrutura
             </Heading>
-          </Box>
 
-          <Box className="col-span-2">
-            <Flex direction="column">
-              <Text color="gray" size="3" highContrast>
-                Conheça os laboratórios que compõem o CIBBiM, juntamente com os
-                respectivos equipamentos disponíveis para a comunidade.
-              </Text>
-            </Flex>
-          </Box>
+            <Text  as="div" color="gray" size="3" className="mb-3" highContrast>
+              Conheça os laboratórios que compõem o CIBBiM, juntamente com os
+              respectivos equipamentos disponíveis para a comunidade.
+            </Text>
 
-          <Box className="row-span-6 col-span-2">
             <LabTemplate />
           </Box>
         </Box>
