@@ -39,7 +39,6 @@ import HOSP_FOTO1 from "../../assets/labminhosp/FOTO1.png";
 import HOSP_FOTO2 from "../../assets/labminhosp/FOTO2.jpg";
 import HOSP_FOTO3 from "../../assets/labminhosp/FOTO3.jpg";
 
-
 import LAPAGEN_FOTO1 from "../../assets/lapagen/FOTO1.jpg";
 import LAPAGEN_FOTO2 from "../../assets/lapagen/FOTO2.jpg";
 import LAPAGEN_FOTO3 from "../../assets/lapagen/FOTO3.jpg";
@@ -51,10 +50,7 @@ import LAPAGEN_FOTO8 from "../../assets/lapagen/FOTO8.jpg";
 import LAPAGEN_FOTO9 from "../../assets/lapagen/FOTO9.jpg";
 import LAPAGEN_FOTO10 from "../../assets/lapagen/FOTO10.jpg";
 
-
-
-
-
+import LEMIC_FOTO1 from "../../assets/lemic/FOTO1.jpg";
 
 // [●] Equipaments
 interface Equipaments {
@@ -705,60 +701,195 @@ export const labsList: Lab[] = [
       "Equipamentos do Laboratório de Interação Microrganismos-hospedeiro:",
     EquipamentsList: [
       {
-        Title:"7500 Fast Real-Time PCR System - Applied Biosystems ", 
+        Title: "7500 Fast Real-Time PCR System - Applied Biosystems ",
         Desc: "O 7500 Fast Real-Time PCR System, é um equipamento de ponta utilizado para a reação em cadeia da polimerase em tempo real (qPCR), amplamente aplicado em pesquisas biomédicas, diagnósticos moleculares, e estudos genéticos. Este sistema é projetado para realizar análises rápidas e precisas de quantificação de ácidos nucleicos (DNA e RNA), o que o torna uma ferramenta essencial em laboratórios de biologia molecular e genética.\nEntre suas principais características está a capacidade de realizar ciclos de PCR em menos tempo comparado aos sistemas tradicionais. O equipamento utiliza tecnologia de detecção fluorescente para monitorar em tempo real a amplificação do material genético, garantindo alta precisão e sensibilidade nas análises.\nO sistema é compatível com uma ampla gama de reagentes e corantes fluorescentes, permitindo flexibilidade nos experimentos. Ele também possui software intuitivo que facilita a configuração das análises e o processamento dos dados, tornando-o acessível para os usuários.\nAlém disso, o 7500 Fast Real-Time PCR System oferece suporte para múltiplos ensaios simultâneos, o que é ideal para laboratórios que demandam produtividade e eficiência. Com opções de análise quantitativa absoluta e relativa, bem como a possibilidade de realizar detecção de polimorfismos de nucleotídeo único (SNP), este sistema é indicado tanto para pesquisa quanto para diagnósticos clínicos.\nNo contexto de aplicações práticas, o equipamento é amplamente utilizado em estudos de expressão gênica, análises de microRNA, detecção de patógenos, análise de mutações, e até mesmo em testes diagnóstico molecular, dada sua rapidez e confiabilidade na detecção de material genético.\nEssas características fazem do 7500 Fast Real-Time PCR System uma ferramenta de escolha em laboratórios que exigem precisão, velocidade e versatilidade nas análises de qPCR, contribuindo significativamente para avanços nas áreas de pesquisa biomédica e genética molecular.",
-        Image:LAPAGEN_FOTO1,
+        Image: LAPAGEN_FOTO1,
       },
       {
-        Title:"Workstation Loccus", 
+        Title: "Workstation Loccus",
         Desc: "A workstation da Loccus é uma plataforma moderna e integrada projetada especificamente para aplicações em biologia molecular, oferecendo uma infraestrutura otimizada para experimentos que requerem precisão, automação e controle rigoroso das condições experimentais. Esta estação de trabalho é utilizada em laboratórios que realizam análises como PCR em tempo real, sequenciamento de DNA, clonagem gênica, e detecção de patógenos, entre outras técnicas avançadas de biologia molecular. \nEntre suas principais funcionalidades, a workstation da Loccus permite o manuseio seguro e eficiente de amostras e reagentes, minimizando o risco de contaminação e erro humano. A plataforma pode ser equipada com módulos de pipetagem automatizada, controle de temperatura, e sistemas de extração de DNA/RNA, o que proporciona um alto nível de reprodutibilidade nos resultados.",
-        Image:LAPAGEN_FOTO2,
+        Image: LAPAGEN_FOTO2,
       },
       {
-        Title:"Cabine biológica LUTECH", 
+        Title: "Cabine biológica LUTECH",
         Desc: "A cabine biológica LUTECH é um equipamento desenvolvido para garantir segurança e proteção durante o manuseio de agentes biológicos e produtos químicos em laboratórios. Este tipo de cabine é essencial para áreas como microbiologia, biologia molecular e bioquímica, onde a manipulação de amostras potencialmente perigosas exige um ambiente controlado e seguro para evitar contaminações tanto para o operador quanto para o ambiente.\nProjetada com tecnologia de filtragem avançada, a cabine LUTECH utiliza filtros HEPA (High-Efficiency Particulate Air) ou ULPA (Ultra Low Penetration Air), que removem partículas e microrganismos do ar, criando uma barreira contra contaminações cruzadas e garantindo que o ar liberado ao ambiente externo seja limpo. Esse sistema de filtragem é ideal para a proteção de amostras, evitando que contaminantes externos interfiram nos resultados experimentais, e também protege o operador contra agentes potencialmente infecciosos",
-        Image:LAPAGEN_FOTO3,
+        Image: LAPAGEN_FOTO3,
       },
       {
-        Title: "Filtro de osmose reversa com UV integrada", 
+        Title: "Filtro de osmose reversa com UV integrada",
         Desc: "O filtro de osmose reversa com integração de luz ultravioleta (UV) é um sistema avançado de purificação de água que combina duas tecnologias eficazes para remover contaminantes e garantir a segurança microbiológica da água. Este tipo de filtro é amplamente utilizado em laboratórios que buscam água de alta pureza.\nA osmose reversa (OR) é um processo de filtração no qual a água passa através de uma membrana semipermeável, bloqueando até 99% das partículas, contaminantes químicos, sais, metais pesados e outros poluentes. A membrana de OR é projetada para permitir a passagem apenas das moléculas de água, retendo contaminantes maiores e resultando em uma água limpa e com baixo teor de sólidos dissolvidos.\nA integração com a luz ultravioleta oferece uma camada adicional de proteção contra contaminantes biológicos, como bactérias, vírus e protozoários. A luz UV atua diretamente no DNA dos microrganismos, impedindo sua reprodução e eliminando seu potencial patogênico. Esse processo é altamente eficaz, rápido e não deixa resíduos químicos na água, ao contrário de outros métodos de desinfecção.",
         Image: LAPAGEN_FOTO4,
       },
       {
-        Title: "Centrífuga DTR 16000", 
+        Title: "Centrífuga DTR 16000",
         Desc: "A centrífuga de laboratório modelo DTR 16000 é um equipamento de alta velocidade desenvolvido para separar componentes de uma amostra com eficiência e precisão. Projetada para atender a demandas de alta capacidade e versatilidade em laboratórios de pesquisa, clínicas e hospitais, a DTR 16000 oferece controle preciso de velocidade e tempo de centrifugação, tornando-a ideal para aplicações em biologia molecular, microbiologia, química clínica e outras áreas.\nCom uma capacidade de até 16.000 rpm, esta centrífuga possibilita a sedimentação rápida de partículas e a separação de componentes celulares, plasmáticos ou moleculares em curtos períodos de tempo. O modelo DTR 16000 é equipado com uma interface digital intuitiva, que permite aos usuários configurar e monitorar os parâmetros de operação, como velocidade, tempo e temperatura, garantindo condições ideais para diferentes tipos de amostras.\nAlém disso, a centrífuga DTR 16000 conta com sistemas de segurança avançados, incluindo travamento automático da tampa, proteção contra desequilíbrio de carga, e sistemas de monitoramento de temperatura para evitar o superaquecimento. Essas características aumentam a segurança operacional e minimizam o risco de acidentes durante o processo de centrifugação.\nA DTR 16000 também possui opções de rotores intercambiáveis, permitindo a adaptação para tubos de diferentes tamanhos e capacidades. Essa flexibilidade é particularmente importante em laboratórios que trabalham com amostras variadas, pois permite o ajuste do equipamento para cada tipo específico de análise, garantindo resultados consistentes e confiáveis.",
         Image: LAPAGEN_FOTO5,
       },
-  
+
       {
-        Title: "Centrífuga DTR 16000", 
+        Title: "Centrífuga DTR 16000",
         Desc: "A centrífuga clínica é um equipamento essencial em laboratórios que fazem análises clínicas, utilizado principalmente para separar componentes de fluidos biológicos, como sangue, urina, e outros líquidos corporais. O funcionamento da centrífuga clínica baseia-se na aplicação de força centrífuga para separar os componentes das amostras, permitindo a sedimentação dos elementos celulares, proteínas, ou outras partículas, e facilitando a análise laboratorial de componentes específicos.\nEste tipo de centrífuga é ideal para procedimentos de separação de plasma e soro, preparação de amostras de hematócrito, e a análise de sedimentos urinários. A centrífuga clínica opera em faixas de velocidade moderada (entre 1.000 e 6.000 rpm) e conta com rotores específicos para tubos de diferentes volumes, o que proporciona flexibilidade",
         Image: LAPAGEN_FOTO6,
       },
       {
-        Title: "Conjunto para eletroforese", 
+        Title: "Conjunto para eletroforese",
         Desc: "O conjunto de eletroforese é essencial em laboratórios de biologia molecular e genética, pois permite a separação de moléculas como DNA, RNA e proteínas com base em seu tamanho e carga. Esse conjunto geralmente inclui três componentes principais: a fonte de alimentação, a cuba de eletroforese e o transiluminador UV.\nFonte de Alimentação: A fonte de alimentação fornece a voltagem necessária para a corrida eletroforética. Ela permite o controle da tensão e da corrente aplicadas ao sistema, o que é fundamental para uma separação eficiente e precisa das amostras. A fonte gera um campo elétrico que impulsiona as moléculas através do gel de agarose ou poliacrilamida dentro da cuba.\nCuba de Eletroforese: A cuba é onde ocorre a separação eletroforética. Ela é preenchida com uma solução tampão que mantém o pH estável durante a corrida, essencial para a integridade das amostras. No gel dentro da cuba, as moléculas migram de acordo com seu tamanho, permitindo a visualização e análise posterior. O gel possui poços onde as amostras são inseridas, e as moléculas carregadas negativamente, como o DNA, migram em direção ao polo positivo.\nTransiluminador UV: Após a corrida, o transiluminador UV é utilizado para visualizar as moléculas fluorescentes no gel. Geralmente, as amostras são coradas com agentes intercalantes, como brometo de etídio ou SYBR Green, que emitem fluorescência sob luz ultravioleta. O transiluminador destaca as bandas de DNA ou RNA, permitindo a captura de imagens e a análise semi-quantitativa e qualitativa das amostras.",
         Image: LAPAGEN_FOTO7,
       },
-      
+
       {
-        Title: "Ultrafreezer", 
+        Title: "Ultrafreezer",
         Desc: "O ultrafreezer é um equipamento essencial para o armazenamento seguro e prolongado de amostras biológicas em temperaturas extremamente baixas, geralmente entre -40°C e -86°C. Comumente usado em laboratórios de pesquisa, biologia molecular, e áreas clínicas, o ultrafreezer é projetado para manter a integridade de materiais sensíveis, como amostras de DNA, RNA, proteínas, tecidos, e células, preservando sua viabilidade e estrutura ao longo do tempo.",
         Image: LAPAGEN_FOTO8,
       },
-      
+
       {
-        Title: "Termociclador", 
+        Title: "Termociclador",
         Desc: "O SimpliAmp Thermal Cycler, da Applied Biosystems, é um termociclador moderno e versátil, utilizado para amplificação de DNA e RNA por meio da técnica de PCR (Reação em Cadeia da Polimerase). Esse equipamento é essencial para laboratórios de biologia molecular, genética e diagnósticos, oferecendo uma solução prática e eficiente para uma ampla gama de aplicações, incluindo clonagem, detecção de patógenos e análise de expressão genética.\nCom um design compacto e interface intuitiva, o SimpliAmp possui um sistema de controle térmico de alta precisão que permite uma rápida transição entre as temperaturas, garantindo resultados consistentes e repetíveis. Ele oferece uma capacidade de 96 poços, sendo compatível com tubos padrão e placas de PCR, o que facilita a integração com outros instrumentos de laboratório. O equipamento também possui conectividade com a nuvem, permitindo monitoramento e controle remoto, o que agiliza o fluxo de trabalho e facilita o gerenciamento das reações.\nOutro destaque do SimpliAmp é sua tecnologia de rampa de temperatura ajustável, que permite otimizar ciclos de amplificação para diferentes tipos de amostras e protocolos específicos. Essa flexibilidade é essencial para pesquisas que demandam precisão e adaptação a diferentes protocolos.",
         Image: LAPAGEN_FOTO9,
       },
-    
+
       {
-        Title: "Espectrofotômetro", 
+        Title: "Espectrofotômetro",
         Desc: "O espectrofotômetro é um equipamento de laboratório usado para medir a quantidade de luz absorvida por uma amostra em diferentes comprimentos de onda. Comumente utilizado em áreas como bioquímica, química e biologia molecular, o espectrofotômetro permite a análise precisa de substâncias, como proteínas, ácidos nucleicos e enzimas, tornando-se fundamental para pesquisas e diagnósticos. Ele é essencial para determinar a concentração de DNA e RNA em amostras, uma etapa importante para estudos genéticos e de biologia molecular.\nO princípio de funcionamento do espectrofotômetro baseia-se na capacidade das moléculas de absorver luz em comprimentos de onda específicos. A luz passa através de um monocromador, que a separa em diferentes comprimentos de onda. A amostra, colocada em uma cubeta, absorve parte dessa luz, e o equipamento mede a quantidade de luz transmitida. Com essa informação, é possível determinar a concentração da substância.",
         Image: LAPAGEN_FOTO10,
       },
-      
+    ],
+  }, // . . .
+
+  {
+    // [●] lemic
+    Id: "lemic",
+    LabName: "Laboratório do Eixo Microbiota-Intestino-Cérebro",
+    LabResponsible: "Dr. Eduardo Ary Villela Marinho",
+    ResponsibleEmail: "(eavmarinho@uesc.br)",
+    DescriptionComponent: () => (
+      <Box className="flex flex-col gap-3">
+        <Text size="2" highContrast className=" whitespace-pre-wrap">
+          Campus Soane Nazaré de Andrade{"\n"}
+          Rodovia Jorge Amado, km 16, Bairro Salobrinho{"\n"}
+          CEP 45662-900. Ilhéus-Bahia{"\n"}
+        </Text>
+
+        <Text size="3" highContrast className=" whitespace-pre-wrap">
+          <Strong>Pesquisadora responsável:</Strong> Dra. Carla Cristina Romano
+          {"\n"}
+          (ccromano@uesc.br)
+        </Text>
+
+        <Text size="3" highContrast className=" whitespace-pre-wrap">
+          <Strong>Sobre o laboratório:</Strong> O LEMIC - Laboratório do Eixo
+          Microbiota-Intestino-Cérebro é um ambiente em que são realizados
+          experimentos e ensaios sobre o comportamento de camundongos
+          submetidos, por exemplo, a administração de bactérias probióticas. O
+          laboratório é coordenado pelo Prof. Dr. Eduardo Ary Villela Marinho e
+          que está vinculado ao Departamento de Ciências da Saúde e aos PPGs em
+          Ciências da Saúde e em Biologia e Biotecnologia de Microrganismos.
+          Discentes de graduação, mestrado e doutorado atuam no laboratório
+          realizando experimentos de acompanhamento diário, devido às pesquisas
+          com modelos de administração crônica de fármacos. Nos últimos 8 anos
+          foram publicados 23 artigos, em revistas de boa qualidade,
+          relacionados com os trabalhos desenvolvidos por docentes e discentes.
+        </Text>
+      </Box>
+    ),
+    EquipamentsQtd: 1,
+    EquipamentsIntro: "",
+    EquipamentsList: [
+      {
+        Title: "",
+        Desc: "O laboratório conta com microscópio fotônico, balanças analíticas e outros equipamentos de pequeno porte necessários ao desenvolvimento das pesquisas. Um computador de alta performance (adquirido com verba FAPESB) com software Anymaze, para análise de imagens, também adquirido no mesmo projeto. \nExiste ainda no laboratório um aparelho de DVR que está conectado através de rede com o computador acima descrito e com quatro câmeras de alta definição que ficam em outras 4 salas individuais onde são feitos os experimentos comportamentais.",
+        Image: LEMIC_FOTO1,
+      },
+    ],
+  }, // . . .
+
+  {
+    // [●] lemic
+    Id: "lemic",
+    LabName: "Laboratório de Biotecnologia Celular e Tecidual",
+    LabResponsible: "Dra. Adriana Bozzi",
+    ResponsibleEmail: "(abozzi@uesc.br)",
+    DescriptionComponent: () => (
+      <Box className="flex flex-col gap-3">
+        <Text size="2" highContrast className=" whitespace-pre-wrap">
+          Campus Soane Nazaré de Andrade{"\n"}
+          Rodovia Jorge Amado, km 16, Bairro Salobrinho{"\n"}
+          CEP 45662-900. Ilhéus-Bahia{"\n"}
+        </Text>
+
+        <Text size="3" highContrast className=" whitespace-pre-wrap">
+          <Strong>Pesquisadora responsável:</Strong> Dra. Adriana Bozzi
+          {"\n"}
+          (abozzi@uesc.br)
+        </Text>
+
+        <Text size="3" highContrast className=" whitespace-pre-wrap">
+          <Strong>Áreas de atuação:</Strong> morfologia, imunologia,
+          microbiologia e biotecnologia.
+        </Text>
+
+        <Text size="3" highContrast className=" whitespace-pre-wrap">
+          <Strong>Sobre o laboratório:</Strong> O Laboratório de Biotecnologia
+          Celular e Tecidual (LABCET) é um laboratório multiusuários liderado e
+          coordenado pela Prof.ª Drª Adriana Bozzi, vinculado ao Centro de
+          Inovação em Biologia e Biotecnologia Microbiana (CIBBiM), com
+          discentes de graduação e de Pós-Graduação atuando. O LABCET está
+          engajado com o estudo aprofundado da biologia celular e tecidual
+          animal, com o objetivo de desenvolver soluções biotecnológicas
+          inovadoras para a recuperação morfofisiológica de tecidos e órgãos
+          afetados por desordens de diferentes origens. Através de abordagens
+          multidisciplinares, o LABCET busca compreender os mecanismos celulares
+          fundamentais envolvidos na regeneração e reparação de áreas orgânicas
+          danificadas, com foco em promover a restauração funcional e
+          estrutural. <br/>Nossa missão é integrar conhecimentos avançados de
+          biotecnologia, biologia celular, engenharia tecidual e medicina
+          regenerativa, visando criar estratégias terapêuticas eficazes que
+          possam ser aplicadas em diversas condições patológicas. As linhas de
+          pesquisa do laboratório incluem, mas não se limitam a biotecnologia de
+          células-tronco, modelamento do sistema imune, engenharia tecidual,
+          nanopartículas e controle microbiológico, com ênfase na recuperação de
+          tecidos lesionados por trauma, doenças degenerativas, processos
+          inflamatórios ou distúrbios metabólicos. \nAlém de contribuir para o
+          avanço da ciência, o LABCET se compromete a traduzir seus resultados
+          em aplicações práticas, desenvolvendo novas tecnologias que possam ser
+          utilizadas no tratamento de doenças e lesões em modelos pré-clínicos e
+          clínicos. O laboratório trabalha em colaboração com instituições de
+          ensino e pesquisa nacionais e internacionais, com o intuito de
+          fomentar a inovação e o desenvolvimento de novas terapias que promovam
+          a regeneração e a reabilitação dos tecidos afetados, melhorando a
+          qualidade de vida dos indivíduos. \nAcreditamos que, por meio da
+          pesquisa e do desenvolvimento de biotecnologias de ponta, o LABCET tem
+          o potencial de fazer contribuições significativas no campo da
+          biomedicina e da biotecnologia aplicada, estabelecendo novas
+          fronteiras no tratamento e recuperação de desordens morfofisiológicas.
+        </Text>
+
+        <Text size="3" highContrast className=" whitespace-pre-wrap">
+          <Strong>Sobre a Equipe:</Strong> A equipe do LABCET é composta por
+          estudantes de iniciação científica, mestrado e doutorado, professores
+          pesquisadores do Departamento de Ciências Biológicas (DCB) e Ciências
+          Agrárias (DCA) da UESC, além de colaboradores externos pertencentes ao
+          Instituto René Rachou (IRR) da FIOCRUZ/Minas, Universidade Federal de
+          Minas Gerais (UFMG), Universidade Federal de Juiz de Fora (UFJF),
+          Stanford University, CA/USA e California Institute for Medical
+          Research, CA/USA. <br/> Nossa equipe é capacitada em atividades de cultura
+          celular, imunologia celular e molecular, modelos experimentais in
+          vitro e in vivo, com expertise no desenvolvimento de técnicas de
+          microscopia, imunológicas, colorações histológicas, citometria de
+          fluxo, diferenciação celular, ensaios de citotoxicidade, expansão e
+          caracterização de células-tronco mesenquimais, reprogramação celular,
+          modelamento de doença in vitro, dentre outras. Os pesquisadores do
+          LABCET são aptos em analisar resultados e desenvolver textos
+          científicos e promover palestras, minicursos e aulas bem fundamentadas
+          na área de morfologia e imunologia.
+        </Text>
+      </Box>
+    ),
+    EquipamentsQtd: 0,
+    EquipamentsIntro: "",
+    EquipamentsList: [
+
     ],
   }, // . . .
 ]; // [✪] labsList ✦────────➤
