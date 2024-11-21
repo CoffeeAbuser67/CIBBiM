@@ -37,6 +37,13 @@ import BIOPROD_FOTO4 from "../../assets/microbioprodutos/FOTO4.jpg";
 import BIOPROD_FOTO5 from "../../assets/microbioprodutos/FOTO5.jpg";
 
 
+import HOSP_FOTO1 from "../../assets/labminhosp/FOTO1.png";
+import HOSP_FOTO2 from "../../assets/labminhosp/FOTO2.jpg";
+import HOSP_FOTO3 from "../../assets/labminhosp/FOTO3.jpg";
+
+
+
+
 // [●] Equipaments
 interface Equipaments {
   Title: string;
@@ -451,6 +458,7 @@ export const labsList: Lab[] = [
       },
     ],
   }, // . . .
+
   {
     // [●] microbioprodutos
     Id: "microbioprodutos",
@@ -467,8 +475,8 @@ export const labsList: Lab[] = [
         </Text>
 
         <Text size="3" highContrast className=" whitespace-pre-wrap">
-          <Strong>Pesquisadores responsáveis:{"\n"}</Strong>Dr. João Carlos Teixeira
-          Dias (jctdias@uesc.br)
+          <Strong>Pesquisadores responsáveis:{"\n"}</Strong>Dr. João Carlos
+          Teixeira Dias (jctdias@uesc.br)
           {"\n"}
           Prof. Eduardo Gross (egross@uesc.br)
         </Text>
@@ -527,29 +535,111 @@ export const labsList: Lab[] = [
       "Equipamentos disponíveis para pesquisadores e usuários do laboratório:",
     EquipamentsList: [
       {
-        Title:"ESPECTROFOTÔMETRO DIGITAL TECNAL modelo ESPEC-V-5000",
-        Desc:"Utilizado para análise de compostos orgânicos e inorgânicos na faixa de comprimento de onda de 325 a 1000 nm, medindo a quantidade de luz absorvida pela amostra e relacionando a com a concentração do analito. Equipamento essencial em laboratórios, com aplicação para diversas pesquisas.",
+        Title: "ESPECTROFOTÔMETRO DIGITAL TECNAL modelo ESPEC-V-5000",
+        Desc: "Utilizado para análise de compostos orgânicos e inorgânicos na faixa de comprimento de onda de 325 a 1000 nm, medindo a quantidade de luz absorvida pela amostra e relacionando a com a concentração do analito. Equipamento essencial em laboratórios, com aplicação para diversas pesquisas.",
         Image: BIOPROD_FOTO1,
       },
       {
-        Title:"ESTUFAS BACTERIOLOGICAS",
-        Desc:"Estufas de DOB (demanda bioquímica de oxigênio) com temperaturas controladas entre 10 a 45 ºC, utilizada para cultivo de microrganismos.",
+        Title: "ESTUFAS BACTERIOLOGICAS",
+        Desc: "Estufas de DOB (demanda bioquímica de oxigênio) com temperaturas controladas entre 10 a 45 ºC, utilizada para cultivo de microrganismos.",
         Image: BIOPROD_FOTO2,
       },
       {
-        Title:"AUTOCLAVE marca PHOENIX",
-        Desc:"Autoclave da com capacidade de 50 l, que realiza esterilização de meios, material de cultivo de microrganismos e soluções.",
+        Title: "AUTOCLAVE marca PHOENIX",
+        Desc: "Autoclave da com capacidade de 50 l, que realiza esterilização de meios, material de cultivo de microrganismos e soluções.",
         Image: BIOPROD_FOTO3,
       },
       {
-        Title:"CABINES DE FLUXO LAMINAR VERTICAL",
-        Desc:"Possuem um sistema de purificação de ar que garante que o ar exausto seja limpo e livre de impurezas, através de filtros HEPA, de modo a garantir a segurança para a isolamento e manipulação de amostras biológicas.",
+        Title: "CABINES DE FLUXO LAMINAR VERTICAL",
+        Desc: "Possuem um sistema de purificação de ar que garante que o ar exausto seja limpo e livre de impurezas, através de filtros HEPA, de modo a garantir a segurança para a isolamento e manipulação de amostras biológicas.",
         Image: BIOPROD_FOTO4,
       },
       {
-        Title:"SISTEMA DE CROMATOGRAFIA LIQUIDA DE ALTA PERFORMANCE (HPLC)",
-        Desc:"O Laboratório é equipado com um sistema HPLC AC 210 da série Prominenc que inclui os módulos: propulsão de solvente por bomba de pistão duplo serial LC-20AT de alta exatidão e precisão de fluxo ajustável de 0,001 a 10,000mL/min; forno de coluna com controle de temperatura por circulação forçada de ar e regulagem entre 10°C abaixo da ambiente até 85°C; detectores  de absorção UV-Vis SPD-20A de alta sensibilidade, com lâmpada de D2 (190 a 700nm); fluorescência RF-20A/RF-20Axs, detector de índice de refração, coletor automático de frações e o controlar de sistema CBM-20A que possibilita a interface de até 8 módulos com o PC via Ethernet. Esse equipamento multiusuário possibilita a execução de pesquisa em diversas áreas sendo imprescindível para a purificação de biomoléculas, análises de hidrocarbonetos e a detecção e quantificação de metabólitos durante os mais diversos processos de fermentação.",
+        Title: "SISTEMA DE CROMATOGRAFIA LIQUIDA DE ALTA PERFORMANCE (HPLC)",
+        Desc: "O Laboratório é equipado com um sistema HPLC AC 210 da série Prominenc que inclui os módulos: propulsão de solvente por bomba de pistão duplo serial LC-20AT de alta exatidão e precisão de fluxo ajustável de 0,001 a 10,000mL/min; forno de coluna com controle de temperatura por circulação forçada de ar e regulagem entre 10°C abaixo da ambiente até 85°C; detectores  de absorção UV-Vis SPD-20A de alta sensibilidade, com lâmpada de D2 (190 a 700nm); fluorescência RF-20A/RF-20Axs, detector de índice de refração, coletor automático de frações e o controlar de sistema CBM-20A que possibilita a interface de até 8 módulos com o PC via Ethernet. Esse equipamento multiusuário possibilita a execução de pesquisa em diversas áreas sendo imprescindível para a purificação de biomoléculas, análises de hidrocarbonetos e a detecção e quantificação de metabólitos durante os mais diversos processos de fermentação.",
         Image: BIOPROD_FOTO5,
+      },
+    ],
+  }, // . . .
+
+  {
+    // [●] labminhosp
+    Id: "labminhosp",
+    LabName: "Laboratório de Interação Microrganismos-hospedeiro",
+    LabResponsible: "Dra. Carla Cristina Romano",
+    ResponsibleEmail: "(ccromano@uesc.br)",
+    DescriptionComponent: () => (
+      <Box className="flex flex-col gap-3">
+        <Text size="2" highContrast className=" whitespace-pre-wrap">
+          Campus Soane Nazaré de Andrade{"\n"}
+          Rodovia Jorge Amado, km 16, Bairro Salobrinho{"\n"}
+          CEP 45662-900. Ilhéus-Bahia{"\n"}
+        </Text>
+
+        <Text size="3" highContrast className=" whitespace-pre-wrap">
+          <Strong>Pesquisadora responsável:</Strong> Dra. Carla Cristina Romano
+          {"\n"}
+          (ccromano@uesc.br)
+        </Text>
+
+        <Text size="3" highContrast className=" whitespace-pre-wrap">
+          <Strong>Sobre o laboratório:</Strong> O Laboratório de Interação
+          Microrganismos-Hospedeiro (LabMinHosp), coordenado pela Profa. Dra
+          Carla Cristina Romano, possui nível de Biossegurança 2 (NB2) e tem
+          caráter multiusuário. O laboratório conta com espaço para cultivo
+          celular equipado com estufa de CO2, capela de fluxo laminar vertical,
+          2 geladeiras, 1 microscópio invertido, 1 microscópio óptico, 1
+          lavadora de microplaca, 1 leitora de microplaca, 1 incubadora shaker e
+          1 citômetro de fluxo. O laboratório atende a várias demandas de
+          pesquisa na área de interação microrganismo - hospedeiro, permeando
+          indicadores que vão desde análise da ação biológica de microrganismos
+          e seus compostos em modelos celulares, como produção de citocinas,
+          ativação celular de macrófagos e linfócitos, expressão de fatores de
+          virulência até cultivo e identificação de microrganismos isolados de
+          amostras biológicas. As pesquisas desenvolvidas no laboratório
+          colaboram com a formação de recursos humanos nos programas de
+          pós-graduação em Biologia e Biotecnologia de Microrganismos (PPGBBM),
+          Programa de Genética e Biologia Molecular (PPGGBM), Programa de
+          Ciência Animal (PPGCA) com resultados principalmente nas áreas de:
+          microbiologia médica e imunologia, com foco em análise de parâmetros
+          imunológicos da interação microrganismo/célula. Na temática de doenças
+          infecciosas, as atividades do laboratório objetivam entender o papel
+          de fatores de virulência (principalmente biofilme) de bactérias
+          isoladas em quadros de infecção relacionada com assistência à saúde
+          (IRAS) com o curso da infecção e realizar abordagens inovadoras que
+          possam potencializar o efeito de antimicrobianos e desinfetantes sobre
+          esses microrganismos. Dentre as abordagens, está o uso de lactobacilos
+          probióticos previamente isolados do cacau e seus sobrenadantes em
+          modelos de infecção in vitro por Gardnerella vaginalis, Enterococcus
+          faecalis, Staphylococcus aureus, Klebsiella pneumoniae, Escherichia
+          coli enterotoxigênica, entre outras. O laboratório atua ainda em
+          projetos junto à comunidade a fim de atender demandas de saúde pública
+          que envolvem desde isolamento e identificação de microrganismos,
+          capacitações e reciclagem de profissionais da área da saúde em
+          temáticas de biossegurança e controle de infecção hospitalar até
+          educação em saúde com foco em doenças humanas veiculadas pelas mãos.
+        </Text>
+
+      </Box>
+    ),
+    EquipamentsQtd: 3,
+    EquipamentsIntro:
+      "Equipamentos do Laboratório de Interação Microrganismos-hospedeiro:",
+    EquipamentsList: [
+      {
+        Title: "Cabine de Segurança Biológica VECO Bio Seg 09",
+        Desc: "O laboratório é equipado com uma cabine de segurança biológica Classe II Tipo A1 (CSB) – BIOSEG compactas. É um equipamento desenvolvido para manipulação de patógenos e proporciona tripla proteção (produto, operador e ambiente). O fluxo de ar vertical com filtragem HEPA garante área de trabalho ultralimpa classificada como ISO Classe 5 de acordo com a norma NBR ISO 14644-1.",
+        Image: HOSP_FOTO1,
+      },
+      {
+        Title: "Citômetro FC500 Beckman Coulter",
+        Desc: "O laboratório possui também um citômetro da Beckman Coulter modelo FC500 MPL. Esse equipamento possui 2 lasers que podem excitar a amostra em 488 nm ou 633 nm, que permite a leitura de 5 cores e 7 parâmetros. Trata-se de equipamento multiusuário que permite múltiplas análises em suspensões celulares diversas. ",
+        Image: HOSP_FOTO2,
+      },
+      {
+        Title: "Lavadora de microplaca Well Wash",
+        Desc: "O laboratório ainda possui uma lavadora de microplaca automatizada que permite lavagens de microplacas de 12 e 8 “wells”, através de ciclos de lavagens programados pelo usuário. Aplica-se para ensaios imunoenzimáticos.",
+        Image: HOSP_FOTO3,
       },
 
     ],
