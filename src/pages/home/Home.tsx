@@ -1,6 +1,8 @@
 // HERE Home
 
 import CIBBiM_BG from "../../assets/bg_cropped2.svg";
+import TESTECIBBBIMBG from "../../assets/TESTECIBBBIMBG.svg";
+
 import {
   Box,
   Card,
@@ -10,6 +12,7 @@ import {
   Button,
   Heading,
   DropdownMenu,
+  Strong,
 } from "@radix-ui/themes";
 
 import { Link } from "react-router-dom";
@@ -38,19 +41,28 @@ const Dropdown_Menu: React.FC = () => {
     <Flex gap="3" align="center">
       <DropdownMenu.Root>
         <DropdownMenu.Trigger>
-
-          <Button variant="ghost" size="2" highContrast color="gray" className ="cursor-pointer">
-
-            <Text weight="bold" size="3" className = "mr-1">
+          <Button
+            variant="ghost"
+            size="2"
+            highContrast
+            color="gray"
+            className="cursor-pointer"
+          >
+            <Text weight="bold" size="3" className="mr-1">
               Menu
             </Text>
 
             <DropdownMenu.TriggerIcon />
           </Button>
-
         </DropdownMenu.Trigger>
 
-        <DropdownMenu.Content size="2" color="gray" variant="soft" highContrast className="bg-gray-100 border-none shadow drop-shadow-xl shadow-white">
+        <DropdownMenu.Content
+          size="2"
+          color="gray"
+          variant="soft"
+          highContrast
+          className="bg-gray-100 border-none shadow drop-shadow-xl shadow-white"
+        >
           {buttons.map(
             (
               item // {○} buttons
@@ -60,7 +72,7 @@ const Dropdown_Menu: React.FC = () => {
                   to={item.path}
                   className="flex justify-start w-full px-4 py-4 cursor-pointer"
                 >
-                  <Text weight="bold" size="2" highContrast  >
+                  <Text weight="bold" size="2" highContrast>
                     {item.name}
                   </Text>
                 </Link>
@@ -283,28 +295,24 @@ const CIBBiM_LOGO_SVG = () => (
 
 // ★ Home ✦─────────────────➤
 const Home = () => {
-
-  // WARN  Missing helmet 
+  // WARN  Missing helmet
 
   // ── ✦─DOM─➤
   return (
-
-    <Box id="home_canvas" className="relative w-full h-screen">
-      {/* <div
+    <Box id="home_canvas" className="relative w-full h-screen mt-4">
+      <div
         // CIBBiM_BG
         id="CIBBiM_BG"
         className="absolute w-full h-[500px] bg-cover bg-center"
         style={{ backgroundImage: `url(${CIBBiM_BG})` }}
-      /> */}
+      />
 
       <Box
         // _PIN_ panel1
         id="panel1"
         className="mx-16 p-16 "
       >
-
         <Box className="grid grid-rows-6 grid-flow-col gap-8">
-          
           <Box
             className="row-span-6"
             //{○} Card_Menu
@@ -355,44 +363,78 @@ const Home = () => {
               manutenção.
             </Text>
           </Box>
-
-
         </Box>
-
       </Box>
 
       <Box
         // . . . . . . . . . . . . . .
         //_PIN_ panel2
         id="panel2"
-        className="bg-rose-300 w-full h-[420px]"
+        className="relative bg-[#036D60] w-full h-[520px]"
       >
-        <Flex align="center" justify="end">
-          <Box className="w-[420px] h-[420px] flex items-center ">
-            <Text as="p" my="5" size="3" highContrast>
+        <div
+          //WARN OUTDATED
+          // _PIN_ TESTECIBBBIMBG
+          id="TESTECIBBBIMBG"
+          className="absolute w-full h-full bg-cover bg-center"
+          style={{ backgroundImage: `url(${TESTECIBBBIMBG})` }}
+        />
+
+        <Box
+          id="Bg_txt"
+          className="absolute right-5 w-[420px] h-[520px] flex items-center mr-10"
+        >
+          <Text as="p" my="5" size="3" highContrast>
+            <Strong>
               Por estar situado no interior da Bahia, o CIBBiM tem como missão
               atender à comunidade interna (universidade) e externa (empresas,
               clínicas, hospitais, institutos) na identificação fenotípica e
               genotípica de microrganismos, bem como de metabólitos provenientes
               de bactérias e fungos visando o desenvolvimento de processos e
-              produtos biotecnológicos. Ao desenvolver pesquisas que promovam o
-              equilíbrio e saúde do ecossistema (conceito de One Health) e ao
-              avançar o conhecimento sobre os microrganismos e suas aplicações
-              tecnológicas em uma região reconhecida como hotspot da
-              biodiversidade do planeta (bioma Mata Atlântica do sul da Bahia),
-              o CIBBiM se constitui como uma ferramenta estratégica do estado na
-              promoção do bem-estar da sociedade.
-            </Text>
-          </Box>
-        </Flex>
-
-        <div className="flex justify-center items-center h-[300px] gap-8">
-          <h1 className="text-4xl">🦀</h1>
-          <Dropdown_Menu //{○} Dropdown_Menu
-          />
-        </div>
+              produtos biotecnológicos. <br />
+              <br />
+            </Strong>
+            <Strong>
+              Ao desenvolver pesquisas que promovam o equilíbrio e saúde do
+              ecossistema (conceito de One Health) e ao avançar o conhecimento
+              sobre os microrganismos e suas aplicações tecnológicas em uma
+              região reconhecida como hotspot da biodiversidade do planeta
+              (bioma Mata Atlântica do sul da Bahia), o CIBBiM se constitui como
+              uma ferramenta estratégica do estado na promoção do bem-estar da
+              sociedade.
+            </Strong>
+          </Text>
+        </Box>
       </Box>
 
+      <Box
+        // . . . . . . . . . . . . . .
+        //_PIN_ panel3
+        className="flex flex-col justify-center items-center h-[300px] gap-8 mx-16 p-16"
+      >
+        <Text as="p" my="5" size="3" highContrast>
+          Por ser um Centro que lida com microrganismos, o prédio do CIBBiM
+          apresenta nível de Biossegurança 2 e assim o sendo, os usuários têm
+          necessidade de realizar além do cadastro para as atividades de
+          pesquisa e análises, também um curso de biossegurança para frequentar
+          as instalações. Para tanto, este Centro tem como política ofertar
+          treinamentos periódicos em biossegurança e uso de equipamentos de
+          análise microbiana aos usuários. Os laboratórios e equipamentos do
+          CIBBiM estão disponíveis para usuários cadastrados e habilitados
+          realizarem seus estudos, exames e ensaios envolvendo a biodiversidade
+          e aplicabilidade dos microrganismos. <br />
+          <br />
+          <Strong>
+            Seja um(a) usuário(a) do CIBBiM! <br />
+            <br />
+          </Strong>
+          Veja como utilizar os laboratórios, equipamentos e serviços do Centro
+          de Inovação em Biologia e Biotecnologia Microbiana da UESC.
+        </Text>
+
+        {/* <Dropdown_Menu //{○} Dropdown_Menu
+        /> */}
+      </Box>
     </Box>
   );
 }; //★ Home ✦─────────────────➤
