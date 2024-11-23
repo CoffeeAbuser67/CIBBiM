@@ -1,7 +1,9 @@
 // HERE Home
 
+import classNames from "classnames";
 import CIBBiM_BG from "../../assets/bg_cropped2.svg";
 import TESTECIBBBIMBG from "../../assets/TESTECIBBBIMBG.svg";
+import { useState } from "react";
 
 import {
   Box,
@@ -21,6 +23,8 @@ interface ButtonProps {
   name: string;
   path: string;
 }
+
+import { useWindowResize } from "../../hooks/useWindowResize";
 
 // {●} buttons
 const buttons: ButtonProps[] = [
@@ -297,6 +301,13 @@ const CIBBiM_LOGO_SVG = () => (
 const Home = () => {
   // WARN  Missing helmet
 
+  // ✳  [windowSize, setWindowSize]
+  const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
+
+  useWindowResize((width, height) => {
+    setWindowSize({ width, height }); // ↺ useWindowResize (setWindowSize)
+  });
+
   // ── ✦─DOM─➤
   return (
     <Box id="home_canvas" className="relative w-full h-screen mt-4">
@@ -370,21 +381,56 @@ const Home = () => {
         // . . . . . . . . . . . . . .
         //_PIN_ panel2
         id="panel2"
-        className="relative bg-[#036D60] w-full h-[520px]"
+        className="relative bg-[#036D60] w-screen h-[520px]"
       >
-        <div
-          //WARN OUTDATED
-          // _PIN_ TESTECIBBBIMBG
-          id="TESTECIBBBIMBG"
+        <Box
+          // HERE jungleMicroscopeBG
+          id="jungleMicroscopeBG"
           className="absolute w-full h-full bg-cover bg-center"
           style={{ backgroundImage: `url(${TESTECIBBBIMBG})` }}
         />
 
+        {/* NOTE Breakpoint prefix
+          sm	640px	
+          md	768px	
+          lg	1024px	
+          xl	1280px	
+          2xl	1536px
+        
+          size 2 = text-sm
+          size 3 = text-base
+
+
+  
+        */}
+
+        <Box
+          // HERE Opacity Control
+          id="opacity BG"
+          className={classNames(
+            "absolute w-full h-full bg-[#036D60] bg-cover bg-center",
+            "opacity-75",
+            "xl:opacity-0",
+          )}
+        />
+
         <Box
           id="Bg_txt"
-          className="absolute right-5 w-[420px] h-[520px] flex items-center mr-10"
+          className= {classNames(
+            "absolute w-full h-full flex items-center justify-center p-10",
+            "xl:w-[520px] h-[520px] xl:right-0",
+            "2xl:mr-24"
+          )}
+          
         >
-          <Text as="p" my="5" size="3" highContrast>
+          <Text   
+            as="div" 
+            my="5" 
+            highContrast
+            className = "text-sm sm:text-base"
+          
+          
+          >
             <Strong>
               Por estar situado no interior da Bahia, o CIBBiM tem como missão
               atender à comunidade interna (universidade) e externa (empresas,
@@ -432,8 +478,15 @@ const Home = () => {
           de Inovação em Biologia e Biotecnologia Microbiana da UESC.
         </Text>
 
-        {/* <Dropdown_Menu //{○} Dropdown_Menu
-        /> */}
+        <Box
+          // ⊙ windowSize
+          className="fixed top-10 rounded-2xl right-10 bg-slate-600 p-2"
+        >
+          <Text color="tomato" size="3" highContrast>
+            🦀{` wdith: ${windowSize.width}`} <br />
+            🦀{` height: ${windowSize.height}`}
+          </Text>
+        </Box>
       </Box>
     </Box>
   );
