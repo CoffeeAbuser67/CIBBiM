@@ -128,14 +128,50 @@ const LabTemplate = () => {
                       <Box className="flex flex-col">
                         <Dialog.Title as="h1">{lab.LabName}</Dialog.Title>
 
-                        <Heading size="3">
+                        {/* HERE ✉ */}
+
+                        <Dialog.Description className="text-xs lg:text-sm">
+                          <span className=" text-sm block">
+                            <strong>
+                              Centro de Inovação em Biologia e Biotecnologia
+                              Microbiana
+                            </strong>
+                          
+                          </span>
+
+                          <span className="text-sm block mb-2">
+                            <strong>Universidade Estadual de Santa Cruz</strong>
+                          </span>
+
+                          <span className=" block mb-2">
+                            Campus Soane Nazaré de Andrade
+                            <br />
+                            Rodovia Jorge Amado, km 16, Bairro Salobrinho
+                            <br />
+                            CEP 45662-900. Ilhéus-Bahia
+                          </span>
+
+                          {Object.entries(lab.DescriptionText).map(
+                            ([key, value]) => (
+                              <span
+                                // <○> DescriptionText
+                                key={key}
+                                className=" text-xs lg:text-sm block"
+                              >
+                                <strong>{key}</strong>: {value}
+                              </span>
+                            )
+                          )}
+                        </Dialog.Description>
+
+                        {/* <Heading size="3">
                           Centro de Inovação em Biologia e Biotecnologia
                           Microbiana
                         </Heading>
 
                         <Heading size="3">
                           Universidade Estadual de Santa Cruz
-                        </Heading>
+                        </Heading> */}
                       </Box>
 
                       <Box
@@ -166,7 +202,7 @@ const LabTemplate = () => {
                         >
                           {lab.EquipamentsList.map((Equipament, index) => (
                             <Dialog.Root key={index}>
-                              <Dialog.Trigger className = "pointer-events-none md:pointer-events-auto">
+                              <Dialog.Trigger className="pointer-events-none md:pointer-events-auto">
                                 <Card // <●> NestedDialogTrigger
                                   className="flex flex-col gap-5 shadow-md bg-slate-200 cursor-pointer"
                                   size="2"
@@ -202,11 +238,10 @@ const LabTemplate = () => {
                                 className={classNames(
                                   // . . .
                                   // <●> NestedDialogcontent
-                      
-                                  "w-full min-h-[600px] max-w-[1200px] rounded-lg bg-gray-100", 
+
+                                  "w-full min-h-[600px] max-w-[1200px] rounded-lg bg-gray-100",
                                   "p-10 md:p-12 ", // Padding
-                                  "shadow-lg overflow-y-auto ", // Shadow for aesthetics and  Ensure no horizontal scroll
-                                
+                                  "shadow-lg overflow-y-auto " // Shadow for aesthetics and  Ensure no horizontal scroll
                                 )}
                               >
                                 <Card

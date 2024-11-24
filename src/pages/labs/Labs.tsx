@@ -59,12 +59,19 @@ interface Equipaments {
   Image: string | undefined;
 }
 
+
+type DescText = {
+  [key: string]: string; 
+};
+
+
 // [●] Lab
 interface Lab {
   Id: string;
   LabName: string;
   LabResponsible: string;
   ResponsibleEmail: string | undefined;
+  DescriptionText: DescText
   DescriptionComponent: () => JSX.Element;
   EquipamentsQtd: number;
   EquipamentsIntro: string;
@@ -80,13 +87,9 @@ export const labsList: Lab[] = [
     LabName: "Laboratório de Alimentos e Bebidas Fermentadas",
     LabResponsible: "Dra. Ana Paula Trovatti Uetanabaro",
     ResponsibleEmail: "(aptuetanabaro@gmail.com)",
+    DescriptionText: {},
     DescriptionComponent: () => (
       <Box className="flex flex-col gap-3">
-        <Text size="2" highContrast className=" whitespace-pre-wrap">
-          Campus Soane Nazaré de Andrade{"\n"}
-          Rodovia Jorge Amado, km 16, Bairro Salobrinho{"\n"}
-          CEP 45662-900. Ilhéus-Bahia{"\n"}
-        </Text>
 
         <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Pesquisadora responsável:</Strong> Dra. Ana Paula Trovatti
@@ -168,16 +171,9 @@ export const labsList: Lab[] = [
     LabName: "Laboratório de Enzimologia Microbiana",
     LabResponsible: "Dra. Andréa Miura Costa",
     ResponsibleEmail: "(amcosta@uesc.br)",
+    DescriptionText: {Email:"labmicroagro@gmail.com", Telefone: "(73) 3680-5190/5275", Instagram:"@labma.uesc"},
     DescriptionComponent: () => (
       <Box className="flex flex-col gap-3">
-        <Text size="2" highContrast className=" whitespace-pre-wrap">
-          Campus Soane Nazaré de Andrade Rodovia Jorge Amado, km 16, Bairro
-          Salobrinho{"\n"}
-          CEP 45662-900. Ilhéus-Bahia{"\n"}
-          <Strong>Email:</Strong> labmicroagro@gmail.com {"\n"}
-          <Strong>Telefone:</Strong> (73) 3680-5190/5275{"\n"}
-          <Strong>Instagram:</Strong>: @labma.uesc{"\n"}
-        </Text>
 
         <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Pesquisadora responsável:</Strong> Dra. Andréa Miura Costa
@@ -242,13 +238,9 @@ export const labsList: Lab[] = [
     LabName: "Laboratório de Imunobiologia",
     LabResponsible: "Dra. Jane Lima dos Santos",
     ResponsibleEmail: "(jlsantos@uesc.br)",
+    DescriptionText: {},
     DescriptionComponent: () => (
       <Box className="flex flex-col gap-3">
-        <Text size="2" highContrast className=" whitespace-pre-wrap">
-          Campus Soane Nazaré de Andrade{"\n"}
-          Rodovia Jorge Amado, km 16, Bairro Salobrinho{"\n"}
-          CEP 45662-900. Ilhéus-Bahia{"\n"}
-        </Text>
 
         <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Pesquisadora responsável:</Strong> Dra. Jane Lima dos Santos
@@ -316,16 +308,9 @@ export const labsList: Lab[] = [
     LabName: "Laboratório de Biotecnologia Microbiana",
     LabResponsible: "Dra. Rachel Passos Rezende",
     ResponsibleEmail: "(rachel@uesc.br)",
+    DescriptionText: {Email:"labmiuesc@gmail.com", Telefone: "(73) 3680 5435", Instagram:"@labmiuesc"},
     DescriptionComponent: () => (
       <Box className="flex flex-col gap-3">
-        <Text size="2" highContrast className=" whitespace-pre-wrap">
-          Campus Soane Nazaré de Andrade{"\n"}
-          Rodovia Jorge Amado, km 16, Bairro Salobrinho{"\n"}
-          CEP 45662-900. Ilhéus-Bahia{"\n"}
-          <Strong>Email:</Strong> labmiuesc@gmail.com {"\n"}
-          <Strong>Telefone:</Strong> (73) 3680 5435{"\n"}
-          <Strong>Instagram:</Strong> @labmiuesc{"\n"}
-        </Text>
 
         <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Pesquisadora responsável:</Strong> Dra. Rachel Passos Rezende
@@ -473,14 +458,9 @@ export const labsList: Lab[] = [
     LabName: "Laboratório de Microbioprodutos",
     LabResponsible: "Dr. João Carlos Teixeira Dias \nProf. Eduardo Gross",
     ResponsibleEmail: "(rachel@uesc.br)/(egross@uesc.br)",
+    DescriptionText: {Telefone: "(73) 3680-5151"},
     DescriptionComponent: () => (
       <Box className="flex flex-col gap-3">
-        <Text size="2" highContrast className=" whitespace-pre-wrap">
-          Campus Soane Nazaré de Andrade{"\n"}
-          Rodovia Jorge Amado, km 16, Bairro Salobrinho{"\n"}
-          CEP 45662-900. Ilhéus-Bahia{"\n"}
-          <Strong>Telefone:</Strong> (73) 3680-5151{"\n"}
-        </Text>
 
         <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Pesquisadores responsáveis:{"\n"}</Strong>Dr. João Carlos
@@ -576,13 +556,9 @@ export const labsList: Lab[] = [
     LabName: "Laboratório de Interação Microrganismos-hospedeiro",
     LabResponsible: "Dra. Carla Cristina Romano",
     ResponsibleEmail: "(ccromano@uesc.br)",
+    DescriptionText: {},
     DescriptionComponent: () => (
       <Box className="flex flex-col gap-3">
-        <Text size="2" highContrast className=" whitespace-pre-wrap">
-          Campus Soane Nazaré de Andrade{"\n"}
-          Rodovia Jorge Amado, km 16, Bairro Salobrinho{"\n"}
-          CEP 45662-900. Ilhéus-Bahia{"\n"}
-        </Text>
 
         <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Pesquisadora responsável:</Strong> Dra. Carla Cristina Romano
@@ -657,16 +633,9 @@ export const labsList: Lab[] = [
     LabName: "Laboratório de Patologia Aplicada e Genética",
     LabResponsible: "Dra. Luciene C. Gastalho Campos Luiz ",
     ResponsibleEmail: "(lcgcluiz@uesc.br)",
+    DescriptionText: {Email:"lapagen@uesc.br", Instagram:"@lapa.gen"},
     DescriptionComponent: () => (
       <Box className="flex flex-col gap-3">
-        <Text size="2" highContrast className=" whitespace-pre-wrap">
-          Campus Soane Nazaré de Andrade Rodovia Jorge Amado, km 16, Bairro
-          Salobrinho{"\n"}
-          CEP 45662-900. Ilhéus-Bahia{"\n"}
-          <Strong>Email:</Strong> lapagen@uesc.br {"\n"}
-          <Strong>Telefone:</Strong> (73) 3680-5190/5275{"\n"}
-          <Strong>Instagram:</Strong>: @lapa.gen{"\n"}
-        </Text>
 
         <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Pesquisadora responsável:</Strong> Dra. Luciene C. Gastalho
@@ -763,13 +732,10 @@ export const labsList: Lab[] = [
     LabName: "Laboratório do Eixo Microbiota-Intestino-Cérebro",
     LabResponsible: "Dr. Eduardo Ary Villela Marinho",
     ResponsibleEmail: "(eavmarinho@uesc.br)",
+    DescriptionText: {},
     DescriptionComponent: () => (
       <Box className="flex flex-col gap-3">
-        <Text size="2" highContrast className=" whitespace-pre-wrap">
-          Campus Soane Nazaré de Andrade{"\n"}
-          Rodovia Jorge Amado, km 16, Bairro Salobrinho{"\n"}
-          CEP 45662-900. Ilhéus-Bahia{"\n"}
-        </Text>
+
 
         <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Pesquisadora responsável:</Strong> Dra. Carla Cristina Romano
@@ -805,18 +771,14 @@ export const labsList: Lab[] = [
   }, // . . .
 
   {
-    // [●] lemic
-    Id: "lemic",
+    // [●] labcet
+    Id: "labcet",
     LabName: "Laboratório de Biotecnologia Celular e Tecidual",
     LabResponsible: "Dra. Adriana Bozzi",
     ResponsibleEmail: "(abozzi@uesc.br)",
+    DescriptionText: {},
     DescriptionComponent: () => (
       <Box className="flex flex-col gap-3">
-        <Text size="2" highContrast className=" whitespace-pre-wrap">
-          Campus Soane Nazaré de Andrade{"\n"}
-          Rodovia Jorge Amado, km 16, Bairro Salobrinho{"\n"}
-          CEP 45662-900. Ilhéus-Bahia{"\n"}
-        </Text>
 
         <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Pesquisadora responsável:</Strong> Dra. Adriana Bozzi
@@ -888,8 +850,6 @@ export const labsList: Lab[] = [
     ),
     EquipamentsQtd: 0,
     EquipamentsIntro: "",
-    EquipamentsList: [
-
-    ],
+    EquipamentsList: [],
   }, // . . .
 ]; // [✪] labsList ✦────────➤
