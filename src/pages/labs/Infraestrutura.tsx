@@ -1,5 +1,4 @@
 // HERE Infraestrutura
-
 import {
   Box,
   Card,
@@ -8,119 +7,20 @@ import {
   Text,
   Button,
   Heading,
-  DropdownMenu,
   Dialog,
   Table,
   Inset,
-  Strong,
 } from "@radix-ui/themes";
 import classNames from "classnames";
-import { Link } from "react-router-dom";
 
 import { labsList } from "./Labs";
+import { Helmet } from "react-helmet-async";
 
-interface ButtonProps {
-  name: string;
-  path: string;
-}
+import { Dropdown_Menu, Card_Menu } from "../../components/menu/Menu";
 
-// {●} buttons
-const buttons: ButtonProps[] = [
-  { name: "Apresentação", path: "/" },
-  { name: "Como utilizar", path: "/como_utilizar" },
-  { name: "Infraestrutura", path: "/infraestrutura" },
-  { name: "Serviços prestados", path: "/servicos_prestados" },
-  { name: "Formulários", path: "/formularios" },
-  { name: "Comitê Gestor", path: "/comite_gestor" },
-  { name: "Publicações", path: "/publicacoes" },
-  { name: "Links", path: "/links" },
-  { name: "Contato", path: "/contato" },
-]; // . . . . . . . . .
-
-// {✪} Dropdown_Menu
-const Dropdown_Menu: React.FC = () => {
-  return (
-    <Flex gap="3" align="center">
-      <DropdownMenu.Root>
-        <DropdownMenu.Trigger>
-          <Button
-            variant="ghost"
-            size="2"
-            highContrast
-            color="gray"
-            className="cursor-pointer"
-          >
-            <Text weight="bold" size="3" className="mr-1">
-              Menu
-            </Text>
-
-            <DropdownMenu.TriggerIcon />
-          </Button>
-        </DropdownMenu.Trigger>
-
-        <DropdownMenu.Content
-          size="2"
-          color="gray"
-          variant="soft"
-          highContrast
-          className="bg-gray-100 border-none shadow drop-shadow-xl shadow-white"
-        >
-          {buttons.map(
-            (
-              item // {○} buttons
-            ) => (
-              <DropdownMenu.Item key={item.path} asChild>
-                <Link
-                  to={item.path}
-                  className="flex justify-start w-full px-4 py-4 cursor-pointer"
-                >
-                  <Text weight="bold" size="2" highContrast>
-                    {item.name}
-                  </Text>
-                </Link>
-              </DropdownMenu.Item>
-            )
-          )}
-        </DropdownMenu.Content>
-      </DropdownMenu.Root>
-    </Flex>
-  );
-}; // . . . . . . . . .
-
-// {✪} Card_Menu
-const Card_Menu: React.FC = () => {
-  return (
-    <Card
-      id="Card_Menu"
-      variant="ghost"
-      className=" flex w-[280px] justify-start p-8 mr-2 bg-gray-100 border-none shadow drop-shadow-xl shadow-white"
-    >
-      <ul className="space-y-2 w-full">
-        {buttons.map(
-          (
-            button // {○} buttons
-          ) => (
-            <li key={button.path}>
-              <Button
-                variant="ghost"
-                size="4"
-                color="gray"
-                className=" w-full"
-                highContrast
-              >
-                <Link to={button.path} className="flex w-full justify-start">
-                  <Text weight="bold" size="3">
-                    {button.name}
-                  </Text>
-                </Link>
-              </Button>
-            </li>
-          )
-        )}
-      </ul>
-    </Card>
-  );
-}; // . . . . . . . . .
+import CIBBiM_BG from "../../assets/bg_cropped2.svg";
+import { useWindowResize } from "../../hooks/useWindowResize";
+import { useState } from "react";
 
 // <✪> LabTemplate ✦───────────────➤
 const LabTemplate = () => {
@@ -187,14 +87,16 @@ const LabTemplate = () => {
                   <Dialog.Content
                     className={classNames(
                       "bg-gray-100",
-                      "w-[75vw] min-h-[600px] max-w-[12000px]", // Dialog width: 90% of the viewport, capped at 700px
+                      "w-[90vw] min-h-[600px] max-w-[12000px]", // Dialog width: 90% of the viewport, capped at 600px
                       "rounded-lg", // Rounded corners
-                      "p-12", // Padding
+                      "p-10", // Padding
                       "shadow-lg", // Shadow for aesthetics
-                      "overflow-y-auto" // Ensure no horizontal scroll
+                      "overflow-y-auto", // Ensure no horizontal scroll
+                      "lg:p-12 lg:w-[75vw]"
                     )}
                   >
-                    <Box // . . .
+                    <Box
+                      // . . . . . . . . . . . . . . .
                       // <●> DialogContent
                       // <○> Id
                       id={`DialogContent${lab.Id}`}
@@ -233,9 +135,11 @@ const LabTemplate = () => {
                           {lab.EquipamentsIntro}
                         </Text>
 
-                        <Box // . . . . . . . . .
+                        <Box // . . .
                           // _PIN_  EQUIPAMENTOS GRID
-                          className="columns-2 md:columns-3 gap-4 items-center"
+                          className={classNames(
+                            "columns-1 md:columns-3 gap-4 items-center",
+                          )}
                         >
                           {lab.EquipamentsList.map((Equipament, index) => (
                             <Dialog.Root key={index}>
@@ -263,7 +167,7 @@ const LabTemplate = () => {
                                       as="p"
                                       size="2"
                                       wrap="wrap"
-                                      className="line-clamp-6"
+                                      className="md:line-clamp-6"
                                     >
                                       {Equipament.Desc}
                                     </Text>
@@ -319,19 +223,32 @@ const LabTemplate = () => {
                                   </Box>
                                 </Card>
                               </Dialog.Content>
+                              {/* // . . . . . . . . . . . . . . . */}
                             </Dialog.Root>
                           ))}
                         </Box>
                       </Box>
-
-                      <Flex gap="3" justify="center">
-                        <Dialog.Close>
-                          <Button variant="soft" color="gray">
-                            🦀
-                          </Button>
-                        </Dialog.Close>
-                      </Flex>
                     </Box>
+
+                    <Flex
+                      className="absolute top-10 right-10"
+                      gap="3"
+                      justify="center"
+                    >
+                      <Dialog.Close>
+                        <Button variant="soft" color="gray">
+                          🦀
+                        </Button>
+                      </Dialog.Close>
+                    </Flex>
+
+                    <Flex className = "mt-10" gap="3" justify="center">
+                      <Dialog.Close>
+                        <Button variant="soft" color="gray">
+                          🦀
+                        </Button>
+                      </Dialog.Close>
+                    </Flex>
                   </Dialog.Content>
                 </Dialog.Root>
               </Table.RowHeaderCell>
@@ -345,39 +262,79 @@ const LabTemplate = () => {
 
 // ★ Infraestrutura ✦───────────────────────➤
 const Infraestrutura = () => {
-  // WARN  Missing helmet
+  // WARN  windowSize and useWindowResize. Remove in production!!
+
+  // ✳  [windowSize, setWindowSize]
+  const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
+
+  useWindowResize((width, height) => {
+    setWindowSize({ width, height }); // ↺ useWindowResize (setWindowSize)
+  });
 
   // ── ✦─DOM─➤
   return (
-    <Box id="infraestrutura_canvas" className="relative w-full h-screen">
+    <>
+      <Helmet title="Laboratórios e Equipamentos do CIBBiM" />
+
       <Box
-        // _PIN_  Panel1
-        id="Pane"
-        className="mx-16 p-16 overflow-hidden"
+        // ⊙ windowSize
+        className="fixed top-10 rounded-2xl right-10 bg-slate-600 p-2"
       >
-        <Box className="grid grid-rows-8 grid-flow-col gap-4">
+        <Text color="tomato" size="3" highContrast>
+          🦀{` wdith: ${windowSize.width}`} <br />
+          🦀{` height: ${windowSize.height}`}
+        </Text>
+      </Box>
+
+      <Box id="infraestrutura_canvas" className="relative w-full h-screen mt-4">
+        <Box
+          // _PIN_ panel1
+          id="panel1"
+          className={classNames(
+            "relative flex flex-col mx-10 z-10",
+            "lg:flex-row lg:mx-16 lg:px-16 lg:py-12 lg:gap-9"
+          )}
+        >
           <Box
-            className="row-span-8"
-            //{○} Card_Menu
+            // {○} Card_Menu
+            className="hidden w-[280px] lg:block"
           >
             <Card_Menu />
           </Box>
 
-          <Box className="row-span-8 col-span-2">
-            <Heading color="green" size="7" className="mb-6" highContrast>
+          <Box
+            // {○} Dropdown_Menu
+            className="relative flex lg:hidden mt-10"
+          >
+            <Dropdown_Menu />
+          </Box>
+
+          <Box className="flex flex-col gap-5">
+            <Heading color="green" size="7" highContrast className="mt-10">
               Infraestrutura
             </Heading>
 
-            <Text  as="div" color="gray" size="3" className="mb-3" highContrast>
+            <Text as="div" color="gray" size="3" highContrast>
               Conheça os laboratórios que compõem o CIBBiM, juntamente com os
               respectivos equipamentos disponíveis para a comunidade.
             </Text>
 
-            <LabTemplate />
+            <Box
+              // <○> LabTemplate
+              className="mb-10"
+            >
+              <LabTemplate />
+            </Box>
           </Box>
         </Box>
+
+        <div
+          id="CIBBiM_BG"
+          className="w-full h-[500px] bg-cover bg-center rotate-180 -mt-[500px] z-0"
+          style={{ backgroundImage: `url(${CIBBiM_BG})` }}
+        />
       </Box>
-    </Box>
+    </>
   );
 }; // ★ Infraestrutura ✦───────────────────────➤
 

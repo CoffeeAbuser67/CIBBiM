@@ -88,19 +88,19 @@ export const labsList: Lab[] = [
           CEP 45662-900. Ilhéus-Bahia{"\n"}
         </Text>
 
-        <Text size="3" highContrast className=" whitespace-pre-wrap">
+        <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Pesquisadora responsável:</Strong> Dra. Ana Paula Trovatti
           Uetanabaro
           {"\n"}
           (aptuetanabaro@gmail.com)
         </Text>
 
-        <Text size="3" highContrast className=" whitespace-pre-wrap">
+        <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Áreas de atuação:</Strong> Projetos e pesquisa aplicados em
           biotecnologia microbiana
         </Text>
 
-        <Text size="3" highContrast className=" whitespace-pre-wrap">
+        <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Expertise:</Strong> Isolamento e seleção de microrganismos de
           fermentações naturais e artesanais para aplicações industriais:
           Cerveja Artesanal; Cachaça Artesanal; Cafés especiais da Chapada da
@@ -110,32 +110,32 @@ export const labsList: Lab[] = [
 
         <Box className="flex flex-col gap-2">
           <Strong> Expertises do grupo: </Strong>
-          <Text>
+          <Text as="div"  highContrast className="text-sm sm:text-base">
             ◆ Coleta e isolamento de microrganismos em campo, especialmente de
             diversas origens, como fermentação do cacau, cachaça artesanal,
             kombucha, vinagre, endofíticos e cogumelos comestíveis.
           </Text>
 
-          <Text>
+          <Text as="div"  highContrast className="text-sm sm:text-base">
             ◆ Processamento de amostras, isolamento, cultivo, preservação,
             caracterização e identificação fenotípica (fisiologia) e genotípica
             (biomol) de leveduras e bactérias.
           </Text>
 
-          <Text>
+          <Text as="div"  highContrast className="text-sm sm:text-base">
             ◆ Utilização de resíduos agroindustriais para produção de enzimas de
             interesse industrial.
           </Text>
 
-          <Text>
+          <Text as="div"  highContrast className="text-sm sm:text-base">
             ◆ Prospecção de enzimas microbianas de interesse biotecnológico.
           </Text>
-          <Text>
+          <Text as="div"  highContrast className="text-sm sm:text-base">
             ◆ Pesquisas para a seleção de microrganismos com potencial
             biotecnológico para a produção/fermentação de: Cerveja, Cachaça,
             Iogurte, Café e Kombucha.
           </Text>
-          <Text>
+          <Text as="div"  highContrast className="text-sm sm:text-base">
             ◆ Análises de resultados, preparo de relatório bem fundamentados,
             escrita de projetos científicos nas áreas de nossa expertise.
           </Text>
@@ -179,17 +179,17 @@ export const labsList: Lab[] = [
           <Strong>Instagram:</Strong>: @labma.uesc{"\n"}
         </Text>
 
-        <Text size="3" highContrast className=" whitespace-pre-wrap">
+        <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Pesquisadora responsável:</Strong> Dra. Andréa Miura Costa
           {"\n"}
           (amcosta@uesc.br)
         </Text>
 
-        <Text size="3" highContrast className=" whitespace-pre-wrap">
+        <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Área de atuação:</Strong> Biotecnologia microbiana.
         </Text>
 
-        <Text size="3" highContrast className=" whitespace-pre-wrap">
+        <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Expertise:</Strong> Enzimas de origem microbiana e aplicações
           em alimentos, bebidas, controle biológico, produção de
           biocombustíveis, de biopolímeros, tratamento de efluentes
@@ -197,16 +197,16 @@ export const labsList: Lab[] = [
 
         <Box className="flex flex-col gap-2">
           <Strong> Expertises do grupo: </Strong>
-          <Text>
+          <Text as="div"  highContrast className="text-sm sm:text-base">
             ◆ Utilização de resíduos agroindustriais para produção de enzimas de
             interesse industrialveis.
           </Text>
 
-          <Text>
+          <Text as="div"  highContrast className="text-sm sm:text-base">
             ◆ Prospecção de enzimas microbianas de interesse biotecnológicorias.
           </Text>
 
-          <Text>
+          <Text as="div"  highContrast className="text-sm sm:text-base">
             ◆ Aplicações de enzimas microbianas em processos biotecnológicos e
             industriais.
           </Text>
@@ -250,18 +250,18 @@ export const labsList: Lab[] = [
           CEP 45662-900. Ilhéus-Bahia{"\n"}
         </Text>
 
-        <Text size="3" highContrast className=" whitespace-pre-wrap">
+        <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Pesquisadora responsável:</Strong> Dra. Jane Lima dos Santos
           {"\n"}
           (aptuetanabaro@gmail.com)
         </Text>
 
-        <Text size="3" highContrast className=" whitespace-pre-wrap">
+        <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Áreas de atuação:</Strong> imunologia, bioprospecção de
           antimicrobianos, interação patógeno-hospedeiro.
         </Text>
 
-        <Text size="3" highContrast className=" whitespace-pre-wrap">
+        <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Expertises do grupo:</Strong> O laboratório de Imunobiologia
           da UESC compõe-se de profissionais qualificados nas áreas de
           Imunologia, Microbiologia e Parasitologia. A equipe é formada por
@@ -327,18 +327,18 @@ export const labsList: Lab[] = [
           <Strong>Instagram:</Strong> @labmiuesc{"\n"}
         </Text>
 
-        <Text size="3" highContrast className=" whitespace-pre-wrap">
+        <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Pesquisadora responsável:</Strong> Dra. Rachel Passos Rezende
           {"\n"}
           (rachel@uesc.br)
         </Text>
 
-        <Text size="3" highContrast className=" whitespace-pre-wrap">
+        <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Áreas de atuação:</Strong> biotecnologia microbiana, genética
           de microrganismos, microbiologia clássica.
         </Text>
 
-        <Text size="3" highContrast className=" whitespace-pre-wrap">
+        <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Sobre o laboratório:</Strong> O Laboratório de Biotecnologia
           Microbiana (LABMI) é um laboratório multiusuários liderado e
           coordenado pela prof.ª Drª Rachel Passos Rezende, vinculada ao
@@ -359,7 +359,7 @@ export const labsList: Lab[] = [
           de biotecnologia microbiana.
         </Text>
 
-        <Text size="3" highContrast className=" whitespace-pre-wrap">
+        <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Expertises do grupo:</Strong> Equipe capacitada em atividades
           de rotina microbiológica e experimentos com técnicas de microbiologia
           clássica repassadas de geração em geração pela Drª Rachel aos nossos
@@ -482,14 +482,14 @@ export const labsList: Lab[] = [
           <Strong>Telefone:</Strong> (73) 3680-5151{"\n"}
         </Text>
 
-        <Text size="3" highContrast className=" whitespace-pre-wrap">
+        <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Pesquisadores responsáveis:{"\n"}</Strong>Dr. João Carlos
           Teixeira Dias (jctdias@uesc.br)
           {"\n"}
           Prof. Eduardo Gross (egross@uesc.br)
         </Text>
 
-        <Text size="3" highContrast className=" whitespace-pre-wrap">
+        <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Sobre o laboratório:</Strong> Como resolver problemas
           ambientais conhecendo e utilizando a vasta diversidade microbiana
           buscando promover o bem-estar da sociedade? Nossa missão no
@@ -522,7 +522,7 @@ export const labsList: Lab[] = [
           e ambientalmente!
         </Text>
 
-        <Text size="3" highContrast className=" whitespace-pre-wrap">
+        <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Equipamentos e facilidades:</Strong> Ao longo das últimas duas
           décadas, o Laboratório de Microbioprodutos (anteriormente chamado de
           Laboratório de Monitoramento Ambiental) vêm se estruturando para
@@ -584,13 +584,13 @@ export const labsList: Lab[] = [
           CEP 45662-900. Ilhéus-Bahia{"\n"}
         </Text>
 
-        <Text size="3" highContrast className=" whitespace-pre-wrap">
+        <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Pesquisadora responsável:</Strong> Dra. Carla Cristina Romano
           {"\n"}
           (ccromano@uesc.br)
         </Text>
 
-        <Text size="3" highContrast className=" whitespace-pre-wrap">
+        <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Sobre o laboratório:</Strong> O Laboratório de Interação
           Microrganismos-Hospedeiro (LabMinHosp), coordenado pela Profa. Dra
           Carla Cristina Romano, possui nível de Biossegurança 2 (NB2) e tem
@@ -668,19 +668,19 @@ export const labsList: Lab[] = [
           <Strong>Instagram:</Strong>: @lapa.gen{"\n"}
         </Text>
 
-        <Text size="3" highContrast className=" whitespace-pre-wrap">
+        <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Pesquisadora responsável:</Strong> Dra. Luciene C. Gastalho
           Campos Luiz
           {"\n"}
           (lcgcluiz@uesc.br)
         </Text>
 
-        <Text size="3" highContrast className=" whitespace-pre-wrap">
+        <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Grande área de atuação:</Strong> Genética Médica de doenças
           Infecciosas e crônico-degenerativas
         </Text>
 
-        <Text size="3" highContrast className=" whitespace-pre-wrap">
+        <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Expertise:</Strong> Uso de técnicas moleculares, como PCR,
           qPCR (PCR quantitativo) para detectar marcadores genéticos de agentes
           infecciosos e mutações relacionadas a doenças crônicas e identificação
@@ -688,7 +688,7 @@ export const labsList: Lab[] = [
           infecções ou condições crônicas.
         </Text>
 
-        <Text size="3" highContrast className=" whitespace-pre-wrap">
+        <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Áreas de atuação:</Strong> Identificação de biomarcadores que
           possam prever suscetibilidade à doença, progressão ou resposta ao
           tratamento, incluindo o estudo das interações entre o hospedeiro e o
@@ -771,13 +771,13 @@ export const labsList: Lab[] = [
           CEP 45662-900. Ilhéus-Bahia{"\n"}
         </Text>
 
-        <Text size="3" highContrast className=" whitespace-pre-wrap">
+        <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Pesquisadora responsável:</Strong> Dra. Carla Cristina Romano
           {"\n"}
           (ccromano@uesc.br)
         </Text>
 
-        <Text size="3" highContrast className=" whitespace-pre-wrap">
+        <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Sobre o laboratório:</Strong> O LEMIC - Laboratório do Eixo
           Microbiota-Intestino-Cérebro é um ambiente em que são realizados
           experimentos e ensaios sobre o comportamento de camundongos
@@ -818,18 +818,18 @@ export const labsList: Lab[] = [
           CEP 45662-900. Ilhéus-Bahia{"\n"}
         </Text>
 
-        <Text size="3" highContrast className=" whitespace-pre-wrap">
+        <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Pesquisadora responsável:</Strong> Dra. Adriana Bozzi
           {"\n"}
           (abozzi@uesc.br)
         </Text>
 
-        <Text size="3" highContrast className=" whitespace-pre-wrap">
+        <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Áreas de atuação:</Strong> morfologia, imunologia,
           microbiologia e biotecnologia.
         </Text>
 
-        <Text size="3" highContrast className=" whitespace-pre-wrap">
+        <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Sobre o laboratório:</Strong> O Laboratório de Biotecnologia
           Celular e Tecidual (LABCET) é um laboratório multiusuários liderado e
           coordenado pela Prof.ª Drª Adriana Bozzi, vinculado ao Centro de
@@ -865,7 +865,7 @@ export const labsList: Lab[] = [
           fronteiras no tratamento e recuperação de desordens morfofisiológicas.
         </Text>
 
-        <Text size="3" highContrast className=" whitespace-pre-wrap">
+        <Text as="div"  highContrast className="text-sm sm:text-base">
           <Strong>Sobre a Equipe:</Strong> A equipe do LABCET é composta por
           estudantes de iniciação científica, mestrado e doutorado, professores
           pesquisadores do Departamento de Ciências Biológicas (DCB) e Ciências
