@@ -42,12 +42,12 @@ const buttons: ButtonProps[] = [
 // {✪} Dropdown_Menu
 const Dropdown_Menu: React.FC = () => {
   return (
-    <Flex gap="3" align="center">
+    <Card variant="ghost" className="flex gap-3">
       <DropdownMenu.Root>
         <DropdownMenu.Trigger>
           <Button
-            variant="ghost"
-            size="2"
+            variant="surface"
+            size="3"
             highContrast
             color="gray"
             className="cursor-pointer"
@@ -85,7 +85,7 @@ const Dropdown_Menu: React.FC = () => {
           )}
         </DropdownMenu.Content>
       </DropdownMenu.Root>
-    </Flex>
+    </Card>
   );
 }; // . . . . . . . . .
 
@@ -95,7 +95,7 @@ const Card_Menu: React.FC = () => {
     <Card
       id="Card_Menu"
       variant="ghost"
-      className=" flex w-[280px] justify-start p-8 mr-2 bg-gray-100 border-none shadow drop-shadow-xl shadow-white"
+      className=" flex w-[280px] justify-start p-8 mr-2 mt-6 bg-gray-100 border-none shadow drop-shadow-xl shadow-white"
     >
       <ul className="space-y-2 w-full">
         {buttons.map(
@@ -309,44 +309,67 @@ const Home = () => {
   });
 
   // ── ✦─DOM─➤
+
   return (
     <Box id="home_canvas" className="relative w-full h-screen mt-4">
       <div
-        // CIBBiM_BG
+        //HERE CIBBiM_BG
         id="CIBBiM_BG"
-        className="absolute w-full h-[500px] bg-cover bg-center"
+        className="absolute top-0 w-full h-[500px] bg-cover bg-center"
         style={{ backgroundImage: `url(${CIBBiM_BG})` }}
       />
 
       <Box
+        // ⊙ windowSize
+        className="fixed top-10 rounded-2xl right-10 bg-slate-600 p-2"
+      >
+        <Text color="tomato" size="3" highContrast>
+          🦀{` wdith: ${windowSize.width}`} <br />
+          🦀{` height: ${windowSize.height}`}
+        </Text>
+      </Box>
+
+      <Box
+        // . . . . . . . . . . . . . .
         // _PIN_ panel1
         id="panel1"
-        className="mx-16 p-16 "
+        className={classNames(
+          "flex flex-col mx-10 mb-2",
+          "lg:flex-row lg:mx-16 lg:px-16 lg:py-12 lg:gap-9"
+        )}
       >
-        <Box className="grid grid-rows-6 grid-flow-col gap-8">
-          <Box
-            className="row-span-6"
-            //{○} Card_Menu
+        <Box
+          // {○} Card_Menu
+          className="hidden w-[280px] lg:block"
+        >
+          <Card_Menu />
+        </Box>
+
+        <Box className="flex flex-col gap-9">
+          <Heading
+            className="relative mt-10"
+            color="green"
+            size="7"
+            highContrast
           >
-            <Card_Menu />
+            Centro de Inovação em Biologia e Biotecnologia Microbiana
+          </Heading>
+
+          <Box
+            // {○} Dropdown_Menu
+            className="relative flex lg:hidden mt-5"
+          >
+            <Dropdown_Menu />
           </Box>
 
-          <Box className=" col-span-2">
-            <Heading color="green" size="7" highContrast>
-              Centro de Inovação em Biologia e Biotecnologia Microbiana
-            </Heading>
+          <Box
+            className="flex items-center justify-center"
+            // <○> CIBBiM_LOGO_SVG
+          >
+            <CIBBiM_LOGO_SVG />
           </Box>
 
-          <Box className=" row-span-2 col-span-2">
-            <Box
-              className="flex items-center justify-center"
-              // <○> CIBBiM_LOGO_SVG
-            >
-              <CIBBiM_LOGO_SVG />
-            </Box>
-          </Box>
-
-          <Box className=" row-span-3 col-span-2">
+          <Box className=" flex flex-col">
             <Text as="p" my="5" size="3" highContrast>
               A construção da estrutura física do Centro de Inovação em Biologia
               e Biotecnologia Microbiana (CIBBiM) é fruto do planejamento de
@@ -356,14 +379,12 @@ const Home = () => {
               diversas edificações do campus Soane Nazaré de Andrade onde os
               projetos em cooperação com pesquisadores da UESC e de outras
               instituições são desenvolvidos utilizando a infraestrutura física
-              e de equipamentos descentralizados.Com a construção e
+              e de equipamentos descentralizados. Com a construção e
               funcionamento do CIBBiM, estes laboratórios estão disponíveis, de
               forma organizada, coerente e centralizada, para instituições de
               ensino, saúde e pesquisa públicas e privadas em um prédio único de
-              caráter multiusuário e multidisciplinar.
-            </Text>
+              caráter multiusuário e multidisciplinar.<br/> <br/>
 
-            <Text as="p" my="5" size="3" highContrast>
               O CIBBiM, funcionando dentro de uma única edificação, facilita e
               agiliza a execução de estudos, ensaios, exames e análises diversas
               envolvendo a biologia e biotecnologia de microrganismos nas áreas
@@ -381,7 +402,7 @@ const Home = () => {
         // . . . . . . . . . . . . . .
         //_PIN_ panel2
         id="panel2"
-        className="relative bg-[#036D60] w-screen h-[520px]"
+        className="relative bg-[#036D60] w-full h-[520px] mb-2"
       >
         <Box
           // HERE jungleMicroscopeBG
@@ -396,12 +417,9 @@ const Home = () => {
           lg	1024px	
           xl	1280px	
           2xl	1536px
-        
+          ---
           size 2 = text-sm
           size 3 = text-base
-
-
-  
         */}
 
         <Box
@@ -409,37 +427,30 @@ const Home = () => {
           id="opacity BG"
           className={classNames(
             "absolute w-full h-full bg-[#036D60] bg-cover bg-center",
-            "opacity-75",
-            "xl:opacity-0",
+            "opacity-80",
+            "xl:opacity-0"
           )}
         />
 
         <Box
           id="Bg_txt"
-          className= {classNames(
+          className={classNames(
             "absolute w-full h-full flex items-center justify-center p-10",
             "xl:w-[520px] h-[520px] xl:right-0",
             "2xl:mr-24"
           )}
-          
         >
-          <Text   
-            as="div" 
-            my="5" 
-            highContrast
-            className = "text-sm sm:text-base"
-          
-          
-          >
+          <Text as="div" my="5" highContrast className="text-sm sm:text-base">
             <Strong>
               Por estar situado no interior da Bahia, o CIBBiM tem como missão
               atender à comunidade interna (universidade) e externa (empresas,
               clínicas, hospitais, institutos) na identificação fenotípica e
               genotípica de microrganismos, bem como de metabólitos provenientes
-              de bactérias e fungos visando o desenvolvimento de processos e
+              de bactérias e fungos, visando o desenvolvimento de processos e
               produtos biotecnológicos. <br />
               <br />
             </Strong>
+
             <Strong>
               Ao desenvolver pesquisas que promovam o equilíbrio e saúde do
               ecossistema (conceito de One Health) e ao avançar o conhecimento
@@ -456,9 +467,20 @@ const Home = () => {
       <Box
         // . . . . . . . . . . . . . .
         //_PIN_ panel3
-        className="flex flex-col justify-center items-center h-[300px] gap-8 mx-16 p-16"
-      >
-        <Text as="p" my="5" size="3" highContrast>
+        className="relative flex justify-center items-center w-full mb-5">
+
+        <Text 
+          as="div" 
+          my="5" 
+          highContrast 
+          className ={classNames(
+              "w-full mx-10 mb-10",
+              "lg:mx-16 lg:px-16 lg:py-12"
+
+            )} >
+          
+          
+          
           Por ser um Centro que lida com microrganismos, o prédio do CIBBiM
           apresenta nível de Biossegurança 2 e assim o sendo, os usuários têm
           necessidade de realizar além do cadastro para as atividades de
@@ -477,16 +499,6 @@ const Home = () => {
           Veja como utilizar os laboratórios, equipamentos e serviços do Centro
           de Inovação em Biologia e Biotecnologia Microbiana da UESC.
         </Text>
-
-        <Box
-          // ⊙ windowSize
-          className="fixed top-10 rounded-2xl right-10 bg-slate-600 p-2"
-        >
-          <Text color="tomato" size="3" highContrast>
-            🦀{` wdith: ${windowSize.width}`} <br />
-            🦀{` height: ${windowSize.height}`}
-          </Text>
-        </Box>
       </Box>
     </Box>
   );
