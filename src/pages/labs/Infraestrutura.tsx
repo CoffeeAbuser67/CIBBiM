@@ -22,6 +22,18 @@ import CIBBiM_BG from "../../assets/bg_cropped2.svg";
 import { useWindowResize } from "../../hooks/useWindowResize";
 import { useState } from "react";
 
+// ● CrossSVG
+const CrossSVG = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={15} height={15} fill="none">
+    <path
+      fill="currentColor"
+      fillRule="evenodd"
+      d="M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687 4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5l3.469-3.468Z"
+      clipRule="evenodd"
+    />
+  </svg>
+);
+
 // <✪> LabTemplate ✦───────────────➤
 const LabTemplate = () => {
   return (
@@ -95,6 +107,17 @@ const LabTemplate = () => {
                       "lg:p-12 lg:w-[75vw]"
                     )}
                   >
+                    <Flex gap="3" justify="end">
+                      <Dialog.Close>
+                        <Button
+                          // ○ CrossSVG
+                          variant="soft"
+                          color="gray"
+                        >
+                          <CrossSVG />
+                        </Button>
+                      </Dialog.Close>
+                    </Flex>
                     <Box
                       // . . . . . . . . . . . . . . .
                       // <●> DialogContent
@@ -138,12 +161,12 @@ const LabTemplate = () => {
                         <Box // . . .
                           // _PIN_  EQUIPAMENTOS GRID
                           className={classNames(
-                            "columns-1 md:columns-3 gap-4 items-center",
+                            "columns-1 md:columns-3 gap-4 items-center"
                           )}
                         >
                           {lab.EquipamentsList.map((Equipament, index) => (
                             <Dialog.Root key={index}>
-                              <Dialog.Trigger>
+                              <Dialog.Trigger className = "pointer-events-none md:pointer-events-auto">
                                 <Card // <●> NestedDialogTrigger
                                   className="flex flex-col gap-5 shadow-md bg-slate-200 cursor-pointer"
                                   size="2"
@@ -179,12 +202,11 @@ const LabTemplate = () => {
                                 className={classNames(
                                   // . . .
                                   // <●> NestedDialogcontent
-                                  "bg-gray-100",
-                                  "w-full min-h-[600px] max-w-[1200px]", // Dialog width: 90% of the viewport, capped at 700px
-                                  "rounded-lg", // Rounded corners
-                                  "p-12", // Padding
-                                  "shadow-lg", // Shadow for aesthetics
-                                  "overflow-y-auto" // Ensure no horizontal scroll
+                      
+                                  "w-full min-h-[600px] max-w-[1200px] rounded-lg bg-gray-100", 
+                                  "p-10 md:p-12 ", // Padding
+                                  "shadow-lg overflow-y-auto ", // Shadow for aesthetics and  Ensure no horizontal scroll
+                                
                                 )}
                               >
                                 <Card
@@ -230,22 +252,14 @@ const LabTemplate = () => {
                       </Box>
                     </Box>
 
-                    <Flex
-                      className="absolute top-10 right-10"
-                      gap="3"
-                      justify="center"
-                    >
+                    <Flex className="mt-10" gap="3" justify="center">
                       <Dialog.Close>
-                        <Button variant="soft" color="gray">
-                          🦀
-                        </Button>
-                      </Dialog.Close>
-                    </Flex>
-
-                    <Flex className = "mt-10" gap="3" justify="center">
-                      <Dialog.Close>
-                        <Button variant="soft" color="gray">
-                          🦀
+                        <Button
+                          // ○ CrossSVG
+                          variant="soft"
+                          color="gray"
+                        >
+                          <CrossSVG />
                         </Button>
                       </Dialog.Close>
                     </Flex>
