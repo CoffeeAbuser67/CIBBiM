@@ -10,11 +10,11 @@ interface ButtonProps {
 // {●} buttons
 const buttons: ButtonProps[] = [
   { name: "Apresentação", path: "/" },
-  { name: "Como utilizar", path: "/como_utilizar" },
+  { name: "Como utilizar", path: "/comoutilizar" },
   { name: "Infraestrutura", path: "/infraestrutura" },
   { name: "Serviços prestados", path: "/servicos_prestados" },
   { name: "Formulários", path: "/formularios" },
-  { name: "Comitê Gestor", path: "/comite_gestor" },
+  { name: "Comitê Gestor", path: "/comitegestor"},
   { name: "Publicações", path: "/publicacoes" },
   { name: "Links", path: "/links" },
   { name: "Contato", path: "/contato" },

@@ -128,8 +128,6 @@ const LabTemplate = () => {
                       <Box className="flex flex-col">
                         <Dialog.Title as="h1">{lab.LabName}</Dialog.Title>
 
-                        {/* HERE ✉ */}
-
                         <Dialog.Description className="text-xs lg:text-sm">
                           <span className=" text-sm block">
                             <strong>
@@ -328,7 +326,7 @@ const Infraestrutura = () => {
         </Text>
       </Box>
 
-      <Box id="infraestrutura_canvas" className="relative w-full h-screen mt-4">
+      <Box id="infraestrutura_canvas" className="relative w-full h-screen mt-3">
         <Box
           // _PIN_ panel1
           id="panel1"
@@ -371,6 +369,7 @@ const Infraestrutura = () => {
         </Box>
 
         <div
+          // HERE CIBBiM_BG
           id="CIBBiM_BG"
           className="w-full h-[500px] bg-cover bg-center rotate-180 -mt-[500px] z-0"
           style={{ backgroundImage: `url(${CIBBiM_BG})` }}

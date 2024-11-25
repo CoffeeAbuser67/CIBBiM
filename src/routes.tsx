@@ -4,7 +4,10 @@ import { lazy } from "@loadable/component";
 import Default from "./layouts/Default";
 
 const Home = lazy(() => import("./pages/home/Home"));
-const Oxe = lazy(() => import("./pages/Oxe"));
+const ComoUtilizar = lazy(() => import("./pages/ComoUtilizar"));
+const ComiteGestor = lazy(() => import("./pages/ComiteGestor"));
+const Contato = lazy(() => import("./pages/Contato"));
+
 const Infra = lazy(() => import("./pages/labs/Infraestrutura"));
 
 const routes = [
@@ -12,26 +15,30 @@ const routes = [
     path: "/",
     element: <Default />,
     children: [
-
       {
         path: "", // [ROUTE] /
-        element: <Home />
+        element: <Home />,
       },
 
       {
         path: "infraestrutura", // [ROUTE] /
-        element: <Infra />
+        element: <Infra />,
       },
-
 
       {
-        path: "oxe", // [ROUTE] /oxe
-        element: <Oxe />
+        path: "comoutilizar", // [ROUTE] /
+        element: <ComoUtilizar />,
       },
 
+      {
+        path: "comitegestor", // [ROUTE] /
+        element: <ComiteGestor />,
+      },
 
-
-
+      {
+        path: "contato", // [ROUTE] /
+        element: <Contato />,
+      },
     ],
   },
 ];
