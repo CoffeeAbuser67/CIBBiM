@@ -107,7 +107,7 @@ const LabTemplate = () => {
                       "lg:p-12 lg:w-[75vw]"
                     )}
                   >
-                    <Flex gap="3" justify="end">
+                    <Flex className = "mb-2" gap="3" justify="end">
                       <Dialog.Close>
                         <Button
                           // ○ CrossSVG
@@ -164,14 +164,6 @@ const LabTemplate = () => {
                           )}
                         </Dialog.Description>
 
-                        {/* <Heading size="3">
-                          Centro de Inovação em Biologia e Biotecnologia
-                          Microbiana
-                        </Heading>
-
-                        <Heading size="3">
-                          Universidade Estadual de Santa Cruz
-                        </Heading> */}
                       </Box>
 
                       <Box
@@ -190,6 +182,7 @@ const LabTemplate = () => {
                           as="div"
                           weight="bold"
                           highContrast
+                          className = "text-sm sm:text-base"
                         >
                           {lab.EquipamentsIntro}
                         </Text>

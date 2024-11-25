@@ -52,6 +52,20 @@ import LAPAGEN_FOTO10 from "../../assets/lapagen/FOTO10.jpg";
 
 import LEMIC_FOTO1 from "../../assets/lemic/FOTO1.jpg";
 
+import LDVEX_FOTO1 from "../../assets/ldvex/FOTO1.jpg"
+import LDVEX_FOTO2 from "../../assets/ldvex/FOTO2.jpg"
+import LDVEX_FOTO3 from "../../assets/ldvex/FOTO3.jpg"
+import LDVEX_FOTO4 from "../../assets/ldvex/FOTO4.jpg"
+import LDVEX_FOTO5 from "../../assets/ldvex/FOTO5.jpg"
+import LDVEX_FOTO6 from "../../assets/ldvex/FOTO6.png"
+import LDVEX_FOTO7 from "../../assets/ldvex/FOTO7.png"
+import LDVEX_FOTO8 from "../../assets/ldvex/FOTO8.jpg"
+import LDVEX_FOTO9 from "../../assets/ldvex/FOTO9.jpg"
+import LDVEX_FOTO10 from "../../assets/ldvex/FOTO10.jpg"
+
+
+
+
 // [●] Equipaments
 interface Equipaments {
   Title: string;
@@ -59,11 +73,9 @@ interface Equipaments {
   Image: string | undefined;
 }
 
-
 type DescText = {
-  [key: string]: string; 
+  [key: string]: string;
 };
-
 
 // [●] Lab
 interface Lab {
@@ -71,7 +83,7 @@ interface Lab {
   LabName: string;
   LabResponsible: string;
   ResponsibleEmail: string | undefined;
-  DescriptionText: DescText
+  DescriptionText: DescText;
   DescriptionComponent: () => JSX.Element;
   EquipamentsQtd: number;
   EquipamentsIntro: string;
@@ -90,20 +102,19 @@ export const labsList: Lab[] = [
     DescriptionText: {},
     DescriptionComponent: () => (
       <Box className="flex flex-col gap-3">
-
-        <Text as="div"  highContrast className="text-sm sm:text-base">
+        <Text as="div" highContrast className="text-sm sm:text-base">
           <Strong>Pesquisadora responsável:</Strong> Dra. Ana Paula Trovatti
           Uetanabaro
           {"\n"}
           (aptuetanabaro@gmail.com)
         </Text>
 
-        <Text as="div"  highContrast className="text-sm sm:text-base">
+        <Text as="div" highContrast className="text-sm sm:text-base">
           <Strong>Áreas de atuação:</Strong> Projetos e pesquisa aplicados em
           biotecnologia microbiana
         </Text>
 
-        <Text as="div"  highContrast className="text-sm sm:text-base">
+        <Text as="div" highContrast className="text-sm sm:text-base">
           <Strong>Expertise:</Strong> Isolamento e seleção de microrganismos de
           fermentações naturais e artesanais para aplicações industriais:
           Cerveja Artesanal; Cachaça Artesanal; Cafés especiais da Chapada da
@@ -111,34 +122,35 @@ export const labsList: Lab[] = [
           humano e animal; Kombucha; Cogumelos comestíveis.
         </Text>
 
-        <Box className="flex flex-col gap-2">
+        <Box className="flex flex-col gap-2 text-sm sm:text-base">
           <Strong> Expertises do grupo: </Strong>
-          <Text as="div"  highContrast className="text-sm sm:text-base">
+
+          <Text as="div" highContrast className="text-sm sm:text-base">
             ◆ Coleta e isolamento de microrganismos em campo, especialmente de
             diversas origens, como fermentação do cacau, cachaça artesanal,
             kombucha, vinagre, endofíticos e cogumelos comestíveis.
           </Text>
 
-          <Text as="div"  highContrast className="text-sm sm:text-base">
+          <Text as="div" highContrast className="text-sm sm:text-base">
             ◆ Processamento de amostras, isolamento, cultivo, preservação,
             caracterização e identificação fenotípica (fisiologia) e genotípica
             (biomol) de leveduras e bactérias.
           </Text>
 
-          <Text as="div"  highContrast className="text-sm sm:text-base">
+          <Text as="div" highContrast className="text-sm sm:text-base">
             ◆ Utilização de resíduos agroindustriais para produção de enzimas de
             interesse industrial.
           </Text>
 
-          <Text as="div"  highContrast className="text-sm sm:text-base">
+          <Text as="div" highContrast className="text-sm sm:text-base">
             ◆ Prospecção de enzimas microbianas de interesse biotecnológico.
           </Text>
-          <Text as="div"  highContrast className="text-sm sm:text-base">
+          <Text as="div" highContrast className="text-sm sm:text-base">
             ◆ Pesquisas para a seleção de microrganismos com potencial
             biotecnológico para a produção/fermentação de: Cerveja, Cachaça,
             Iogurte, Café e Kombucha.
           </Text>
-          <Text as="div"  highContrast className="text-sm sm:text-base">
+          <Text as="div" highContrast className="text-sm sm:text-base">
             ◆ Análises de resultados, preparo de relatório bem fundamentados,
             escrita de projetos científicos nas áreas de nossa expertise.
           </Text>
@@ -171,38 +183,41 @@ export const labsList: Lab[] = [
     LabName: "Laboratório de Enzimologia Microbiana",
     LabResponsible: "Dra. Andréa Miura Costa",
     ResponsibleEmail: "(amcosta@uesc.br)",
-    DescriptionText: {Email:"labmicroagro@gmail.com", Telefone: "(73) 3680-5190/5275", Instagram:"@labma.uesc"},
+    DescriptionText: {
+      Email: "labmicroagro@gmail.com",
+      Telefone: "(73) 3680-5190/5275",
+      Instagram: "@labma.uesc",
+    },
     DescriptionComponent: () => (
       <Box className="flex flex-col gap-3">
-
-        <Text as="div"  highContrast className="text-sm sm:text-base">
+        <Text as="div" highContrast className="text-sm sm:text-base">
           <Strong>Pesquisadora responsável:</Strong> Dra. Andréa Miura Costa
           {"\n"}
           (amcosta@uesc.br)
         </Text>
 
-        <Text as="div"  highContrast className="text-sm sm:text-base">
+        <Text as="div" highContrast className="text-sm sm:text-base">
           <Strong>Área de atuação:</Strong> Biotecnologia microbiana.
         </Text>
 
-        <Text as="div"  highContrast className="text-sm sm:text-base">
+        <Text as="div" highContrast className="text-sm sm:text-base">
           <Strong>Expertise:</Strong> Enzimas de origem microbiana e aplicações
           em alimentos, bebidas, controle biológico, produção de
           biocombustíveis, de biopolímeros, tratamento de efluentes
         </Text>
 
-        <Box className="flex flex-col gap-2">
+        <Box className="flex flex-col gap-2 text-sm sm:text-base">
           <Strong> Expertises do grupo: </Strong>
-          <Text as="div"  highContrast className="text-sm sm:text-base">
+          <Text as="div" highContrast className="text-sm sm:text-base">
             ◆ Utilização de resíduos agroindustriais para produção de enzimas de
             interesse industrialveis.
           </Text>
 
-          <Text as="div"  highContrast className="text-sm sm:text-base">
+          <Text as="div" highContrast className="text-sm sm:text-base">
             ◆ Prospecção de enzimas microbianas de interesse biotecnológicorias.
           </Text>
 
-          <Text as="div"  highContrast className="text-sm sm:text-base">
+          <Text as="div" highContrast className="text-sm sm:text-base">
             ◆ Aplicações de enzimas microbianas em processos biotecnológicos e
             industriais.
           </Text>
@@ -241,19 +256,18 @@ export const labsList: Lab[] = [
     DescriptionText: {},
     DescriptionComponent: () => (
       <Box className="flex flex-col gap-3">
-
-        <Text as="div"  highContrast className="text-sm sm:text-base">
+        <Text as="div" highContrast className="text-sm sm:text-base">
           <Strong>Pesquisadora responsável:</Strong> Dra. Jane Lima dos Santos
           {"\n"}
           (aptuetanabaro@gmail.com)
         </Text>
 
-        <Text as="div"  highContrast className="text-sm sm:text-base">
+        <Text as="div" highContrast className="text-sm sm:text-base">
           <Strong>Áreas de atuação:</Strong> imunologia, bioprospecção de
           antimicrobianos, interação patógeno-hospedeiro.
         </Text>
 
-        <Text as="div"  highContrast className="text-sm sm:text-base">
+        <Text as="div" highContrast className="text-sm sm:text-base ">
           <Strong>Expertises do grupo:</Strong> O laboratório de Imunobiologia
           da UESC compõe-se de profissionais qualificados nas áreas de
           Imunologia, Microbiologia e Parasitologia. A equipe é formada por
@@ -308,22 +322,25 @@ export const labsList: Lab[] = [
     LabName: "Laboratório de Biotecnologia Microbiana",
     LabResponsible: "Dra. Rachel Passos Rezende",
     ResponsibleEmail: "(rachel@uesc.br)",
-    DescriptionText: {Email:"labmiuesc@gmail.com", Telefone: "(73) 3680 5435", Instagram:"@labmiuesc"},
+    DescriptionText: {
+      Email: "labmiuesc@gmail.com",
+      Telefone: "(73) 3680 5435",
+      Instagram: "@labmiuesc",
+    },
     DescriptionComponent: () => (
       <Box className="flex flex-col gap-3">
-
-        <Text as="div"  highContrast className="text-sm sm:text-base">
+        <Text as="div" highContrast className="text-sm sm:text-base">
           <Strong>Pesquisadora responsável:</Strong> Dra. Rachel Passos Rezende
           {"\n"}
           (rachel@uesc.br)
         </Text>
 
-        <Text as="div"  highContrast className="text-sm sm:text-base">
+        <Text as="div" highContrast className="text-sm sm:text-base">
           <Strong>Áreas de atuação:</Strong> biotecnologia microbiana, genética
           de microrganismos, microbiologia clássica.
         </Text>
 
-        <Text as="div"  highContrast className="text-sm sm:text-base">
+        <Text as="div" highContrast className="text-sm sm:text-base">
           <Strong>Sobre o laboratório:</Strong> O Laboratório de Biotecnologia
           Microbiana (LABMI) é um laboratório multiusuários liderado e
           coordenado pela prof.ª Drª Rachel Passos Rezende, vinculada ao
@@ -344,7 +361,7 @@ export const labsList: Lab[] = [
           de biotecnologia microbiana.
         </Text>
 
-        <Text as="div"  highContrast className="text-sm sm:text-base">
+        <Text as="div" highContrast className="text-sm sm:text-base">
           <Strong>Expertises do grupo:</Strong> Equipe capacitada em atividades
           de rotina microbiológica e experimentos com técnicas de microbiologia
           clássica repassadas de geração em geração pela Drª Rachel aos nossos
@@ -458,18 +475,17 @@ export const labsList: Lab[] = [
     LabName: "Laboratório de Microbioprodutos",
     LabResponsible: "Dr. João Carlos Teixeira Dias \nProf. Eduardo Gross",
     ResponsibleEmail: "(rachel@uesc.br)/(egross@uesc.br)",
-    DescriptionText: {Telefone: "(73) 3680-5151"},
+    DescriptionText: { Telefone: "(73) 3680-5151" },
     DescriptionComponent: () => (
       <Box className="flex flex-col gap-3">
-
-        <Text as="div"  highContrast className="text-sm sm:text-base">
+        <Text as="div" highContrast className="text-sm sm:text-base">
           <Strong>Pesquisadores responsáveis:{"\n"}</Strong>Dr. João Carlos
           Teixeira Dias (jctdias@uesc.br)
           {"\n"}
           Prof. Eduardo Gross (egross@uesc.br)
         </Text>
 
-        <Text as="div"  highContrast className="text-sm sm:text-base">
+        <Text as="div" highContrast className="text-sm sm:text-base">
           <Strong>Sobre o laboratório:</Strong> Como resolver problemas
           ambientais conhecendo e utilizando a vasta diversidade microbiana
           buscando promover o bem-estar da sociedade? Nossa missão no
@@ -502,7 +518,7 @@ export const labsList: Lab[] = [
           e ambientalmente!
         </Text>
 
-        <Text as="div"  highContrast className="text-sm sm:text-base">
+        <Text as="div" highContrast className="text-sm sm:text-base">
           <Strong>Equipamentos e facilidades:</Strong> Ao longo das últimas duas
           décadas, o Laboratório de Microbioprodutos (anteriormente chamado de
           Laboratório de Monitoramento Ambiental) vêm se estruturando para
@@ -559,14 +575,13 @@ export const labsList: Lab[] = [
     DescriptionText: {},
     DescriptionComponent: () => (
       <Box className="flex flex-col gap-3">
-
-        <Text as="div"  highContrast className="text-sm sm:text-base">
+        <Text as="div" highContrast className="text-sm sm:text-base">
           <Strong>Pesquisadora responsável:</Strong> Dra. Carla Cristina Romano
           {"\n"}
           (ccromano@uesc.br)
         </Text>
 
-        <Text as="div"  highContrast className="text-sm sm:text-base">
+        <Text as="div" highContrast className="text-sm sm:text-base">
           <Strong>Sobre o laboratório:</Strong> O Laboratório de Interação
           Microrganismos-Hospedeiro (LabMinHosp), coordenado pela Profa. Dra
           Carla Cristina Romano, possui nível de Biossegurança 2 (NB2) e tem
@@ -633,23 +648,22 @@ export const labsList: Lab[] = [
     LabName: "Laboratório de Patologia Aplicada e Genética",
     LabResponsible: "Dra. Luciene C. Gastalho Campos Luiz ",
     ResponsibleEmail: "(lcgcluiz@uesc.br)",
-    DescriptionText: {Email:"lapagen@uesc.br", Instagram:"@lapa.gen"},
+    DescriptionText: { Email: "lapagen@uesc.br", Instagram: "@lapa.gen" },
     DescriptionComponent: () => (
       <Box className="flex flex-col gap-3">
-
-        <Text as="div"  highContrast className="text-sm sm:text-base">
+        <Text as="div" highContrast className="text-sm sm:text-base">
           <Strong>Pesquisadora responsável:</Strong> Dra. Luciene C. Gastalho
           Campos Luiz
           {"\n"}
           (lcgcluiz@uesc.br)
         </Text>
 
-        <Text as="div"  highContrast className="text-sm sm:text-base">
+        <Text as="div" highContrast className="text-sm sm:text-base">
           <Strong>Grande área de atuação:</Strong> Genética Médica de doenças
           Infecciosas e crônico-degenerativas
         </Text>
 
-        <Text as="div"  highContrast className="text-sm sm:text-base">
+        <Text as="div" highContrast className="text-sm sm:text-base">
           <Strong>Expertise:</Strong> Uso de técnicas moleculares, como PCR,
           qPCR (PCR quantitativo) para detectar marcadores genéticos de agentes
           infecciosos e mutações relacionadas a doenças crônicas e identificação
@@ -657,7 +671,7 @@ export const labsList: Lab[] = [
           infecções ou condições crônicas.
         </Text>
 
-        <Text as="div"  highContrast className="text-sm sm:text-base">
+        <Text as="div" highContrast className="text-sm sm:text-base">
           <Strong>Áreas de atuação:</Strong> Identificação de biomarcadores que
           possam prever suscetibilidade à doença, progressão ou resposta ao
           tratamento, incluindo o estudo das interações entre o hospedeiro e o
@@ -735,15 +749,13 @@ export const labsList: Lab[] = [
     DescriptionText: {},
     DescriptionComponent: () => (
       <Box className="flex flex-col gap-3">
-
-
-        <Text as="div"  highContrast className="text-sm sm:text-base">
+        <Text as="div" highContrast className="text-sm sm:text-base">
           <Strong>Pesquisadora responsável:</Strong> Dra. Carla Cristina Romano
           {"\n"}
           (ccromano@uesc.br)
         </Text>
 
-        <Text as="div"  highContrast className="text-sm sm:text-base">
+        <Text as="div" highContrast className="text-sm sm:text-base">
           <Strong>Sobre o laboratório:</Strong> O LEMIC - Laboratório do Eixo
           Microbiota-Intestino-Cérebro é um ambiente em que são realizados
           experimentos e ensaios sobre o comportamento de camundongos
@@ -779,19 +791,18 @@ export const labsList: Lab[] = [
     DescriptionText: {},
     DescriptionComponent: () => (
       <Box className="flex flex-col gap-3">
-
-        <Text as="div"  highContrast className="text-sm sm:text-base">
+        <Text as="div" highContrast className="text-sm sm:text-base">
           <Strong>Pesquisadora responsável:</Strong> Dra. Adriana Bozzi
           {"\n"}
           (abozzi@uesc.br)
         </Text>
 
-        <Text as="div"  highContrast className="text-sm sm:text-base">
+        <Text as="div" highContrast className="text-sm sm:text-base">
           <Strong>Áreas de atuação:</Strong> morfologia, imunologia,
           microbiologia e biotecnologia.
         </Text>
 
-        <Text as="div"  highContrast className="text-sm sm:text-base">
+        <Text as="div" highContrast className="text-sm sm:text-base">
           <Strong>Sobre o laboratório:</Strong> O Laboratório de Biotecnologia
           Celular e Tecidual (LABCET) é um laboratório multiusuários liderado e
           coordenado pela Prof.ª Drª Adriana Bozzi, vinculado ao Centro de
@@ -804,17 +815,18 @@ export const labsList: Lab[] = [
           multidisciplinares, o LABCET busca compreender os mecanismos celulares
           fundamentais envolvidos na regeneração e reparação de áreas orgânicas
           danificadas, com foco em promover a restauração funcional e
-          estrutural. <br/>Nossa missão é integrar conhecimentos avançados de
-          biotecnologia, biologia celular, engenharia tecidual e medicina
-          regenerativa, visando criar estratégias terapêuticas eficazes que
-          possam ser aplicadas em diversas condições patológicas. As linhas de
-          pesquisa do laboratório incluem, mas não se limitam a biotecnologia de
-          células-tronco, modelamento do sistema imune, engenharia tecidual,
-          nanopartículas e controle microbiológico, com ênfase na recuperação de
-          tecidos lesionados por trauma, doenças degenerativas, processos
-          inflamatórios ou distúrbios metabólicos. \nAlém de contribuir para o
-          avanço da ciência, o LABCET se compromete a traduzir seus resultados
-          em aplicações práticas, desenvolvendo novas tecnologias que possam ser
+          estrutural. <br />
+          Nossa missão é integrar conhecimentos avançados de biotecnologia,
+          biologia celular, engenharia tecidual e medicina regenerativa, visando
+          criar estratégias terapêuticas eficazes que possam ser aplicadas em
+          diversas condições patológicas. As linhas de pesquisa do laboratório
+          incluem, mas não se limitam a biotecnologia de células-tronco,
+          modelamento do sistema imune, engenharia tecidual, nanopartículas e
+          controle microbiológico, com ênfase na recuperação de tecidos
+          lesionados por trauma, doenças degenerativas, processos inflamatórios
+          ou distúrbios metabólicos. \nAlém de contribuir para o avanço da
+          ciência, o LABCET se compromete a traduzir seus resultados em
+          aplicações práticas, desenvolvendo novas tecnologias que possam ser
           utilizadas no tratamento de doenças e lesões em modelos pré-clínicos e
           clínicos. O laboratório trabalha em colaboração com instituições de
           ensino e pesquisa nacionais e internacionais, com o intuito de
@@ -827,7 +839,7 @@ export const labsList: Lab[] = [
           fronteiras no tratamento e recuperação de desordens morfofisiológicas.
         </Text>
 
-        <Text as="div"  highContrast className="text-sm sm:text-base">
+        <Text as="div" highContrast className="text-sm sm:text-base">
           <Strong>Sobre a Equipe:</Strong> A equipe do LABCET é composta por
           estudantes de iniciação científica, mestrado e doutorado, professores
           pesquisadores do Departamento de Ciências Biológicas (DCB) e Ciências
@@ -835,9 +847,9 @@ export const labsList: Lab[] = [
           Instituto René Rachou (IRR) da FIOCRUZ/Minas, Universidade Federal de
           Minas Gerais (UFMG), Universidade Federal de Juiz de Fora (UFJF),
           Stanford University, CA/USA e California Institute for Medical
-          Research, CA/USA. <br/> Nossa equipe é capacitada em atividades de cultura
-          celular, imunologia celular e molecular, modelos experimentais in
-          vitro e in vivo, com expertise no desenvolvimento de técnicas de
+          Research, CA/USA. <br /> Nossa equipe é capacitada em atividades de
+          cultura celular, imunologia celular e molecular, modelos experimentais
+          in vitro e in vivo, com expertise no desenvolvimento de técnicas de
           microscopia, imunológicas, colorações histológicas, citometria de
           fluxo, diferenciação celular, ensaios de citotoxicidade, expansão e
           caracterização de células-tronco mesenquimais, reprogramação celular,
@@ -851,5 +863,122 @@ export const labsList: Lab[] = [
     EquipamentsQtd: 0,
     EquipamentsIntro: "",
     EquipamentsList: [],
+  }, // . . .
+
+  {
+    // [●] ldvex
+    Id: "ldvex",
+    LabName:
+      "Laboratório de Desenvolvimento de Vacinas Experimentais e Patogênese Microbiana",
+    LabResponsible: "Dr Wilson Barros Luiz",
+    ResponsibleEmail: "(wbluiz@uesc.br)",
+    DescriptionText: { Instagram: "@lapa.gen", Email: "wbluiz@uesc.br" },
+    DescriptionComponent: () => (
+      <Box className="flex flex-col gap-3">
+        <Text as="div" highContrast className="text-sm sm:text-base">
+          <Strong>Pesquisador responsável:</Strong> Dr Wilson Barros Luiz
+          {"\n"}
+          (abozzi@uesc.br)
+        </Text>
+
+        <Text as="div" highContrast className="text-sm sm:text-base">
+          <Strong>Grande área de atuação:</Strong> Microbiologia de
+          microrganismos: genética de microrganismos e desenvolvimento de
+          imunobiológicos
+        </Text>
+
+        <Text as="div" highContrast className="text-sm sm:text-base">
+          <Strong>Expertise:</Strong> Uso de técnicas moleculares e sorológicas,
+          como PCR, qPCR (PCR quantitativo), ELISA, Westernblot, produção e
+          purificação de antígenos, para detecção direta e indiretamente agentes
+          infecciosos.
+        </Text>
+
+        <Text as="div" highContrast className="text-sm sm:text-base">
+          <Strong>Áreas de atuação:</Strong>Realiza pesquisas relacionadas ao
+          desenvolvimento de vacinas experimentais, produção de imunobiológicos,
+          desenvolvimento de novas metodologias moleculares e sorológicas
+          relacionadas ao diagnóstico de doenças infecciosas e crônicas,
+          acompanhamento epidemiológico e de surtos de doenças emergentes, e a
+          pesquisa de soluções inovadoras com baixo custo para a triagem de
+          alterações do estado de saúde por inteligência artificial. Possuindo
+          colaborações com pesquisadores da Universidade Federal da Bahia,
+          Universidade Federal do Oeste da Bahia, Universidade Federal do
+          Espirito Santo, Universidade Federal de Sergipe, Universidade Federal
+          de Minas Gerais, Universidade de São Paulo, Instituo Butantan, além de
+          parcerias com empresas e startups nacionais e cooperações
+          internacionais.
+        </Text>
+      </Box>
+    ),
+    EquipamentsQtd: 10,
+    EquipamentsIntro: "Equipamentos:",
+    EquipamentsList: [
+
+      {
+        Title: "Cabines de contenção biológica LUTECH, classe II B2",
+        Desc: "A cabine biológica LUTECH é um equipamento desenvolvido para garantir segurança e proteção durante o manuseio de agentes biológicos e produtos químicos em laboratórios. Este tipo de cabine é essencial para áreas como microbiologia, biologia molecular e bioquímica, onde a manipulação de amostras potencialmente perigosas exige um ambiente controlado e seguro para evitar contaminações tanto para o operador quanto para o ambiente. \n Projetada com tecnologia de filtragem avançada, a cabine LUTECH utiliza filtros HEPA (High-Efficiency Particulate Air) ou ULPA (Ultra Low Penetration Air), que removem partículas e microrganismos do ar, criando uma barreira contra contaminações cruzadas e garantindo que o ar liberado ao ambiente externo seja limpo. Esse sistema de filtragem é ideal para a proteção de amostras, evitando que contaminantes externos interfiram nos resultados experimentais, e também protege o operador contra agentes potencialmente infecciosos ",
+        Image: LDVEX_FOTO1,
+      },
+
+      {
+        Title:"",
+        Desc: "",
+        Image: LDVEX_FOTO2,
+      },
+
+
+      {
+        Title: "Filtro de osmose reversa",
+        Desc: "O filtro de osmose reversa com integração de luz ultravioleta (UV) é um sistema avançado de purificação de água que combina duas tecnologias eficazes para remover contaminantes e garantir a segurança microbiológica da água. Este tipo de filtro é amplamente utilizado em laboratórios que buscam água de alta pureza. \n A osmose reversa (OR) é um processo de filtração no qual a água passa através de uma membrana semipermeável, bloqueando até 99% das partículas, contaminantes químicos, sais, metais pesados e outros poluentes. A membrana de OR é projetada para permitir a passagem apenas das moléculas de água, retendo contaminantes maiores e resultando em uma água limpa e com baixo teor de sólidos dissolvidos. \n A integração com a luz ultravioleta oferece uma camada adicional de proteção contra contaminantes biológicos, como bactérias, vírus e protozoários. A luz UV atua diretamente no DNA dos microrganismos, impedindo sua reprodução e eliminando seu potencial patogênico. Esse processo é altamente eficaz, rápido e não deixa resíduos químicos na água, ao contrário de outros métodos de desinfecção.",
+        Image: LDVEX_FOTO3,
+      },
+      
+
+      {
+        Title: "Conjunto para eletroforese de proteínas",
+        Desc: "O conjunto de eletroforese é essencial em laboratórios de biologia molecular e genética, pois permite a separação de moléculas de proteínas com base em seu tamanho e carga. Esse conjunto geralmente inclui três componentes principais: a fonte de alimentação, a cuba de eletroforese e o transiluminador UV. \n Fonte de Alimentação: A fonte de alimentação fornece a voltagem necessária para a corrida eletroforética. Ela permite o controle da tensão e da corrente aplicadas ao sistema, o que é fundamental para uma separação eficiente e precisa das amostras. A fonte gera um campo elétrico que impulsiona as moléculas através do gel de agarose ou poliacrilamida dentro da cuba. \n Cuba de Eletroforese: A cuba é onde ocorre a separação eletroforética. Ela é preenchida com uma solução tampão que mantém o pH estável durante a corrida, essencial para a integridade das amostras. No gel dentro da cuba, as moléculas migram de acordo com seu tamanho, permitindo a visualização e análise posterior. O gel possui poços onde as amostras são inseridas, e as moléculas carregadas negativamente, como o DNA, migram em direção ao polo positivo.",
+        Image: LDVEX_FOTO4,
+      },
+      
+
+      {
+        Title: "Estufa De Esterilização E Secagem Digital Microprocessada, Até 300ºc, Circulação E Renovação Forçada De Ar",
+        Desc: "A Estufa Digital Microprocessada de Esterilização e Secagem com Circulação e Renovação de Ar até 300°C Vulcan possui uma tecnologia embarcada de última geração que garante um aquecimento rápido e preciso da câmara. \n Primeiramente, o microprocessador de última geração com sistema PID dá ao usuário acesso à funções de seleção de temperatura, seleção de tempo, temporizador e parada automática ao fim de cada processo. \n Junto a isso, seu display LCD de 5.3, permite uma perfeita visualização dos parâmetros de aquecimento, tempo e configurações do equipamento. Além disso, possui sistema de abertura e fechamento de aletas na lateral que permite a renovação e circulação do ar no interior do equipamento. \n A Estufa Digital de Esterilização e Secagem com Circulação e Renovação de Ar até 300°C possui um sistema de segurança digital, isso significa que, opcionalmente, pode ser solicitado sistema duplo de segurança com termostato mecânico. Assim sendo, limita a temperatura máxima estabelecida pelo usuário para evitar superaquecimento. E também, um alarme sonoro indicará ao usuário que o equipamento atingiu a temperatura desejada e quando o ciclo programado chegar ao fim.",
+        Image: LDVEX_FOTO5,
+      },
+      
+      {
+        Title: "Incubadora BOD",
+        Desc: "Estufa Incubadora para B.O.D. (demanda bioquímica de Oxigênio) e outras aplicações laboratoriais onde se requer ambiente em baixas e médias temperaturas. Montadas em gabinetes tipo geladeira, construídas em chapa de aço com tratamento anticorrosivo e fino acabamento em pintura eletrostática a pó. Internamente revestida em material sintético, que evita corrosão e facilita a limpeza. Isolação térmica em poliuretano expandido. Porta com vedação magnética. Temperatura de trabalho de -10 a 60ºC, com aferição especial em 37º e 56ºC. (maior faixa de temperatura sob consulta). Resistência tubular blindada em inox. Convecção de ar forçado quente/frio no sentido vertical, através de ventilador, proporcionando maior homogeneidade de temperatura no interior da câmara. Controle de temperatura PID microprocessado, com indicação digital. Sensor tipo PT-100 com encapsulamento em inox. Sistema de proteção de sobreaquecimento através de termostato hidráulico com ajuste de fábrica. Painel frontal em policarbonato, com comandos e lâmpadas indicadoras de função.",
+        Image: LDVEX_FOTO6,
+      },
+      
+
+      {
+        Title: "Incubadora Shaker de Laboratório Refrigerada com movimento orbital",
+        Desc: "Gabinete externo: aço carbono 1020, com tratamento anticorrosivo e pintura eletrostática em epóxi texturizado. Gabinete interno: acabamento interno construída em aço inox. Porta externa: em aço 1020 com pintura eletrostática, isolação térmica e vedação em perfil magnético. Condições Ambientais: temperatura ambiente entre 5°C a 40°C / Umidade relativa 80%, sem condensação. Controlador de Temperatura: digital microprocessado com sistema PID e auto-tuning, display com resolução de 0,1°C. Faixa de temperatura de trabalho: ambiente - 18°C até 70°C, com temperatura mínima de setpoint +4°C. Variação de temperatura: ± 0,2°C. Sensor de temperatura: PT 100. Display Digital: painel de controle eletrônico– Touch Screen, Colorido.Permite ao usuário a perfeita visualização de todos os parâmetros. Operação fácil, prática e segura. Timer: temporizador Digital 99hrs: 59min: 59seg. ou continuo, possibilitando programar o tempo de agitação. Movimento: orbital de 20 até 300 rpm",
+        Image: LDVEX_FOTO7,
+      },
+
+      {
+        Title: "Termociclador Com Gradiente",
+        Desc: "O Termociclador com Gradiente Kasvi é utilizado para executar a técnica de Reação em Cadeia da Polimerase nas áreas de pesquisa, medicina, indústria de alimentos, ciência forense, biotecnologia, ciência ambiental, microbiologia, diagnóstico clínico, epidemiologia, genética, chips genéticos, testes genéticos, clonagem de genes, entre outras. \n O Termociclador com Gradiente Kasvi é equipado com sistema Peltier de alta performance, vida útil longa, com controle de circuitos independentes para diferentes segmentos de aquecimento. Possui controle preciso de temperatura, proteção de desligamento, gradiente de temperatura e conta com software interno de fácil utilização (interface user-friendly).",
+        Image: LDVEX_FOTO8,
+      },
+      
+      {
+        Title: "Espectrofotômetro",
+        Desc: "O espectrofotômetro é um equipamento de laboratório usado para medir a quantidade de luz absorvida por uma amostra em diferentes comprimentos de onda. Comumentente utilizado em áreas como bioquímica, química e biologia molecular, o espectrofotômetro permite a análise precisa de substâncias, como proteínas, ácidos nucleicos e enzimas, tornando-se fundamental para pesquisas e diagnósticos. Ele é essencial para determinar a concentração de DNA e RNA em amostras, uma etapa importante para estudos genéticos e de biologia molecular. \n O princípio de funcionamento do espectrofotômetro baseia-se na capacidade das moléculas de absorver luz em comprimentos de onda específicos. A luz passa através de um monocromador, que a separa em diferentes comprimentos de onda. A amostra, colocada em uma cubeta, absorve parte dessa luz, e o equipamento mede a quantidade de luz transmitida. Com essa informação, é possível determinar a concentração da substância.",
+        Image: LDVEX_FOTO9,
+      },
+      
+      {
+        Title: "Autoclave vertical",
+        Desc: "A Autoclave Vertical CS é utilizada para esterilização de materiais e utensílios diversos em laboratórios clínicos, bioquímicos, químicos, indústria farmacêutica e laboratórios de controle de qualidade. Autoclave Vertical com registro na ANVISA. \n O processo de esterilização da Autoclave Vertical é feito através do vapor de água saturado, onde certa quantidade de água é aquecida através de um conjunto de resistências elétricas, proporcionando assim a geração de vapor necessária. \n O Equipamento é equipado com manômetro de duas escalas, sendo uma 2 escala para indicação da pressão (kgf/cm ), e a outra correspondente para temperatura (ºC). \n Compõem o equipamento, válvula controladora, registro para liberação da pressão e ar interno, torneira de dreno e cesto interno para materiais. Possui painel de controle, situado na parte frontal do aparelho, possuí lâmpada piloto e chave comutadora de 3 (três) posições até 150 litros, e 2 (dois) posições de 225 a 300 litros, além das instruções de uso.",
+        Image: LDVEX_FOTO10,
+      }
+      
+    ],
   }, // . . .
 ]; // [✪] labsList ✦────────➤

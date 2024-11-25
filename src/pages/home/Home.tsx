@@ -213,6 +213,7 @@ const Home = () => {
       <Helmet title="CIBBiM - Centro de Inovação em Biologia e Biotecnologia Microbiana" />
 
       <Box id="home_canvas" className="relative w-full h-screen mt-3">
+        
         <div
           //HERE CIBBiM_BG
           id="CIBBiM_BG"
