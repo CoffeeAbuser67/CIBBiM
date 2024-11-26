@@ -1,8 +1,8 @@
 // HERE Contato
 
-import { useState } from "react";
+
 import { Helmet } from "react-helmet-async";
-import { useWindowResize } from "../hooks/useWindowResize";
+
 
 import { Box, Text, Heading, Strong } from "@radix-ui/themes";
 import classNames from "classnames";

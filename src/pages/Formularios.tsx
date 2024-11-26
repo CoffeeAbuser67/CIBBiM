@@ -1,8 +1,8 @@
 // HERE Formularios
 
-import { useState } from "react";
+
 import { Helmet } from "react-helmet-async";
-import { useWindowResize } from "../hooks/useWindowResize";
+
 
 import { Box, Text, Heading, Link } from "@radix-ui/themes";
 import classNames from "classnames";

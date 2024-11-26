@@ -1,6 +1,6 @@
 // import
 
-import { Box, Card, Flex, Heading } from "@radix-ui/themes";
+import { Box, Flex, Heading } from "@radix-ui/themes";
 
 import BRASAO_UESC from "../../assets/BRASAO_UESC.svg";
 

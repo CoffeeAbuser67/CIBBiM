@@ -19,8 +19,7 @@ import { Helmet } from "react-helmet-async";
 import { Dropdown_Menu, Card_Menu } from "../../components/menu/Menu";
 
 import CIBBiM_BG from "../../assets/bg_cropped2.svg";
-import { useWindowResize } from "../../hooks/useWindowResize";
-import { useState } from "react";
+// import { useWindowResize } from "../../hooks/useWindowResize";
 
 // ● CrossSVG
 const CrossSVG = () => (
