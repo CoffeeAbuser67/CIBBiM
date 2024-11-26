@@ -4,33 +4,13 @@ import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useWindowResize } from "../hooks/useWindowResize";
 
-import {
-  Box,
-  Card,
-  Avatar,
-  Flex,
-  Text,
-  Button,
-  Heading,
-  Dialog,
-  Table,
-  Inset,
-  Strong,
-} from "@radix-ui/themes";
+import { Box, Text, Heading, Strong } from "@radix-ui/themes";
 import classNames from "classnames";
 import { Card_Menu, Dropdown_Menu } from "../components/menu/Menu";
 import CIBBiM_BG from "../assets/bg_cropped2.svg";
 
 // ★ ComoUtilizar ✦────────────➤
 const ComoUtilizar = () => {
-  // WARN  windowSize and useWindowResize. Remove in production!!
-
-  // ✳  [windowSize, setWindowSize]
-  const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
-
-  useWindowResize((width, height) => {
-    setWindowSize({ width, height }); // ↺ useWindowResize (setWindowSize)
-  });
 
   // ── ✦─DOM─➤
 
@@ -38,15 +18,6 @@ const ComoUtilizar = () => {
     <>
       <Helmet title="Como Utilizar Laboratórios e Equipamentos CIBBiM" />
 
-      <Box
-        // ⊙ windowSize
-        className="fixed top-10 rounded-2xl right-10 bg-slate-600 p-2"
-      >
-        <Text color="tomato" size="3" highContrast>
-          🦀{` wdith: ${windowSize.width}`} <br />
-          🦀{` height: ${windowSize.height}`}
-        </Text>
-      </Box>
 
       <Box id="comoutilizar_canvas" className="relative w-full h-screen mt-3">
         <Box
@@ -72,7 +43,7 @@ const ComoUtilizar = () => {
           </Box>
 
           <Box className="flex flex-col gap-5 mb-10">
-            <Heading color="green" size="7" highContrast className="mt-10">
+            <Heading color="blue" size="7" highContrast className="mt-10">
               Como utilizar
             </Heading>
             <Text as="div" highContrast className="text-sm md:text-base">
@@ -147,8 +118,6 @@ const ComoUtilizar = () => {
           </Box>
         </Box>
 
-
-
         <div
           // HERE CIBBiM_BG
           id="CIBBiM_BG"
@@ -160,18 +129,10 @@ const ComoUtilizar = () => {
             id="opacity BG"
             className={classNames(
               "absolute w-full h-full bg-white bg-cover bg-center",
-              "opacity-50",
+              "opacity-50"
             )}
           />
         </div>
-
-
-
-
-
-
-
-
       </Box>
     </>
   );

@@ -302,29 +302,11 @@ const LabTemplate = () => {
 
 // ★ Infraestrutura ✦───────────────────────➤
 const Infraestrutura = () => {
-  // WARN  windowSize and useWindowResize. Remove in production!!
-
-  // ✳  [windowSize, setWindowSize]
-  const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
-
-  useWindowResize((width, height) => {
-    setWindowSize({ width, height }); // ↺ useWindowResize (setWindowSize)
-  });
 
   // ── ✦─DOM─➤
   return (
     <>
       <Helmet title="Laboratórios e Equipamentos do CIBBiM" />
-
-      <Box
-        // ⊙ windowSize
-        className="fixed top-10 rounded-2xl right-10 bg-slate-600 p-2"
-      >
-        <Text color="tomato" size="3" highContrast>
-          🦀{` wdith: ${windowSize.width}`} <br />
-          🦀{` height: ${windowSize.height}`}
-        </Text>
-      </Box>
 
       <Box id="infraestrutura_canvas" className="relative w-full h-screen mt-3">
         <Box
@@ -350,7 +332,7 @@ const Infraestrutura = () => {
           </Box>
 
           <Box className="flex flex-col gap-5">
-            <Heading color="green" size="7" highContrast className="mt-10">
+            <Heading color="blue" size="7" highContrast className="mt-10">
               Infraestrutura
             </Heading>
 

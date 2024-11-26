@@ -1,25 +1,19 @@
-// HERE Contato
+// HERE Links
 
-import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { useWindowResize } from "../hooks/useWindowResize";
-
-import { Box, Text, Heading, Strong } from "@radix-ui/themes";
+import { Box, Heading,  } from "@radix-ui/themes";
 import classNames from "classnames";
 import { Card_Menu, Dropdown_Menu } from "../components/menu/Menu";
 import CIBBiM_BG from "../assets/bg_cropped2.svg";
 
-// ★ Contato ✦────────────➤
-const Contato = () => {
+// ★ Links ✦────────────➤
+const Links = () => {
 
   // ── ✦─DOM─➤
 
   return (
     <>
-      <Helmet title="Contato CIBBiM" />
-
-
-
+      <Helmet title="Links CIBBiM" />
       <Box id="contato_canvas" className="relative w-full h-screen mt-3">
         <Box
           // _PIN_ panel1
@@ -45,28 +39,8 @@ const Contato = () => {
 
           <Box className="flex flex-col gap-5">
             <Heading color="blue" size="7" highContrast className="mt-10">
-              Contato
+              Links
             </Heading>
-
-            <Heading size="4" highContrast>
-              Universidade Estadual de Santa Cruz (UESC)
-            </Heading>
-
-            <Text as="div" highContrast className="text-sm md:text-base">
-              <Strong>Campus Soane Nazaré de Andrade</Strong>
-              <br />
-              km 16 da Rodovia Jorge Amado
-              <br />
-              Bairro: Salobrinho
-              <br />
-              Ilhéus – BA– Brasil
-              <br />
-              CEP 45662-000
-            </Text>
-
-            <Text as="div" highContrast className="text-sm md:text-base">
-              <Strong>E-mail:</Strong> cibbim@uesc.br
-            </Text>
           </Box>
         </Box>
 
@@ -88,6 +62,6 @@ const Contato = () => {
       </Box>
     </>
   );
-}; // ★ Contato ✦────────────➤
+}; // ★ Links ✦────────────➤
 
-export default Contato;
+export default Links;

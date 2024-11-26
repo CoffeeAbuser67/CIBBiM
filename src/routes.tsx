@@ -8,7 +8,14 @@ const ComoUtilizar = lazy(() => import("./pages/ComoUtilizar"));
 const ComiteGestor = lazy(() => import("./pages/ComiteGestor"));
 const Contato = lazy(() => import("./pages/Contato"));
 
+const Links = lazy(() => import("./pages/Links"));
+const ServicosPrestados = lazy(() => import("./pages/ServicosPrestados"));
+const Forms = lazy(() => import("./pages/Formularios"));
 const Infra = lazy(() => import("./pages/labs/Infraestrutura"));
+
+const Publicacoes = lazy(() => import("./pages/Publicacoes"));
+
+
 
 const routes = [
   {
@@ -16,29 +23,53 @@ const routes = [
     element: <Default />,
     children: [
       {
-        path: "", // [ROUTE] /
+        path: "", // [ROUTE] 
         element: <Home />,
       },
 
       {
-        path: "infraestrutura", // [ROUTE] /
+        path: "infraestrutura", // [ROUTE] 
         element: <Infra />,
       },
 
       {
-        path: "comoutilizar", // [ROUTE] /
+        path: "comoutilizar", // [ROUTE] 
         element: <ComoUtilizar />,
       },
 
       {
-        path: "comitegestor", // [ROUTE] /
+        path: "comitegestor", // [ROUTE] 
         element: <ComiteGestor />,
       },
 
       {
-        path: "contato", // [ROUTE] /
+        path: "contato", // [ROUTE] 
         element: <Contato />,
       },
+
+      {
+        path: "formularios", // [ROUTE] 
+        element: <Forms />,
+      },
+
+      {
+        path: "links", // [ROUTE] 
+        element: <Links />,
+      },
+
+      {
+        path: "servicosprestados", // [ROUTE] 
+        element: <ServicosPrestados />,
+      },
+
+
+      {
+        path: "publicacoes", // [ROUTE] 
+        element: <Publicacoes />,
+      },
+
+
+
     ],
   },
 ];

@@ -8,6 +8,13 @@ import Loader from "./components/Loader";
 import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
+
+
 function App() {
   const content = useRoutes(routes);
   return (
@@ -17,9 +24,11 @@ function App() {
         defaultTitle="CIBBiM"
       />
 
-      <Theme accentColor="green" grayColor="olive">
+      <Theme accentColor="blue" grayColor="olive">
         <Suspense fallback={<Loader />}>{content}</Suspense>
       </Theme>
+      <ToastContainer theme="colored" />
+
     </HelmetProvider>
   );
 }

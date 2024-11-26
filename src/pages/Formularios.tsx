@@ -1,24 +1,24 @@
-// HERE ComiteGestor
+// HERE Formularios
 
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useWindowResize } from "../hooks/useWindowResize";
 
-import { Box, Text, Heading, Strong } from "@radix-ui/themes";
+import { Box, Text, Heading, Link } from "@radix-ui/themes";
 import classNames from "classnames";
 import { Card_Menu, Dropdown_Menu } from "../components/menu/Menu";
 import CIBBiM_BG from "../assets/bg_cropped2.svg";
 
-// ★ ComiteGestor ✦────────────➤
-const ComiteGestor = () => {
+// ★ Formularios ✦────────────➤
+const Formularios = () => {
 
   // ── ✦─DOM─➤
 
   return (
     <>
-      <Helmet title="Comitê Gestor do CIBBiM" />
+      <Helmet title="Formularios CIBBiM" />
 
-      <Box id="comitegestor_canvas" className="relative w-full h-screen mt-3">
+      <Box id="contato_canvas" className="relative w-full h-screen mt-3">
         <Box
           // _PIN_ panel1
           id="panel1"
@@ -43,44 +43,11 @@ const ComiteGestor = () => {
 
           <Box className="flex flex-col gap-5">
             <Heading color="blue" size="7" highContrast className="mt-10">
-              Comitê Gestor
+              Formulários
             </Heading>
-
-            <Heading size="4" highContrast>
-              Comissão de Administração
-            </Heading>
-
             <Text as="div" highContrast className="text-sm md:text-base">
-              <Strong>Diretora:</Strong> Dra. Ana Paula Trovatti Uetanabaro
+              ◆{" "}<Link href="#">Formulário de Solicitação de Serviços e Cadastro</Link>
               <br />
-              <br />
-              <Strong>Vice-Diretora:</Strong> Dra. Rachel Passos Rezende
-            </Text>
-
-            <Text as="div" highContrast className="text-sm md:text-base">
-              <Strong>Comissão de Pesquisa</Strong>
-              <br />
-              Dra. Adriana Bozzi
-              <br />
-              Dra. Andrea Miura Da Cost
-              <br />
-              Dra. Carla Cristina Romano
-              <br />
-              Dr. Eduardo Ary Villela Marinho
-              <br />
-              Dra. Jane Lima Dos Santos
-              <br />
-              Dr. Joao Carlos Teixeira Dias
-              <br />
-              Dra. Luciene Cristina Gastalho Campos Luiz
-              <br />
-              Dr. Wilson Barros Luiz
-            </Text>
-
-            <Text as="div" highContrast className="text-sm md:text-base">
-              <Strong>Técnica Administrativa</Strong>
-              <br />
-              Adriana Xavier Brandão Pimentel
             </Text>
           </Box>
         </Box>
@@ -103,6 +70,6 @@ const ComiteGestor = () => {
       </Box>
     </>
   );
-}; // ★ ComiteGestor ✦────────────➤
+}; // ★ Formularios ✦────────────➤
 
-export default ComiteGestor;
+export default Formularios;

@@ -12,7 +12,7 @@ const buttons: ButtonProps[] = [
   { name: "Apresentação", path: "/" },
   { name: "Como utilizar", path: "/comoutilizar" },
   { name: "Infraestrutura", path: "/infraestrutura" },
-  { name: "Serviços prestados", path: "/servicos_prestados" },
+  { name: "Serviços prestados", path: "/servicosprestados" },
   { name: "Formulários", path: "/formularios" },
   { name: "Comitê Gestor", path: "/comitegestor"},
   { name: "Publicações", path: "/publicacoes" },
