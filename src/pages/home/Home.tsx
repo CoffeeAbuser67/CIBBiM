@@ -1,8 +1,22 @@
 // HERE Home
 
+{
+  /* NOTE Breakpoint prefix
+          sm	640px	
+          md	768px	
+          lg	1024px	
+          xl	1280px	
+          2xl	1536px
+          ---
+          size 2 = text-sm
+          size 3 = text-base
+        */
+}
+
 import classNames from "classnames";
 import CIBBiM_BG from "../../assets/bg_cropped2.svg";
 import TESTECIBBBIMBG from "../../assets/TESTECIBBBIMBG.svg";
+
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 
@@ -213,7 +227,6 @@ const Home = () => {
       <Helmet title="CIBBiM - Centro de Inovação em Biologia e Biotecnologia Microbiana" />
 
       <Box id="home_canvas" className="relative w-full h-screen mt-3">
-        
         <div
           //HERE CIBBiM_BG
           id="CIBBiM_BG"
@@ -301,6 +314,7 @@ const Home = () => {
 
         <Box
           // . . . . . . . . . . . . . .
+
           //_PIN_ panel2
           id="panel2"
           className="relative bg-[#036D60] w-full h-[520px] mb-2"
@@ -311,17 +325,6 @@ const Home = () => {
             className="absolute w-full h-full bg-cover bg-center"
             style={{ backgroundImage: `url(${TESTECIBBBIMBG})` }}
           />
-
-          {/* NOTE Breakpoint prefix
-          sm	640px	
-          md	768px	
-          lg	1024px	
-          xl	1280px	
-          2xl	1536px
-          ---
-          size 2 = text-sm
-          size 3 = text-base
-        */}
 
           <Box
             // HERE Opacity Control
