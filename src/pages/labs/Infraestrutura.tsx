@@ -96,6 +96,7 @@ const LabTemplate = () => {
                   </Dialog.Trigger>
 
                   <Dialog.Content
+                    // <●> DialogContent
                     className={classNames(
                       "bg-gray-100",
                       "w-[90vw] min-h-[600px] max-w-[12000px]", // Dialog width: 90% of the viewport, capped at 600px
@@ -106,7 +107,7 @@ const LabTemplate = () => {
                       "lg:p-12 lg:w-[75vw]"
                     )}
                   >
-                    <Flex className = "mb-2" gap="3" justify="end">
+                    <Flex className="mb-2" gap="3" justify="end">
                       <Dialog.Close>
                         <Button
                           // ○ CrossSVG
@@ -119,7 +120,6 @@ const LabTemplate = () => {
                     </Flex>
                     <Box
                       // . . . . . . . . . . . . . . .
-                      // <●> DialogContent
                       // <○> Id
                       id={`DialogContent${lab.Id}`}
                       className="flex flex-col w-full gap-6"
@@ -133,7 +133,6 @@ const LabTemplate = () => {
                               Centro de Inovação em Biologia e Biotecnologia
                               Microbiana
                             </strong>
-                          
                           </span>
 
                           <span className="text-sm block mb-2">
@@ -160,7 +159,6 @@ const LabTemplate = () => {
                             )
                           )}
                         </Dialog.Description>
-
                       </Box>
 
                       <Box
@@ -179,7 +177,7 @@ const LabTemplate = () => {
                           as="div"
                           weight="bold"
                           highContrast
-                          className = "text-sm sm:text-base"
+                          className="text-sm sm:text-base"
                         >
                           {lab.EquipamentsIntro}
                         </Text>
@@ -202,7 +200,7 @@ const LabTemplate = () => {
                                   <Inset clip="border-box" side="top">
                                     <img // <○> Image
                                       src={Equipament.Image}
-                                      alt="Bold typography"
+                                      alt="🔬"
                                       className="h-full w-full object-cover"
                                     />
                                   </Inset>
@@ -246,7 +244,7 @@ const LabTemplate = () => {
                                   >
                                     <img // <○> Image
                                       src={Equipament.Image}
-                                      alt="Bold typography"
+                                      alt="🔬"
                                       className="h-full w-full object-contain"
                                     />
                                   </Inset>
@@ -301,7 +299,6 @@ const LabTemplate = () => {
 
 // ★ Infraestrutura ✦───────────────────────➤
 const Infraestrutura = () => {
-
   // ── ✦─DOM─➤
   return (
     <>
