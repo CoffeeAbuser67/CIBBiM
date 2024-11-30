@@ -15,7 +15,7 @@
 
 import classNames from "classnames";
 import CIBBiM_BG from "../../assets/bg_cropped2.svg";
-import TESTECIBBBIMBG from "../../assets/TESTECIBBBIMBG.svg";
+import TESTECIBBBIMBG from "../../assets/TESTECIBBBIMBG3.svg";
 
 import { Helmet } from "react-helmet-async";
 
@@ -341,7 +341,7 @@ const Home = () => {
               "2xl:mr-24"
             )}
           >
-            <Text as="div" my="5" highContrast className="text-sm sm:text-base">
+            <Text as="div" my="5"  highContrast className="text-sm sm:text-base text-neutral-100">
               <Strong>
                 Por estar situado no interior da Bahia, o CIBBiM tem como missão
                 atender à comunidade interna (universidade) e externa (empresas,
