@@ -188,6 +188,7 @@ const Links = () => {
               )}
             >
               {linksList.map((el, index) => (
+                // [○] linksList
                 <Card
                   key={index}
                   variant="ghost"
@@ -200,7 +201,7 @@ const Links = () => {
                   >
                     <Link href={el.link}>
                       {el.img ? (
-                        <img // <○> Image
+                        <img 
                           src={el.img}
                           alt="🔬"
                           className="h-full w-full object-contain"
