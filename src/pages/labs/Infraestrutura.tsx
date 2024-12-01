@@ -199,6 +199,7 @@ const LabTemplate = () => {
                                 >
                                   <Inset clip="border-box" side="top">
                                     <img // <○> Image
+                                      loading="lazy"
                                       src={Equipament.Image}
                                       alt="🔬"
                                       className="h-full w-full object-cover"
@@ -243,6 +244,7 @@ const LabTemplate = () => {
                                     className="w-2/3"
                                   >
                                     <img // <○> Image
+                                      loading="lazy"
                                       src={Equipament.Image}
                                       alt="🔬"
                                       className="h-full w-full object-contain"

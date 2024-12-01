@@ -60,7 +60,7 @@ const ComiteGestor = () => {
               <br />
               Dra. Adriana Bozzi
               <br />
-              Dra. Andrea Miura Da Cost
+              Dra. Andrea Miura Da Costa
               <br />
               Dra. Carla Cristina Romano
               <br />

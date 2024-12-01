@@ -52,19 +52,16 @@ import LAPAGEN_FOTO10 from "../../assets/lapagen/FOTO10.jpg";
 
 import LEMIC_FOTO1 from "../../assets/lemic/FOTO1.jpg";
 
-import LDVEX_FOTO1 from "../../assets/ldvex/FOTO1.jpg"
-import LDVEX_FOTO2 from "../../assets/ldvex/FOTO2.jpg"
-import LDVEX_FOTO3 from "../../assets/ldvex/FOTO3.jpg"
-import LDVEX_FOTO4 from "../../assets/ldvex/FOTO4.jpg"
-import LDVEX_FOTO5 from "../../assets/ldvex/FOTO5.jpg"
-import LDVEX_FOTO6 from "../../assets/ldvex/FOTO6.png"
-import LDVEX_FOTO7 from "../../assets/ldvex/FOTO7.png"
-import LDVEX_FOTO8 from "../../assets/ldvex/FOTO8.jpg"
-import LDVEX_FOTO9 from "../../assets/ldvex/FOTO9.jpg"
-import LDVEX_FOTO10 from "../../assets/ldvex/FOTO10.jpg"
-
-
-
+import LDVEX_FOTO1 from "../../assets/ldvex/FOTO1.jpg";
+import LDVEX_FOTO2 from "../../assets/ldvex/FOTO2.jpg";
+import LDVEX_FOTO3 from "../../assets/ldvex/FOTO3.jpg";
+import LDVEX_FOTO4 from "../../assets/ldvex/FOTO4.jpg";
+import LDVEX_FOTO5 from "../../assets/ldvex/FOTO5.jpg";
+import LDVEX_FOTO6 from "../../assets/ldvex/FOTO6.png";
+import LDVEX_FOTO7 from "../../assets/ldvex/FOTO7.png";
+import LDVEX_FOTO8 from "../../assets/ldvex/FOTO8.jpg";
+import LDVEX_FOTO9 from "../../assets/ldvex/FOTO9.jpg";
+import LDVEX_FOTO10 from "../../assets/ldvex/FOTO10.jpg";
 
 // [●] Equipaments
 interface Equipaments {
@@ -587,33 +584,35 @@ export const labsList: Lab[] = [
           Carla Cristina Romano, possui nível de Biossegurança 2 (NB2) e tem
           caráter multiusuário. O laboratório conta com espaço para cultivo
           celular equipado com estufa de CO2, capela de fluxo laminar vertical,
-          2 geladeiras, 1 microscópio invertido, 1 microscópio óptico, 1
-          lavadora de microplaca, 1 leitora de microplaca, 1 incubadora shaker e
-          1 citômetro de fluxo. O laboratório atende a várias demandas de
-          pesquisa na área de interação microrganismo - hospedeiro, permeando
+          2 geladeiras, 1 microscópio invertido, 1 microscópio optico, 1
+          lavadora de microplaca, 1 leitora de microplaca, 1 agitador incubadora
+          e 1 citômetro de fluxo. O laboratório atende a diversas demandas de
+          pesquisa na área de interação microrganismo - hospedeiro permeando
           indicadores que vão desde análise da ação biológica de microrganismos
           e seus compostos em modelos celulares, como produção de citocinas,
-          ativação celular de macrófagos e linfócitos, expressão de fatores de
-          virulência até cultivo e identificação de microrganismos isolados de
-          amostras biológicas. As pesquisas desenvolvidas no laboratório
-          colaboram com a formação de recursos humanos nos programas de
-          pós-graduação em Biologia e Biotecnologia de Microrganismos (PPGBBM),
-          Programa de Genética e Biologia Molecular (PPGGBM), Programa de
-          Ciência Animal (PPGCA) com resultados principalmente nas áreas de:
-          microbiologia médica e imunologia, com foco em análise de parâmetros
-          imunológicos da interação microrganismo/célula. Na temática de doenças
-          infecciosas, as atividades do laboratório objetivam entender o papel
-          de fatores de virulência (principalmente biofilme) de bactérias
-          isoladas em quadros de infecção relacionada com assistência à saúde
-          (IRAS) com o curso da infecção e realizar abordagens inovadoras que
-          possam potencializar o efeito de antimicrobianos e desinfetantes sobre
-          esses microrganismos. Dentre as abordagens, está o uso de lactobacilos
-          probióticos previamente isolados do cacau e seus sobrenadantes em
-          modelos de infecção in vitro por Gardnerella vaginalis, Enterococcus
-          faecalis, Staphylococcus aureus, Klebsiella pneumoniae, Escherichia
-          coli enterotoxigênica, entre outras. O laboratório atua ainda em
-          projetos junto à comunidade a fim de atender demandas de saúde pública
-          que envolvem desde isolamento e identificação de microrganismos,
+          ativação de macrófagos celulares e linfócitos, expressão de fatores de
+          citocinas, ativação de macrófagos celulares e linfócitos, expressão de
+          fatores de citocinas, virulência até cultivo e identificação de
+          microrganismos isolados de amostras biológicas. As pesquisas
+          realizadas no laboratório colaboram com a formação de recursos humanos
+          nos programas de pós-graduação em Biologia e Biotecnologia de
+          Microrganismos (PPGBBM), Programa de Genética e Biologia Molecular
+          (PPGGBM), Programa de Ciência Animal (PPGCA) com resultados
+          principalmente nas áreas de: microbiologia médica e imunologia, com
+          foco em análise de parâmetros imunológicos da interação
+          microrganismo/célula. Na temática de doenças infecciosas, as
+          atividades do laboratório objetivam entender o papel de fatores de
+          virulência (principalmente biofilme) de bactérias isoladas em quadros
+          de infecção relacionada com assistência à saúde (IRAS) com o curso da
+          infecção e realizar abordagens inovadoras que possam potencializar o
+          efeito de antimicrobianos e desinfetantes sobre esses microrganismos.
+          Dentre as abordagens, está o uso de lactobacilos probióticos
+          previamente isolados do cacau e seus sobrenadantes em modelos de
+          infecção in vitro por Gardnerella vaginalis, Enterococcus faecalis,
+          Staphylococcus aureus, Klebsiella pneumoniae, Escherichia coli
+          enterotoxigênica, entre outras. O laboratório atua ainda em projetos
+          junto à comunidade a fim de atender demandas de saúde pública que
+          envolvem desde isolamento e identificação de microrganismos,
           capacitações e reciclagem de profissionais da área da saúde em
           temáticas de biossegurança e controle de infecção hospitalar até
           educação em saúde com foco em doenças humanas veiculadas pelas mãos.
@@ -914,7 +913,6 @@ export const labsList: Lab[] = [
     EquipamentsQtd: 10,
     EquipamentsIntro: "Equipamentos:",
     EquipamentsList: [
-
       {
         Title: "Cabines de contenção biológica LUTECH, classe II B2",
         Desc: "A cabine biológica LUTECH é um equipamento desenvolvido para garantir segurança e proteção durante o manuseio de agentes biológicos e produtos químicos em laboratórios. Este tipo de cabine é essencial para áreas como microbiologia, biologia molecular e bioquímica, onde a manipulação de amostras potencialmente perigosas exige um ambiente controlado e seguro para evitar contaminações tanto para o operador quanto para o ambiente. \n Projetada com tecnologia de filtragem avançada, a cabine LUTECH utiliza filtros HEPA (High-Efficiency Particulate Air) ou ULPA (Ultra Low Penetration Air), que removem partículas e microrganismos do ar, criando uma barreira contra contaminações cruzadas e garantindo que o ar liberado ao ambiente externo seja limpo. Esse sistema de filtragem é ideal para a proteção de amostras, evitando que contaminantes externos interfiram nos resultados experimentais, e também protege o operador contra agentes potencialmente infecciosos ",
@@ -922,41 +920,39 @@ export const labsList: Lab[] = [
       },
 
       {
-        Title:"",
+        Title: "",
         Desc: "",
         Image: LDVEX_FOTO2,
       },
-
 
       {
         Title: "Filtro de osmose reversa",
         Desc: "O filtro de osmose reversa com integração de luz ultravioleta (UV) é um sistema avançado de purificação de água que combina duas tecnologias eficazes para remover contaminantes e garantir a segurança microbiológica da água. Este tipo de filtro é amplamente utilizado em laboratórios que buscam água de alta pureza. \n A osmose reversa (OR) é um processo de filtração no qual a água passa através de uma membrana semipermeável, bloqueando até 99% das partículas, contaminantes químicos, sais, metais pesados e outros poluentes. A membrana de OR é projetada para permitir a passagem apenas das moléculas de água, retendo contaminantes maiores e resultando em uma água limpa e com baixo teor de sólidos dissolvidos. \n A integração com a luz ultravioleta oferece uma camada adicional de proteção contra contaminantes biológicos, como bactérias, vírus e protozoários. A luz UV atua diretamente no DNA dos microrganismos, impedindo sua reprodução e eliminando seu potencial patogênico. Esse processo é altamente eficaz, rápido e não deixa resíduos químicos na água, ao contrário de outros métodos de desinfecção.",
         Image: LDVEX_FOTO3,
       },
-      
 
       {
         Title: "Conjunto para eletroforese de proteínas",
         Desc: "O conjunto de eletroforese é essencial em laboratórios de biologia molecular e genética, pois permite a separação de moléculas de proteínas com base em seu tamanho e carga. Esse conjunto geralmente inclui três componentes principais: a fonte de alimentação, a cuba de eletroforese e o transiluminador UV. \n Fonte de Alimentação: A fonte de alimentação fornece a voltagem necessária para a corrida eletroforética. Ela permite o controle da tensão e da corrente aplicadas ao sistema, o que é fundamental para uma separação eficiente e precisa das amostras. A fonte gera um campo elétrico que impulsiona as moléculas através do gel de agarose ou poliacrilamida dentro da cuba. \n Cuba de Eletroforese: A cuba é onde ocorre a separação eletroforética. Ela é preenchida com uma solução tampão que mantém o pH estável durante a corrida, essencial para a integridade das amostras. No gel dentro da cuba, as moléculas migram de acordo com seu tamanho, permitindo a visualização e análise posterior. O gel possui poços onde as amostras são inseridas, e as moléculas carregadas negativamente, como o DNA, migram em direção ao polo positivo.",
         Image: LDVEX_FOTO4,
       },
-      
 
       {
-        Title: "Estufa De Esterilização E Secagem Digital Microprocessada, Até 300ºc, Circulação E Renovação Forçada De Ar",
+        Title:
+          "Estufa De Esterilização E Secagem Digital Microprocessada, Até 300ºc, Circulação E Renovação Forçada De Ar",
         Desc: "A Estufa Digital Microprocessada de Esterilização e Secagem com Circulação e Renovação de Ar até 300°C Vulcan possui uma tecnologia embarcada de última geração que garante um aquecimento rápido e preciso da câmara. \n Primeiramente, o microprocessador de última geração com sistema PID dá ao usuário acesso à funções de seleção de temperatura, seleção de tempo, temporizador e parada automática ao fim de cada processo. \n Junto a isso, seu display LCD de 5.3, permite uma perfeita visualização dos parâmetros de aquecimento, tempo e configurações do equipamento. Além disso, possui sistema de abertura e fechamento de aletas na lateral que permite a renovação e circulação do ar no interior do equipamento. \n A Estufa Digital de Esterilização e Secagem com Circulação e Renovação de Ar até 300°C possui um sistema de segurança digital, isso significa que, opcionalmente, pode ser solicitado sistema duplo de segurança com termostato mecânico. Assim sendo, limita a temperatura máxima estabelecida pelo usuário para evitar superaquecimento. E também, um alarme sonoro indicará ao usuário que o equipamento atingiu a temperatura desejada e quando o ciclo programado chegar ao fim.",
         Image: LDVEX_FOTO5,
       },
-      
+
       {
         Title: "Incubadora BOD",
         Desc: "Estufa Incubadora para B.O.D. (demanda bioquímica de Oxigênio) e outras aplicações laboratoriais onde se requer ambiente em baixas e médias temperaturas. Montadas em gabinetes tipo geladeira, construídas em chapa de aço com tratamento anticorrosivo e fino acabamento em pintura eletrostática a pó. Internamente revestida em material sintético, que evita corrosão e facilita a limpeza. Isolação térmica em poliuretano expandido. Porta com vedação magnética. Temperatura de trabalho de -10 a 60ºC, com aferição especial em 37º e 56ºC. (maior faixa de temperatura sob consulta). Resistência tubular blindada em inox. Convecção de ar forçado quente/frio no sentido vertical, através de ventilador, proporcionando maior homogeneidade de temperatura no interior da câmara. Controle de temperatura PID microprocessado, com indicação digital. Sensor tipo PT-100 com encapsulamento em inox. Sistema de proteção de sobreaquecimento através de termostato hidráulico com ajuste de fábrica. Painel frontal em policarbonato, com comandos e lâmpadas indicadoras de função.",
         Image: LDVEX_FOTO6,
       },
-      
 
       {
-        Title: "Incubadora Shaker de Laboratório Refrigerada com movimento orbital",
+        Title:
+          "Incubadora Shaker de Laboratório Refrigerada com movimento orbital",
         Desc: "Gabinete externo: aço carbono 1020, com tratamento anticorrosivo e pintura eletrostática em epóxi texturizado. Gabinete interno: acabamento interno construída em aço inox. Porta externa: em aço 1020 com pintura eletrostática, isolação térmica e vedação em perfil magnético. Condições Ambientais: temperatura ambiente entre 5°C a 40°C / Umidade relativa 80%, sem condensação. Controlador de Temperatura: digital microprocessado com sistema PID e auto-tuning, display com resolução de 0,1°C. Faixa de temperatura de trabalho: ambiente - 18°C até 70°C, com temperatura mínima de setpoint +4°C. Variação de temperatura: ± 0,2°C. Sensor de temperatura: PT 100. Display Digital: painel de controle eletrônico– Touch Screen, Colorido.Permite ao usuário a perfeita visualização de todos os parâmetros. Operação fácil, prática e segura. Timer: temporizador Digital 99hrs: 59min: 59seg. ou continuo, possibilitando programar o tempo de agitação. Movimento: orbital de 20 até 300 rpm",
         Image: LDVEX_FOTO7,
       },
@@ -966,19 +962,18 @@ export const labsList: Lab[] = [
         Desc: "O Termociclador com Gradiente Kasvi é utilizado para executar a técnica de Reação em Cadeia da Polimerase nas áreas de pesquisa, medicina, indústria de alimentos, ciência forense, biotecnologia, ciência ambiental, microbiologia, diagnóstico clínico, epidemiologia, genética, chips genéticos, testes genéticos, clonagem de genes, entre outras. \n O Termociclador com Gradiente Kasvi é equipado com sistema Peltier de alta performance, vida útil longa, com controle de circuitos independentes para diferentes segmentos de aquecimento. Possui controle preciso de temperatura, proteção de desligamento, gradiente de temperatura e conta com software interno de fácil utilização (interface user-friendly).",
         Image: LDVEX_FOTO8,
       },
-      
+
       {
         Title: "Espectrofotômetro",
         Desc: "O espectrofotômetro é um equipamento de laboratório usado para medir a quantidade de luz absorvida por uma amostra em diferentes comprimentos de onda. Comumentente utilizado em áreas como bioquímica, química e biologia molecular, o espectrofotômetro permite a análise precisa de substâncias, como proteínas, ácidos nucleicos e enzimas, tornando-se fundamental para pesquisas e diagnósticos. Ele é essencial para determinar a concentração de DNA e RNA em amostras, uma etapa importante para estudos genéticos e de biologia molecular. \n O princípio de funcionamento do espectrofotômetro baseia-se na capacidade das moléculas de absorver luz em comprimentos de onda específicos. A luz passa através de um monocromador, que a separa em diferentes comprimentos de onda. A amostra, colocada em uma cubeta, absorve parte dessa luz, e o equipamento mede a quantidade de luz transmitida. Com essa informação, é possível determinar a concentração da substância.",
         Image: LDVEX_FOTO9,
       },
-      
+
       {
         Title: "Autoclave vertical",
         Desc: "A Autoclave Vertical CS é utilizada para esterilização de materiais e utensílios diversos em laboratórios clínicos, bioquímicos, químicos, indústria farmacêutica e laboratórios de controle de qualidade. Autoclave Vertical com registro na ANVISA. \n O processo de esterilização da Autoclave Vertical é feito através do vapor de água saturado, onde certa quantidade de água é aquecida através de um conjunto de resistências elétricas, proporcionando assim a geração de vapor necessária. \n O Equipamento é equipado com manômetro de duas escalas, sendo uma 2 escala para indicação da pressão (kgf/cm ), e a outra correspondente para temperatura (ºC). \n Compõem o equipamento, válvula controladora, registro para liberação da pressão e ar interno, torneira de dreno e cesto interno para materiais. Possui painel de controle, situado na parte frontal do aparelho, possuí lâmpada piloto e chave comutadora de 3 (três) posições até 150 litros, e 2 (dois) posições de 225 a 300 litros, além das instruções de uso.",
         Image: LDVEX_FOTO10,
-      }
-      
+      },
     ],
   }, // . . .
 ]; // [✪] labsList ✦────────➤
