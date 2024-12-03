@@ -1,7 +1,7 @@
 // HERE Login
 
 import { Helmet } from "react-helmet-async";
-import { Box, Heading } from "@radix-ui/themes";
+import { Box } from "@radix-ui/themes";
 import classNames from "classnames";
 
 import { Card, Flex, Text, Button, TextField } from "@radix-ui/themes";
