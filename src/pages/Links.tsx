@@ -1,7 +1,7 @@
 // HERE Links
 
 import { Helmet } from "react-helmet-async";
-import { Box, Card, Heading, Inset, Link, Table } from "@radix-ui/themes";
+import { Box, Card, Heading, Inset, Link } from "@radix-ui/themes";
 import classNames from "classnames";
 import { Card_Menu, Dropdown_Menu } from "../components/menu/Menu";
 import CIBBiM_BG from "../assets/bg_cropped2.svg";

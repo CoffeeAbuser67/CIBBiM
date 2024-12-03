@@ -1,9 +1,12 @@
 /* eslint-disable react-refresh/only-export-components */
 
 import { lazy } from "@loadable/component";
-import Default from "./layouts/Default";
+
+import AuthLayout from "./layouts/Auth";
+import DefaultLayout from "./layouts/Default";
 
 const Home = lazy(() => import("./pages/home/Home"));
+
 const ComoUtilizar = lazy(() => import("./pages/ComoUtilizar"));
 const ComiteGestor = lazy(() => import("./pages/ComiteGestor"));
 const Contato = lazy(() => import("./pages/Contato"));
@@ -15,61 +18,68 @@ const Infra = lazy(() => import("./pages/labs/Infraestrutura"));
 
 const Publicacoes = lazy(() => import("./pages/Publicacoes"));
 
-
+const Login = lazy(() => import("./pages/auth/Login"));
 
 const routes = [
   {
     path: "/",
-    element: <Default />,
+    element: <DefaultLayout />,
     children: [
       {
-        path: "", // [ROUTE] 
+        path: "", // [ROUTE] /home
         element: <Home />,
       },
 
       {
-        path: "infraestrutura", // [ROUTE] 
+        path: "infraestrutura", // [ROUTE] /infraestrutura
         element: <Infra />,
       },
 
       {
-        path: "comoutilizar", // [ROUTE] 
+        path: "comoutilizar", // [ROUTE] /comoutilizar
         element: <ComoUtilizar />,
       },
 
       {
-        path: "comitegestor", // [ROUTE] 
+        path: "comitegestor", // [ROUTE] /comitegestor
         element: <ComiteGestor />,
       },
 
       {
-        path: "contato", // [ROUTE] 
+        path: "contato", // [ROUTE] /contato
         element: <Contato />,
       },
 
       {
-        path: "formularios", // [ROUTE] 
+        path: "formularios", // [ROUTE] /formularios
         element: <Forms />,
       },
 
       {
-        path: "links", // [ROUTE] 
+        path: "links", // [ROUTE] /links
         element: <Links />,
       },
 
       {
-        path: "servicosprestados", // [ROUTE] 
+        path: "servicosprestados", // [ROUTE] /servicosprestados
         element: <ServicosPrestados />,
       },
 
-
       {
-        path: "publicacoes", // [ROUTE] 
+        path: "publicacoes", // [ROUTE] /publicacoes
         element: <Publicacoes />,
       },
-
-
-
+    ],
+  },
+  // . . .
+  {
+    path: "/auth/",
+    element: <AuthLayout />,
+    children: [
+      {
+        path: "login", // [ROUTE] /auth/login
+        element: <Login />,
+      },
     ],
   },
 ];

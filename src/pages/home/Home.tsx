@@ -39,7 +39,7 @@ const useIsVisible = (ref: unknown) =>  {
         setIntersecting(entry.isIntersecting)
     } 
     );
-  
+    // @ts-ignore
     observer.observe(ref.current);
     return () => {
       observer.disconnect();
@@ -123,7 +123,7 @@ const Home = () => {
               <img
                 // HERE logo_cibbim
                 src={logo_cibbim}
-                alt="BRASAO UESC "
+                alt="🔬"
                 className="w-4/5 md:w-2/5"
               />
             </Flex>

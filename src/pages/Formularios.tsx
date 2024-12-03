@@ -42,7 +42,7 @@ const Formularios = () => {
             <Heading color="blue" size="7" highContrast className="mt-10">
               Formulários
             </Heading>
-            <Text as="div" highContrast className="text-sm md:text-base">
+            <Text as="div" highContrast className="text-sm md:text-base whitespace-pre-wrap">
               ◆{" "}
               <Link href="https://cibbim-media-files.s3.sa-east-1.amazonaws.com/assets/formulario_de_solicitacao_de_servicos_e_cadastro.doc">
                 Formulário de Solicitação de Serviços e Cadastro

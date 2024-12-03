@@ -1,45 +1,23 @@
 // HERE Serviços prestados
 
 import { Helmet } from "react-helmet-async";
-import { Box, Heading } from "@radix-ui/themes";
+import { Box, Heading, Strong } from "@radix-ui/themes";
 import classNames from "classnames";
 import { Card_Menu, Dropdown_Menu } from "../components/menu/Menu";
 import CIBBiM_BG from "../assets/bg_cropped2.svg";
 
-import { Card, Flex, Text, Button, TextField } from "@radix-ui/themes";
+import { Text, Button } from "@radix-ui/themes";
 
-import { useFormik } from "formik";
-import * as Yup from "yup";
-import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
-const defaultValues = {
-  email: "", // default email value
-  password: "", // default password value
-};
 
 // ★ ServiçosPrestados ✦────────────➤
 const ServiçosPrestados = () => {
   // ── ✦─DOM─➤
-
-  const validationSchema = Yup.object({
-    email: Yup.string().email("Invalid email address"),
-    password: Yup.string().required("Password is required"),
-  });
-
-  // ✪ formik
-  const formik = useFormik({
-    initialValues: defaultValues,
-    validationSchema,
-    onSubmit: async () => {
-      const message = `Acesso não permitido`;
-      toast.warn(message);
-    },
-  });
-
   return (
     <>
       <Helmet title="Serviços prestados CIBBiM" />
-      <Box id="contato_canvas" className="relative w-full h-screen mt-3">
+      <Box id="servico_canvas" className="relative w-full h-screen mt-3">
         <Box
           // _PIN_ panel1
           id="panel1"
@@ -67,74 +45,49 @@ const ServiçosPrestados = () => {
               Serviços prestados
             </Heading>
 
-            <Text as="div" highContrast className="text-sm md:text-base mb-5">
-              Para acessar os serviços oferecidos pelo CIBBiM, faça login abaixo
-              para continuar."
+            <Text as="div" highContrast className="text-sm md:text-base mb-2">
+              Os equipamentos do CIBBiM destinados às análises e ensaios com
+              microrganismos estão disponíveis para pesquisadores e
+              profissionais de empresas, bem como para professores e estudantes
+              de mestrado, doutorado e iniciação científica de instituições de
+              ensino médio e superior, evidenciando o caráter multiusuário e
+              multidisciplinar do Centro.
             </Text>
 
-            <Card
-              // ✪ Login Card
-              size="4"
-              className=" flex flex-col w-full sm:w-[420px] "
+            <Text as="div" highContrast className="text-sm md:text-base">
+              <Strong>Atividades realizadas:</Strong>
+            </Text>
+
+            <Text
+              as="div"
+              highContrast
+              className="text-sm md:text-base whitespace-pre-wrap"
             >
-              <Heading as="h2" size="8" trim="start" mb="7" color="blue">
-                CIBBiM
-              </Heading>
+              ◆ Isolamento e caracterização de fungos e bactérias <br />
+              ◆ Observação microscópica <br />
+              ◆ Identificação fenotípica de microrganismos <br />
+              ◆ Testes bioquímicos e enzimáticos <br />
+              ◆ Análise microbiológica de água <br />
+              ◆ Análise microbiológica de alimentos e bebidas <br />
+              ◆ Avaliação da colonização micorrízica em plantas <br />
+              ◆ Armazenamento dos microrganismos a longo prazo <br />
+              ◆ Análise de resistência a antimicrobianos <br />
+            </Text>
 
-              <form onSubmit={formik.handleSubmit}>
-                <Box mb="5">
-                  <Text as="div" size="2" mb="1" weight="bold">
-                    Email
-                  </Text>
+            <Text as="div" highContrast className="text-sm md:text-base">
+              <Strong>
+                Clique abaixo para acessar os equipamentos e serviços oferecidos
+                pelo CIBBiM
+              </Strong>
+            </Text>
 
-                  <TextField.Root
-                    type="email"
-                    name="email"
-                    value={formik.values.email}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                  />
-                  {formik.touched.email && formik.errors.email && (
-                    <Text size="2" color="red">
-                      {formik.errors.email}
-                    </Text>
-                  )}
-                </Box>
-
-                <Box mb="5" position="relative">
-                  <Flex align="baseline" justify="between" mb="1">
-                    <Text
-                      as="label"
-                      size="2"
-                      weight="bold"
-                      htmlFor="example-password-field"
-                    >
-                      Senha
-                    </Text>
-                  </Flex>
-
-                  <TextField.Root
-                    type="password"
-                    name="password"
-                    value={formik.values.password}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                  />
-
-                  {formik.touched.password && formik.errors.password && (
-                    <Text size="2" color="red">
-                      {formik.errors.password}
-                    </Text>
-                  )}
-                </Box>
-
-                <Flex mt="6" justify="end" gap="3">
-                  <Button variant="outline" type="submit">
-                    Continuar
-                  </Button>
-                </Flex>
-              </form>
-            </Card>
+            <Link to="/auth/login/">
+              <Button className="" variant="solid">
+                <Text weight="bold" color = "gray" size="2" highContrast>
+                  Agende aqui
+                </Text>
+              </Button>
+            </Link>
           </Box>
         </Box>
 
@@ -153,6 +106,7 @@ const ServiçosPrestados = () => {
             )}
           />
         </div>
+
       </Box>
     </>
   );
