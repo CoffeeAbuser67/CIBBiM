@@ -43,21 +43,22 @@ const Formularios = () => {
               Formulários
             </Heading>
             <Text
-              // HERE Form
+              // HERE Formulários
               as="div"
               highContrast
               className="text-sm md:text-base whitespace-pre-wrap"
             >
-              ◆{" "}
+              ◆{"  "}
               <Link href="/forms/formulario_de_solicitacao_de_servicos_e_cadastro.doc">
                 Formulário de Solicitação de Serviços e Cadastro
-              </Link>
-
+              </Link>{" "}
+              <br /> <br />◆{"  "}
+              <Link href="/forms/ficha_inscricao_curso_biosseguranca.doc">
+                Ficha de Inscrição do Curso de Biossegurança
+              </Link>{" "}
               {/* <Link href="https://cibbim-media-files.s3.sa-east-1.amazonaws.com/assets/formulario_de_solicitacao_de_servicos_e_cadastro.doc">
                 Formulário de Solicitação de Serviços e Cadastro
               </Link> */}
-
-              <br />
             </Text>
           </Box>
         </Box>
