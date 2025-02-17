@@ -749,9 +749,9 @@ export const labsList: Lab[] = [
     DescriptionComponent: () => (
       <Box className="flex flex-col gap-3">
         <Text as="div" highContrast className="text-sm sm:text-base">
-          <Strong>Pesquisadora responsável:</Strong> Dra. Carla Cristina Romano
+          <Strong>Pesquisadora responsável:</Strong> Dr. Eduardo Ary Villela Marinho
           {"\n"}
-          (ccromano@uesc.br)
+          (eavmarinho@uesc.br)
         </Text>
 
         <Text as="div" highContrast className="text-sm sm:text-base">
